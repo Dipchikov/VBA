@@ -4,7 +4,7 @@ Sub Jumpers()
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 
-'---------------------------clear cells BAT-FCF -QAB -BGT -QCE---------------------------------------
+'---------------------------clear cells BAT-FCF -QAB -BGT -QCE-BCT--------------------------------------
 
 Set MyPlage = Range("A15:A1000")
 
@@ -53,7 +53,13 @@ Set MyPlage = Range("A15:A1000")
             cell(1, 9).Font.Bold = True
         End If
         
-
+                If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BCT" Then
+            cell(1, 7).ClearContents
+            cell(1, 8).ClearContents
+            cell(1, 9).Font.ColorIndex = 3
+            cell(1, 9).Font.Bold = True
+        End If
+		
        Next
                  
                  
