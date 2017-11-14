@@ -255,8 +255,8 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         End If
-         If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDC" Then
-        XDC = InputBox("Please add cross-section of conductors ", "Cross-Section of " & cell.Value, "1")
+         If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDC" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+        XDC = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), "1")
         cell(1, 7).Value = XDC
         cell(1, 8).Value = "bk"
         End If
@@ -654,7 +654,8 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         End If
-   If Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
+		
+		If Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
@@ -676,13 +677,10 @@ Set MyPlage = Range("A15:A1000")
         End If
         
         
-        
-        
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Insertable jumper" Then
          cell(1, 7).ClearContents
         cell(1, 8).ClearContents
-
         End If
         End If
                
@@ -690,11 +688,14 @@ Set MyPlage = Range("A15:A1000")
         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
+        End If
+        End If
 
-        
+                If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDX" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+        XDX = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper between " & cell(1, 3) & " and " & cell(1, 6), "1")
+        cell(1, 7).Value = XDX
+        cell(1, 8).Value = "bk"
         End If
-        End If
- 
  
   '---------------------------Wire Bridges----------------------------------------------
 
