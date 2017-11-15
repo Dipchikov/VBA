@@ -2,10 +2,22 @@ Attribute VB_Name = "ERRORS"
 Sub Errors()
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
-Dim XDM1 As Variant
-Dim XDM2 As Variant
-Dim XDM3 As Variant
 
+
+'----------------- minimal wires crossection   --------------------
+Dim wire As String
+
+Set MyPlage = Range("G15:G1000")
+
+wire = InputBox("Please add minimal cross-section of conductors" , "Read the General Arrangement Drawings", 1)
+For Each cell In MyPlage
+ If cell(1, 7).Value < wire then
+ cell.Value=wire
+	cell.Font.ColorIndex = 3
+ cell.Font.Bold = True
+End If
+
+Next
 
 
 
