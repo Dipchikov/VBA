@@ -3,7 +3,7 @@ Sub GAD()
 
 '----------------- minimal wires crossection   --------------------
 
-Application.Calculation = xlCalculationManual
+
 Application.ScreenUpdating = False
 
 Dim wire As String
@@ -19,7 +19,6 @@ For Each cell In MyPlage
  cell.Font.Bold = True
 End If
 Next
-Application.Calculation = xlCalculationAutomatic
 Application.ScreenUpdating = True
 
 End Sub

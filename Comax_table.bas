@@ -68,7 +68,7 @@ soft_by_colour.soft_by_colour
 
         '----------Condition If cell is empty------------------
          Final.Range("A:A").SpecialCells(xlCellTypeBlanks).EntireRow.Delete
-
+    Number_pr_comax.number
     Application.Calculation = xlCalculationAutomatic
     Application.ScreenUpdating = True
 

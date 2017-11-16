@@ -22,6 +22,7 @@ Application.ScreenUpdating = False
 If CheckBox3.Value = True Then
 Range("A15:N1000").Interior.ColorIndex = 0
 Swap.Swap
+GAD.GAD
 Jumpers.Jumpers
 Errors.Errors
 Legend_of_colours.Legend_of_colours
