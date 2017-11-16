@@ -529,6 +529,8 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         End If
+		         
+
         
         '-------------------clear--------------------------------
         
@@ -564,7 +566,12 @@ Set MyPlage = Range("A15:A1000")
         
         End If
         End If
-        
+        If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+        XDI = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), "1")
+        cell(1, 7).Value = XDI
+        cell(1, 8).Value = "bk"
+        End If
+		
         Next
     '--------------------------------------RAR------------------------------
     Set MyPlage = Range("A15:A1000")
