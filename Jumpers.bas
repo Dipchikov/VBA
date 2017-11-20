@@ -14,16 +14,18 @@ Set MyPlage = Range("G15:G1000")
 wire = InputBox("Please add minimal cross-section of conductors", "Read the General Arrangement Drawings", 1)
 For Each cell In MyPlage
  If Not IsEmpty(cell.Value) And cell.Value < wire Then
+ If Not (cell(1, 6).Value = "-" Or cell(1, 6).Value = "Shielded cable") Then
  cell.Value = wire
  cell.Font.ColorIndex = 3
  cell.Font.Bold = True
+End If
 End If
 Next
 
 
 
 
-'---------------------------clear cells BAT-FCF -QAB -BGT -QCE -BCT---------------------------------------
+'---------------------------clear cells BAT-FCF -QAB -BGT -QCE -BCT- BCN- BAD- EB- EA-----------------------------------
 
 Set MyPlage = Range("A15:A1000")
 
@@ -73,6 +75,32 @@ Set MyPlage = Range("A15:A1000")
         End If
         
                 If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BCT" Then
+            cell(1, 7).ClearContents
+            cell(1, 8).ClearContents
+            cell(1, 9).Font.ColorIndex = 3
+            cell(1, 9).Font.Bold = True
+        End If
+               If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BCN" Then
+            cell(1, 7).ClearContents
+            cell(1, 8).ClearContents
+            cell(1, 9).Font.ColorIndex = 3
+            cell(1, 9).Font.Bold = True
+        End If
+                 If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BAD" Then
+            cell(1, 7).ClearContents
+            cell(1, 8).ClearContents
+            cell(1, 9).Font.ColorIndex = 3
+            cell(1, 9).Font.Bold = True
+        End If
+        
+              If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EB" Then
+            cell(1, 7).ClearContents
+            cell(1, 8).ClearContents
+            cell(1, 9).Font.ColorIndex = 3
+            cell(1, 9).Font.Bold = True
+        End If
+        
+                      If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EA" Then
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3

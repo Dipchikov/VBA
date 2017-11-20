@@ -50,7 +50,7 @@ If ActiveSheet.Name = "Wiring table" Then
 Application.ScreenUpdating = False
 Application.DisplayAlerts = False
  On Error Resume Next
-    ActiveSheet.ShowAllData
+ActiveSheet.ShowAllData
 '
 ' delete Macro
 '
@@ -69,20 +69,19 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Selection.ClearContents
     Range("A15:L550").Select
     Selection.ClearContents
-
-    Range("L550").Activate
-    With Selection.Interior
-        .Pattern = xlNone
-        .TintAndShade = 0
-        .PatternTintAndShade = 0
-        Selection.Font.Bold = False
+    
+    Columns("E:E").Select
+    Selection.NumberFormat = "@"
+    Columns("B:B").Select
+    Selection.NumberFormat = "@"
+    
+   Range("A15:L551").Select
+    Range("L551").Activate
     With Selection.Font
         .ColorIndex = xlAutomatic
         .TintAndShade = 0
     End With
-        
-        
-    End With
+    Selection.Font.Bold = False
     Selection.Borders(xlDiagonalDown).LineStyle = xlNone
     Selection.Borders(xlDiagonalUp).LineStyle = xlNone
     With Selection.Borders(xlEdgeLeft)
@@ -121,7 +120,6 @@ Range("A15:N1000").Interior.ColorIndex = 0
         .TintAndShade = 0
         .Weight = xlThin
     End With
-   
     
     Else
     'do nothing
@@ -155,7 +153,9 @@ Range("A15:N1000").Interior.ColorIndex = 0
     
    '-------------Possible_errors---------------
     Possible_errors.Possible_errors
+    
 
+    
      Application.ScreenUpdating = True
 Application.DisplayAlerts = True
 Range("A15").Select
