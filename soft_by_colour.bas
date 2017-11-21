@@ -5,7 +5,7 @@ Attribute soft_by_colour.VB_ProcData.VB_Invoke_Func = " \n14"
 Application.ScreenUpdating = False
 ' soft_by_colour Macro
 '----------------start Legend_of_colours-----------------
-Legend_of_colours.Legend_of_colours
+'Legend_of_colours.Legend_of_colours
 
     lr = Range("A" & Rows.Count).End(xlUp).Row
 
