@@ -179,6 +179,47 @@ Set MyPlage = Range("A15:A1000")
         End If
 
     Next
+    
+     '---------------------Wireing - XDB----------------------------
+    
+    Set MyPlage = Range("D15:D1000")
+
+    For Each cell In MyPlage
+    
+        If cell.Value = "XDB" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+        
+           If cell.Value = "XDB91" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+        
+           If cell.Value = "XDB10" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+                   If cell.Value = "XDB89" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+               If cell.Value = "XDB89" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+
+               If cell.Value = "XDB93" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+               If cell.Value = "XDB95" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+                       If cell.Value = "XDB96" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+        
+            If cell.Value = "XDB97" Then
+            cell(1, 8).Interior.ColorIndex = 37
+       End If
+    Next
+    
+    
     '----------------------------Door Wireing ----------------------------
     
     
@@ -285,45 +326,7 @@ Set MyPlage = Range("A15:A1000")
 
     Next
  
- '---------------------Wireing - XDB----------------------------
-    
-    Set MyPlage = Range("D15:D1000")
 
-    For Each cell In MyPlage
-    
-        If cell.Value = "XDB" Then
-            cell(1, 8).Interior.ColorIndex = 37
-        End If
-        
-           If cell.Value = "XDB91" Then
-            cell(1, 8).Interior.ColorIndex = 37
-        End If
-        
-           If cell.Value = "XDB10" Then
-            cell(1, 8).Interior.ColorIndex = 37
-        End If
-                   If cell.Value = "XDB89" Then
-            cell(1, 8).Interior.ColorIndex = 37
-        End If
-               If cell.Value = "XDB89" Then
-            cell(1, 8).Interior.ColorIndex = 37
-        End If
-
-               If cell.Value = "XDB93" Then
-            cell(1, 8).Interior.ColorIndex = 37
-        End If
-               If cell.Value = "XDB95" Then
-            cell(1, 8).Interior.ColorIndex = 37
-        End If
-                       If cell.Value = "XDB96" Then
-            cell(1, 8).Interior.ColorIndex = 37
-        End If
-        
-            If cell.Value = "XDB97" Then
-            cell(1, 8).Interior.ColorIndex = 37
-       End If
-    Next
-    
       
  
  '---------------------Wireing - 'Ref protection-----------------
