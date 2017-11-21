@@ -7,7 +7,7 @@ On Error Resume Next
     ActiveSheet.ShowAllData
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Clear
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add Key _
-        :=Range("A14:A550"), SortOn:=xlSortOnValues, Order:=xlAscending, _
+        :=Range("A14:A551"), SortOn:=xlSortOnValues, Order:=xlAscending, _
         DataOption:=xlSortNormal
     With ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort
         .Header = xlYes
@@ -39,6 +39,17 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 40
         End If
 
+          If Left(cell.Value, 2) = "BM" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
+                  If Left(cell.Value, 2) = "BX" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
+                          If Left(cell.Value, 2) = "TS" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
          '  If cell.Value = "AA1" Then
         'cell(1, 11).Interior.ColorIndex = 40
         'End If
@@ -118,7 +129,7 @@ Set MyPlage = Range("A15:A1000")
              If Left(cell.Value, 3) = "KFA" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
-        If Left(cell.Value, 4) = "KFP." Then
+        If Left(cell.Value, 3) = "KFP" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
         
@@ -159,28 +170,14 @@ Set MyPlage = Range("A15:A1000")
     
       '-----------------Shielded cable--------------------------------
     
-    Set MyPlage = Range("H15:H1000")
+    Set MyPlage = Range("L15:L1000")
 
     For Each cell In MyPlage
     
-        If cell.Value = "SH" Then
-            cell(1, 4).Interior.ColorIndex = 6
-            cell(1, 5).Interior.ColorIndex = 6
+        If cell.Value = "Shielded cable" Then
+            cell.Interior.ColorIndex = 6
         End If
-                If cell.Value = "sh" Then
-            cell(1, 4).Interior.ColorIndex = 6
-            cell(1, 5).Interior.ColorIndex = 6
-        End If
-        
-             If cell.Value = "wh/og" Then
-            cell(1, 4).Interior.ColorIndex = 6
-            cell(1, 5).Interior.ColorIndex = 6
-        End If
-        
-            If cell.Value = "og/wh" Then
-            cell(1, 4).Interior.ColorIndex = 6
-            cell(1, 5).Interior.ColorIndex = 6
-        End If
+
     Next
     '----------------------------Door Wireing ----------------------------
     
@@ -216,6 +213,10 @@ Set MyPlage = Range("A15:A1000")
         End If
                 
         If Left(cell.Value, 3) = "PFY" Then
+            cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
+                If Left(cell.Value, 3) = "PFB" Then
             cell(1, 11).Interior.ColorIndex = 43
         End If
         
