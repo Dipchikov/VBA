@@ -47,11 +47,8 @@ If CheckBox1.Value = True And CheckBox2.Value = False Then
 Application.ScreenUpdating = True
 End Sub
 
-Private Sub Label8_Click()
 
-End Sub
-
-Private Sub UserForm_Click()
+Private Sub UserForm_Initialize()
 Label8.Caption = Tools.Label8.Caption
     Me.StartUpPosition = 0
     Me.Top = 130

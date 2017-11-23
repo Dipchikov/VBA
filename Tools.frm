@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} Tools 
    Caption         =   "UniSec menu"
-   ClientHeight    =   8460
+   ClientHeight    =   9096
    ClientLeft      =   36
    ClientTop       =   -636
    ClientWidth     =   2532
@@ -69,11 +69,15 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Selection.ClearContents
     Range("A15:L551").Select
     Selection.ClearContents
-    
+    Columns("C:C").Select
+    Selection.NumberFormat = "General"
+    Columns("F:F").Select
+    Selection.NumberFormat = "General"
     Columns("E:E").Select
     Selection.NumberFormat = "@"
     Columns("B:B").Select
     Selection.NumberFormat = "@"
+
     
    Range("A15:L551").Select
     Range("L551").Activate
@@ -137,6 +141,10 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Selection.AutoFill Destination:=Range("F15:F551"), Type:=xlFillDefault
     Range("F15:F551").Select
     
+    Columns("C:C").Select
+    Selection.NumberFormat = "@"
+    Columns("F:F").Select
+    Selection.NumberFormat = "@"
     
        '-------------Length formula---------------
         Range("K15").Select
@@ -186,7 +194,7 @@ End Select
 End Sub
 
 Private Sub CommandButton16_Click()
-Error_menu.Show vbModeless
+Error_menu.Show vbModaless
 End Sub
 
 
@@ -236,6 +244,10 @@ Private Sub CommandButton24_Click()
     End With
 End Sub
 
+Private Sub CommandButton25_Click()
+Number_of_connections.Show vbModaless
+End Sub
+
 Private Sub CommandButton4_Click()
  Legend_of_colours.Legend_of_colours
 End Sub
@@ -264,7 +276,7 @@ End Sub
 
 Private Sub UserForm_Initialize()
 
-    Label8.Caption = "created by Hristo Dipchikov © vB8"
+    Label8.Caption = "created by Hristo Dipchikov © vB9"
     Me.StartUpPosition = 0
     Me.Top = 130
     Me.Left = Application.Left - 50 + Application.Width - Me.Width
