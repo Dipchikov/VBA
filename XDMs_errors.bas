@@ -125,6 +125,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         
 Next
+
 Dim XDM5 As String
 Set MyPlage = Range("A15:d1000")
 
