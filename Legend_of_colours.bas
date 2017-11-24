@@ -348,6 +348,42 @@ Set MyPlage = Range("A15:A1000")
                 If Left(cell.Value, 3) = "BET" Then
             cell(1, 11).Interior.ColorIndex = 44
         End If
+             If Left(cell.Value, 3) = "BCP" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+             If Left(cell.Value, 3) = "BCM" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+            If Left(cell.Value, 3) = "BCG" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+            If Left(cell.Value, 3) = "BCD" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+            If Left(cell.Value, 3) = "BCF" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+            If Left(cell.Value, 3) = "BCP" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+             If Left(cell.Value, 3) = "BCZ" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+            If Left(cell.Value, 3) = "BEF" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+             If Left(cell.Value, 3) = "BER" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+             If Left(cell.Value, 3) = "BES" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+            If Left(cell.Value, 3) = "BAR" Then
+            cell(1, 11).Interior.ColorIndex = 44
+        End If
+        
+        
+        
     Next
     
     
