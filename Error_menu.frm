@@ -61,7 +61,7 @@ If CheckBox1.Value = True And CheckBox2.Value = False Then
 CountColorValue.CountColorValue
 MsgBox "Now" & vbNewLine & "1. Check Ref numbers of connections" & vbNewLine & "2. Chack all metal jumpes for XDA ,XDV ,XDI,XDX and numbers of conections for them" & vbNewLine & "3. Check all wires sections"
 Application.ScreenUpdating = True
-
+Unload Me
 End Sub
 
 

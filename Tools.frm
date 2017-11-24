@@ -57,10 +57,6 @@ ActiveSheet.ShowAllData
 answer = MsgBox("Are you sure you want to clear the table? Did you press the Routing botton?", vbYesNo + vbQuestion, "Clear the table")
 If answer = vbYes Then
 
-
-
-
-
 Range("A15:N1000").Interior.ColorIndex = 0
 
     Range("B1").Select
@@ -125,9 +121,7 @@ Range("A15:N1000").Interior.ColorIndex = 0
         .Weight = xlThin
     End With
     
-    Else
-    'do nothing
-    End If
+
     '-------------Formulas---------------
     
     Range("C15").Select
@@ -141,11 +135,10 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Selection.AutoFill Destination:=Range("F15:F551"), Type:=xlFillDefault
     Range("F15:F551").Select
     
-    Columns("C:C").Select
+        Columns("C:C").Select
     Selection.NumberFormat = "@"
     Columns("F:F").Select
     Selection.NumberFormat = "@"
-    
        '-------------Length formula---------------
         Range("K15").Select
         
@@ -166,14 +159,15 @@ Range("A15:N1000").Interior.ColorIndex = 0
     
    '-------------Possible_errors---------------
     Possible_errors.Possible_errors
-    
 
-    
      Application.ScreenUpdating = True
 Application.DisplayAlerts = True
 Range("A15").Select
-End If
 
+    Else
+    'do nothing
+    End If
+ End If
 End Sub
 
 Private Sub CommandButton13_Click()
@@ -213,7 +207,7 @@ Comax_table.Comax_table
 End Sub
 
 Private Sub CommandButton20_Click()
-Unload Me
+
 edit_table.Show vbModaless
 End Sub
 

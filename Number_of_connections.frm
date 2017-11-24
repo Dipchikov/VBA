@@ -45,6 +45,7 @@ If CheckBox1.Value = True And CheckBox2.Value = False Then
        
   End If
 Application.ScreenUpdating = True
+Unload Me
 End Sub
 
 
