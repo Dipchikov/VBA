@@ -288,13 +288,13 @@ XDMs_errors.XDMs_errors
   For Each cell In MyPlage
   
         
-        If Not (cell(1, 5).Value = "gnye" Or cell(1, 5).Value = "GNYE") And Left(cell.Value, 2) = "XE" Then
+        If Not IsEmpty(cell(1, 4).Value) And Not (cell(1, 5).Value = "gnye" Or cell(1, 5).Value = "GNYE") And Left(cell.Value, 2) = "XE" Then
         cell(1, 5).Value = "gnye"
         cell(1, 5).Font.ColorIndex = 3
         cell(1, 5).Font.Bold = True
         End If
 
-         If Left(cell.Value, 2) = "XE" And cell(1, 4).Value < "2,5" Then
+        If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 2) = "XE" And cell(1, 4).Value < "2,5" Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = "2,5"
@@ -347,7 +347,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 10 And cell(1, 5).Value = 11 Then
+            If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 10 And cell(1, 5).Value = 11 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
             cell(1, 9).Value = "Wire jumper"
             cell(1, 7).Value = "1,5"
             cell(1, 8).Value = "bk"
@@ -356,7 +356,7 @@ Set MyPlage = Range("A15:A1000")
             
    answer = MsgBox("Please check connection XDV:10 to XDV:11 if not wire jumper then remove ection and colour!!!", vbYes + vbQuestion, "")
  End If
-             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 10 Then
+             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 10 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
             cell(1, 9).Value = "Wire jumper"
             cell(1, 7).Value = "1,5"
             cell(1, 8).Value = "bk"
@@ -365,7 +365,7 @@ Set MyPlage = Range("A15:A1000")
    answer = MsgBox("Please check connection XDV:10 to XDV:11 if not wire jumper then remove ection and colour!!!", vbYes + vbQuestion, "")
  End If
           
-             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 12 And cell(1, 5).Value = 13 Then
+             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 12 And cell(1, 5).Value = 13 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
             cell(1, 9).Value = "Wire jumper"
             cell(1, 7).Value = "1,5"
             cell(1, 8).Value = "bk"
@@ -373,7 +373,7 @@ Set MyPlage = Range("A15:A1000")
             cell(1, 9).Font.Bold = True
    answer = MsgBox("Please check connection XDV:12 to XDV:13 if not wire jumper then remove section and colour!!!", vbYes + vbQuestion, "")
  End If
-             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 13 And cell(1, 5).Value = 12 Then
+             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 13 And cell(1, 5).Value = 12 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
             cell(1, 9).Value = "Wire jumper"
             cell(1, 7).Value = "1,5"
             cell(1, 8).Value = "bk"
