@@ -125,6 +125,10 @@ Set MyPlage = Range("A15:A1000")
         If cell.Value = "K4" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
+        
+        If Left(cell.Value, 2) = "KA" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
                     
              If Left(cell.Value, 3) = "KFA" Then
         cell(1, 11).Interior.ColorIndex = 40
