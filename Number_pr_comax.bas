@@ -8,40 +8,39 @@ Sheets("Comax").Select
     Range("CO2").Select
     ActiveCell.FormulaR1C1 = "1"
     Range("CO2").Select
-    Selection.AutoFill Destination:=Range("CO2:CO80"), Type:=xlFillDefault
-    Range("CO2:CO80").Select
-    Range("CO81").Select
+    Selection.AutoFill Destination:=Range("CO2:CO99"), Type:=xlFillDefault
+    Range("CO2:CO99").Select
+    Range("CO100").Select
     ActiveCell.FormulaR1C1 = "2"
-    Range("CO81").Select
-    Selection.AutoFill Destination:=Range("CO81:CO161"), Type:=xlFillDefault
-    Range("CO81:CO161").Select
-    Range("CO162").Select
+    Range("CO100").Select
+    Selection.AutoFill Destination:=Range("CO100:CO195"), Type:=xlFillDefault
+    Range("CO100:CO195").Select
+    Range("CO196").Select
     ActiveCell.FormulaR1C1 = "3"
-    Range("CO162").Select
-    Selection.AutoFill Destination:=Range("CO162:CO241"), Type:=xlFillDefault
-    Range("CO162:CO241").Select
-    ActiveWindow.SmallScroll Down:=12
-    Range("CO242").Select
+    Range("CO196").Select
+    Selection.AutoFill Destination:=Range("CO196:CO291"), Type:=xlFillDefault
+    Range("CO196:CO291").Select
+     Range("CO292").Select
     ActiveCell.FormulaR1C1 = "4"
-    Range("CO242").Select
-    Selection.AutoFill Destination:=Range("CO242:CO322"), Type:=xlFillDefault
-    Range("CO242:CO322").Select
+    Range("CO292").Select
+    Selection.AutoFill Destination:=Range("CO292:CO387"), Type:=xlFillDefault
+    Range("CO292:CO387").Select
     ActiveWindow.SmallScroll Down:=9
-    Range("CO323").Select
+    Range("CO388").Select
     ActiveCell.FormulaR1C1 = "5"
-    Range("CO323").Select
-    Selection.AutoFill Destination:=Range("CO323:CO403"), Type:=xlFillDefault
-    Range("CO323:CO403").Select
-    Range("CO404").Select
+    Range("CO389").Select
+    Selection.AutoFill Destination:=Range("CO389:CO483"), Type:=xlFillDefault
+    Range("CO389:CO483").Select
+    Range("CO484").Select
     ActiveCell.FormulaR1C1 = "6"
-    Range("CO404").Select
-    Selection.AutoFill Destination:=Range("CO404:CO484"), Type:=xlFillDefault
-    Range("CO404:CO484").Select
+    Range("CO484").Select
+    Selection.AutoFill Destination:=Range("CO484:CO579"), Type:=xlFillDefault
+    Range("CO484:CO579").Select
     ActiveWindow.SmallScroll Down:=9
-    Range("CO485").Select
+    Range("CO580").Select
     ActiveCell.FormulaR1C1 = "7"
-    Range("CO485").Select
-    Selection.AutoFill Destination:=Range("CO485:CO565"), Type:=xlFillDefault
-    Range("CO485:CO565").Select
+    Range("CO580").Select
+    Selection.AutoFill Destination:=Range("CO580:CO675"), Type:=xlFillDefault
+    Range("A2").Select
 
 End Sub

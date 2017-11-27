@@ -1,7 +1,6 @@
 Attribute VB_Name = "Comax_table_inter"
 Sub Comax_table_inter()
 
-
  On Error Resume Next
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
@@ -30,8 +29,10 @@ soft_by_colour.soft_by_colour
 
     Final.Range("A2").Select
     Final.Range("A2:CO1000").ClearContents
+      '----------Prigram number------------------
     Number_pr_comax.number
     Final.Range("A2").Select
+    
 Dim i As Long
     Set Rng = Data.Range("J6:J1048576")
     For i = Rng.Cells(1, 1).Row To Rng.Cells(1, 1).End(xlDown).Row

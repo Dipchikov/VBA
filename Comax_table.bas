@@ -25,6 +25,7 @@ soft_by_colour.soft_by_colour
 
     Final.Range("A2").Select
     Final.Range("A2:CO1000").ClearContents
+    '----------Prigram number------------------
     Number_pr_comax.number
     Final.Range("A2").Select
 
@@ -68,7 +69,8 @@ soft_by_colour.soft_by_colour
 
         '----------Condition If cell is empty------------------
          Final.Range("A:A").SpecialCells(xlCellTypeBlanks).EntireRow.Delete
-    Number_pr_comax.number
+         
+    
     Application.Calculation = xlCalculationAutomatic
     Application.ScreenUpdating = True
 

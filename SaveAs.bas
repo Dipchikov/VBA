@@ -23,7 +23,8 @@ Routing_inter.Routing_inter
     Legend_of_colours.Legend_of_colours
     soft_by_colour.soft_by_colour
     Routing.Routing
-    
+
+
 
 
    
@@ -41,8 +42,12 @@ Routing_inter.Routing_inter
     'Range("A1").PasteSpecial Paste:=xlPasteFormats
     
     ActiveSheet.Name = Range("B1").Value
-       '-------------Formulas---------------
-    
+       '-------------Edit style---------------
+    Columns("C:C").Select
+    Selection.NumberFormat = "General"
+    Columns("F:F").Select
+    Selection.NumberFormat = "General"
+        '-------------Formulas---------------
     Range("C15").Select
     ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
     Range("C15").Select
@@ -54,9 +59,8 @@ Routing_inter.Routing_inter
     Selection.AutoFill Destination:=Range("F15:F" & lr), Type:=xlFillDefault
     Range("F15:F" & lr).Select
     Range("A15").Select
-         
-    Application.CutCopyMode = False 'esp
 
+    Application.CutCopyMode = False 'esp
 
 
 Dim sFileSaveName As Variant
