@@ -300,6 +300,30 @@ XDMs_errors.XDMs_errors
         cell(1, 4).Value = "2,5"
         End If
         
+                
+        If Not IsEmpty(cell(1, 4).Value) And Not (cell(1, 5).Value = "gnye" Or cell(1, 5).Value = "GNYE") And Left(cell.Value, 2) = "PE" Then
+        cell(1, 5).Value = "gnye"
+        cell(1, 5).Font.ColorIndex = 3
+        cell(1, 5).Font.Bold = True
+        End If
+
+        If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 2) = "PE" And cell(1, 4).Value < "2,5" Then
+        cell(1, 4).Font.ColorIndex = 3
+        cell(1, 4).Font.Bold = True
+        cell(1, 4).Value = "2,5"
+        End If
+                 
+        If Not IsEmpty(cell(1, 4).Value) And Not (cell(1, 5).Value = "gnye" Or cell(1, 5).Value = "GNYE") And Left(cell.Value, 2) = "IE" Then
+        cell(1, 5).Value = "gnye"
+        cell(1, 5).Font.ColorIndex = 3
+        cell(1, 5).Font.Bold = True
+        End If
+
+        If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 2) = "IE" And cell(1, 4).Value < "2,5" Then
+        cell(1, 4).Font.ColorIndex = 3
+        cell(1, 4).Font.Bold = True
+        cell(1, 4).Value = "2,5"
+        End If
 Next
    
 
