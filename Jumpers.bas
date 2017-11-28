@@ -4,6 +4,17 @@ Sub Jumpers()
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 
+ '------------------Jumpers Primery -------------------------
+ 
+Set MyPlage = Range("G15:G1000")
+
+    For Each cell In MyPlage
+
+   If cell.Value = "Bridge" Then
+            cell(1, 3).Value = "Insertable jumper"
+            cell.Value = ""
+    End If
+    Next
 
 '----------------- minimal wires crossection   --------------------
 Dim wire As String
@@ -93,19 +104,19 @@ Set MyPlage = Range("A15:A1000")
             cell(1, 9).Font.Bold = True
         End If
         
-              If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EB" Then
-            cell(1, 7).ClearContents
-            cell(1, 8).ClearContents
-            cell(1, 9).Font.ColorIndex = 3
-            cell(1, 9).Font.Bold = True
-        End If
+              'If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EB" Then
+           ' cell(1, 7).ClearContents
+           ' cell(1, 8).ClearContents
+           ' cell(1, 9).Font.ColorIndex = 3
+           ' cell(1, 9).Font.Bold = True
+       ' End If
         
-                      If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EA" Then
-            cell(1, 7).ClearContents
-            cell(1, 8).ClearContents
-            cell(1, 9).Font.ColorIndex = 3
-            cell(1, 9).Font.Bold = True
-        End If
+                    '  If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EA" Then
+          '  cell(1, 7).ClearContents
+          '  cell(1, 8).ClearContents
+           ' cell(1, 9).Font.ColorIndex = 3
+          ' cell(1, 9).Font.Bold = True
+       ' End If
         
        Next
                  
@@ -173,6 +184,7 @@ Set MyPlage = Range("A15:A1000")
             cell(1, 8).Font.Bold = True
     End If
     End If
+
     
        If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Ponticello inseribile" Then
             cell(1, 9).Value = "Conduttore/filo"
@@ -227,7 +239,8 @@ Set MyPlage = Range("A15:A1000")
             cell(1, 8).Font.Bold = True
     End If
     End If
-        
+
+    
  Next
         
         
