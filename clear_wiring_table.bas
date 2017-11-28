@@ -19,7 +19,7 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Selection.ClearContents
         Range("O12").Select
     Selection.ClearContents
-    Range("A15:L551").Select
+    Range("A15:L651").Select
     Selection.ClearContents
     Columns("C:C").Select
     Selection.NumberFormat = "General"
@@ -31,8 +31,8 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Selection.NumberFormat = "@"
 
     
-   Range("A15:L551").Select
-    Range("L551").Activate
+   Range("A15:L651").Select
+    Range("L651").Activate
     With Selection.Font
         .ColorIndex = xlAutomatic
         .TintAndShade = 0
@@ -83,13 +83,13 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Range("C15").Select
     ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
     Range("C15").Select
-    Selection.AutoFill Destination:=Range("C15:C551"), Type:=xlFillDefault
-    Range("C15:C551").Select
+    Selection.AutoFill Destination:=Range("C15:C651"), Type:=xlFillDefault
+    Range("C15:C651").Select
     Range("F15").Select
     ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
     Range("F15").Select
-    Selection.AutoFill Destination:=Range("F15:F551"), Type:=xlFillDefault
-    Range("F15:F551").Select
+    Selection.AutoFill Destination:=Range("F15:F651"), Type:=xlFillDefault
+    Range("F15:F651").Select
     
         Columns("C:C").Select
     Selection.NumberFormat = "@"
@@ -101,8 +101,8 @@ Range("A15:N1000").Interior.ColorIndex = 0
     ActiveCell.FormulaR1C1 = _
         "=IF(ISBLANK(RC[-4]),""-"",INDEX(INDIRECT(R12C15),MATCH(RC[-10],'Standard length'!R1C1:R500C1,0),MATCH(RC[-7],'Standard length'!R1C1:R1C500,0)))"
     Range("K15").Select
-    Selection.AutoFill Destination:=Range("K15:K551")
-    Range("K15:K551").Select
+    Selection.AutoFill Destination:=Range("K15:K651")
+    Range("K15:K651").Select
     
      '-------------Cable type formula---------------
      
@@ -110,8 +110,8 @@ Range("A15:N1000").Interior.ColorIndex = 0
     ActiveCell.FormulaR1C1 = _
         "=IFNA(INDEX(INDIRECT(R12C13),MATCH(RC[-4],'Type of cables '!R2C1:R15C1,0),MATCH(RC[-5],'Type of cables '!R2C1:R2C15,0)),""-"")"
     Range("L15").Select
-    Selection.AutoFill Destination:=Range("L15:L551")
-    Range("L15:L551").Select
+    Selection.AutoFill Destination:=Range("L15:L651")
+    Range("L15:L651").Select
     
    '-------------Possible_errors---------------
     Possible_errors.Possible_errors
