@@ -34,6 +34,12 @@ Set MyPlage = Range("A15:A1000")
           If Left(cell.Value, 2) = "BT" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
+                  If Left(cell.Value, 2) = "IE" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+                  If Left(cell.Value, 2) = "EA" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
         
             If Left(cell.Value, 2) = "BR" Then
         cell(1, 11).Interior.ColorIndex = 40
@@ -73,11 +79,16 @@ Set MyPlage = Range("A15:A1000")
                 If Left(cell.Value, 3) = "XDE" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
+        
     
                 If Left(cell.Value, 3) = "XDT" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
-                If cell.Value = "PFV1" Then
+                If Left(cell.Value, 3) = "PFV" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
+            If Left(cell.Value, 3) = "RAD" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
         
@@ -133,7 +144,15 @@ Set MyPlage = Range("A15:A1000")
              If Left(cell.Value, 3) = "KFA" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
+            If Left(cell.Value, 3) = "RAA" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
         If Left(cell.Value, 3) = "KFP" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
+          If Left(cell.Value, 3) = "KFE" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
         
@@ -155,6 +174,10 @@ Set MyPlage = Range("A15:A1000")
 
 
         If Left(cell.Value, 3) = "TFS" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
+        If Left(cell.Value, 3) = "TFM" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
            
@@ -258,6 +281,10 @@ Set MyPlage = Range("A15:A1000")
         End If
                 
         If Left(cell.Value, 3) = "PFY" Then
+            cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
+            If Left(cell.Value, 3) = "PGW" Then
             cell(1, 11).Interior.ColorIndex = 43
         End If
         
