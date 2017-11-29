@@ -25,18 +25,16 @@ Sheets("Comax").Select
     Range("CO292").Select
     Selection.AutoFill Destination:=Range("CO292:CO387"), Type:=xlFillDefault
     Range("CO292:CO387").Select
-    ActiveWindow.SmallScroll Down:=9
     Range("CO388").Select
     ActiveCell.FormulaR1C1 = "5"
-    Range("CO389").Select
-    Selection.AutoFill Destination:=Range("CO389:CO483"), Type:=xlFillDefault
-    Range("CO389:CO483").Select
+    Range("CO388").Select
+    Selection.AutoFill Destination:=Range("CO388:CO483"), Type:=xlFillDefault
+    Range("CO388:CO483").Select
     Range("CO484").Select
     ActiveCell.FormulaR1C1 = "6"
     Range("CO484").Select
     Selection.AutoFill Destination:=Range("CO484:CO579"), Type:=xlFillDefault
     Range("CO484:CO579").Select
-    ActiveWindow.SmallScroll Down:=9
     Range("CO580").Select
     ActiveCell.FormulaR1C1 = "7"
     Range("CO580").Select
