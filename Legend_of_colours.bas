@@ -268,9 +268,6 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 43
         End If
         
-                    If Left(cell.Value, 3) = "K86" Then
-        cell(1, 11).Interior.ColorIndex = 43
-        End If
         
            If Left(cell.Value, 3) = "SFU" Then
         cell(1, 11).Interior.ColorIndex = 43
@@ -279,7 +276,8 @@ Set MyPlage = Range("A15:A1000")
         If Left(cell.Value, 3) = "PFW" Then
             cell(1, 11).Interior.ColorIndex = 43
         End If
-                If Left(cell.Value, 3) = "PGQ" Then
+        
+             If Left(cell.Value, 3) = "PGQ" Then
             cell(1, 11).Interior.ColorIndex = 43
         End If
                 
