@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} edit_table 
    Caption         =   "Edit table"
-   ClientHeight    =   3840
+   ClientHeight    =   4596
    ClientLeft      =   36
    ClientTop       =   360
    ClientWidth     =   2628
@@ -26,7 +26,7 @@ Swap.Swap
 End Sub
 
 Private Sub CommandButton18_Click()
-FilterCriteria.FilterCriteria
+formula.formula
 End Sub
 
 Private Sub CommandButton19_Click()
@@ -59,14 +59,7 @@ End Sub
 Private Sub UserForm_Click()
 
 End Sub
-Private Sub UserForm_QueryClose(Cancel As Integer, CloseMode As Integer)
 
-    If CloseMode = 0 Then
-        Cancel = True
-        MsgBox "The X is disabled, please use the Close Command Button.", vbCritical
-    End If
-    
-End Sub
 
 Private Sub UserForm_Initialize()
 Label8.Caption = Tools.Label8.Caption

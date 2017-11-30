@@ -20,7 +20,6 @@ End Sub
 Private Sub CommandButton2_Click()
 Application.ScreenUpdating = False
 If CheckBox3.Value = True Then
-formula.formula
 Range("A15:N1000").Interior.ColorIndex = 0
 Swap.Swap
 Jumpers.Jumpers
