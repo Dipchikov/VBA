@@ -37,7 +37,7 @@ Dim i As Long
     Set Rng = Data.Range("J6:J1048576")
     For i = Rng.Cells(1, 1).Row To Rng.Cells(1, 1).End(xlDown).Row
         '----------Condition If cell is empty-------------------
-        If Not Data.Range("J" & i).Value = "-" Then
+        If Not (Data.Range("J" & i).Value = "-" Or Data.Range("J" & i).Value = "Shielded cable") Then
             Final.Range("A" & i - 4).Value = "INTERP" & Left(Data.Range("E1").Value, 2) & "." & Final.Range("CO" & i - 4).Value
             Final.Range("C" & i - 4).Value = 1
             Final.Range("D" & i - 4).Value = 1

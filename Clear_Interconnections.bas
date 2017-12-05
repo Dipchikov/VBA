@@ -34,7 +34,7 @@ If answer = vbYes Then
     Range("I6:I515").Select
     Range("J6").Select
     ActiveCell.FormulaR1C1 = _
-        "=IFNA(INDEX(INDIRECT(R3C12),MATCH(RC[-3],'Type of cables '!R2C1:R15C1,0),MATCH(RC[-2],'Type of cables '!R2C1:R2C11,0)),""-"")"
+        "=IFNA(INDEX(INDIRECT(R3C12),MATCH(RC[-3],'Type of cables '!R2C1:R15C1,0),MATCH(RC[-2],'Type of cables '!R2C1:R2C15,0)),""-"")"
     Range("J6").Select
     Selection.AutoFill Destination:=Range("J6:J515"), Type:=xlFillDefault
     Range("J6:J515").Select

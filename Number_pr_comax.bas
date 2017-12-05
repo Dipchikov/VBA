@@ -39,10 +39,13 @@ Sheets("Comax").Select
     ActiveCell.FormulaR1C1 = "7"
     Range("CO580").Select
     Selection.AutoFill Destination:=Range("CO580:CO675"), Type:=xlFillDefault
-	Range("CO676").Select
+    Range("CO676").Select
     ActiveCell.FormulaR1C1 = "8"
     Range("CO676").Select
     Selection.AutoFill Destination:=Range("CO676:CO771"), Type:=xlFillDefault
+    Range("CO772").Select
+    ActiveCell.FormulaR1C1 = "9"
+    Selection.AutoFill Destination:=Range("CO772:CO867"), Type:=xlFillDefault
     Range("A2").Select
 
 End Sub

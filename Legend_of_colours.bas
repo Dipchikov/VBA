@@ -34,6 +34,10 @@ Set MyPlage = Range("A15:A1000")
           If Left(cell.Value, 2) = "BT" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
+        
+                  If Left(cell.Value, 2) = "PE" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
                   If Left(cell.Value, 2) = "IE" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
@@ -252,6 +256,18 @@ Set MyPlage = Range("A15:A1000")
     
     Set MyPlage = Range("A15:A1000")
         For Each cell In MyPlage
+        
+            If Left(cell.Value, 3) = "SPM" Then
+        cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
+           If Left(cell.Value, 3) = "STF" Then
+        cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
+            If Left(cell.Value, 3) = "SFT" Then
+        cell(1, 11).Interior.ColorIndex = 43
+        End If
         
            If Left(cell.Value, 3) = "SFA" Then
         cell(1, 11).Interior.ColorIndex = 43

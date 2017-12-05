@@ -198,7 +198,7 @@ Private Sub UserForm_Initialize()
 ComboBox1.List = Array("bk", "gnye", "bn", "gr", "bu")
 ComboBox7.List = ComboBox1.List
 ComboBox9.List = ComboBox1.List
-ComboBox2.List = Array("1", "1,5", "2,5", "4", "6")
+ComboBox2.List = Array("0,2", "0,5", "0,8", "1", "1,5", "2,5", "4", "6")
 ComboBox8.List = ComboBox2.List
 ComboBox10.List = ComboBox2.List
 ComboBox3.List = Array("XDI", "XDI1", "XDI2", "XDI3", "XDI4", "XDI5", "XDI6", "XDI9")
