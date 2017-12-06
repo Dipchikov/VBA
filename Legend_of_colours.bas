@@ -305,12 +305,20 @@ Set MyPlage = Range("A15:A1000")
             cell(1, 11).Interior.ColorIndex = 43
         End If
         
+            If Left(cell.Value, 3) = "PGS" Then
+            cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
                 If Left(cell.Value, 3) = "PFB" Then
             cell(1, 11).Interior.ColorIndex = 43
         End If
         
             If Left(cell.Value, 3) = "PFS" Then
             cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
+           If Left(cell.Value, 3) = "PFL" Then
+        cell(1, 11).Interior.ColorIndex = 43
         End If
         
             If Left(cell.Value, 3) = "PFR" Then
@@ -367,6 +375,17 @@ Set MyPlage = Range("A15:A1000")
         
         
         If Left(cell.Value, 3) = "SFV" Then
+        cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
+            If Left(cell.Value, 2) = "SF" Then
+        cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
+        '---------------LOCKOUT RELAY---------------------
+        
+        
+                If Left(cell.Value, 3) = "K86" Then
         cell(1, 11).Interior.ColorIndex = 43
         End If
         

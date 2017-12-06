@@ -168,11 +168,26 @@ Set MyPlage = Range("A15:A1000")
                        If Left(cell.Value, 3) = "PFR" And cell(1, 13).Value > 2 Then
         cell(1, 2).Interior.ColorIndex = 3
         End If
-                               If Left(cell.Value, 3) = "PFY" And cell(1, 13).Value > 2 Then
+        
+             If Left(cell.Value, 3) = "PFY" And cell(1, 13).Value > 2 Then
+        cell(1, 2).Interior.ColorIndex = 3
+        End If
+        
+        If Left(cell.Value, 3) = "SPM" And cell(1, 13).Value > 2 Then
+        cell(1, 2).Interior.ColorIndex = 3
+        End If
+        
+        If Left(cell.Value, 3) = "SFT" And cell(1, 13).Value > 2 Then
+        cell(1, 2).Interior.ColorIndex = 3
+        End If
+        
+        If Left(cell.Value, 3) = "STF" And cell(1, 13).Value > 2 Then
         cell(1, 2).Interior.ColorIndex = 3
         End If
 
-
+        If Left(cell.Value, 3) = "PFL" And cell(1, 13).Value > 2 Then
+        cell(1, 2).Interior.ColorIndex = 3
+        End If
 Next
 
 Set MyPlage = Range("D15:D1000")
@@ -194,7 +209,23 @@ Set MyPlage = Range("D15:D1000")
                       If Left(cell.Value, 3) = "PFY" And cell(1, 11).Value > 2 Then
         cell(1, 2).Interior.ColorIndex = 3
         End If
+            
+     
+                If Left(cell.Value, 3) = "SPM" And cell(1, 11).Value > 2 Then
+        cell(1, 2).Interior.ColorIndex = 3
+        End If
         
+              If Left(cell.Value, 3) = "SFT" And cell(1, 11).Value > 2 Then
+        cell(1, 2).Interior.ColorIndex = 3
+        End If
+        
+             If Left(cell.Value, 3) = "STF" And cell(1, 11).Value > 2 Then
+        cell(1, 2).Interior.ColorIndex = 3
+        End If
+             
+             If Left(cell.Value, 3) = "PFL" And cell(1, 11).Value > 2 Then
+        cell(1, 2).Interior.ColorIndex = 3
+        End If
      
 Next
 
