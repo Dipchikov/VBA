@@ -229,7 +229,7 @@ Set MyPlage = Range("A15:A1000")
     End If
     End If
          
-                    If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Wire jumper" Then
+                If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Wire jumper" Then
             cell(1, 9).Value = "Conductor / wire"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
@@ -840,10 +840,12 @@ Set MyPlage = Range("A15:A1000")
         End If
         End If
         
-                          If IsEmpty(cell(1, 7).Value) And cell.Value = "XDB1" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+          If IsEmpty(cell(1, 7).Value) And cell.Value = "XDB1" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
         XDB1 = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDB1
         cell(1, 8).Value = "bk"
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
         End If
         
         
