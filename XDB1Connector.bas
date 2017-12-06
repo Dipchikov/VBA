@@ -91,7 +91,7 @@ Next
     Set MyPlage = Range("A15:A1000")
         For Each cell In MyPlage
         
-         If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDB1" And cell(1, 4).Value = "XDB" Then
+         If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDB1" And Left(cell(1, 4).Value, 3) = "XDB" Then
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Value = "Direct connection"
@@ -100,6 +100,6 @@ Next
             End If
 
 
-Next
+        Next
             
 End Sub
