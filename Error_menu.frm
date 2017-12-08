@@ -24,6 +24,7 @@ Range("A15:N1000").Interior.ColorIndex = 0
 Swap.Swap
 Jumpers.Jumpers
 Errors.Errors
+tfm.tfm
 Legend_of_colours.Legend_of_colours
 Error_number_of_conections.Error_number_of_conections
 '------------------------- Jumpers clear cells"----------------------------------
