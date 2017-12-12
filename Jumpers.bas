@@ -813,25 +813,18 @@ Set myplage = Range("A15:A1000")
  
  
   '---------------------------Wire Bridges----------------------------------------------
-     If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And Not (cell(1, 9).Value = "Ponticello a filo" Or cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Conduttore/filo" Or cell(1, 9).Value = "Conductor / wire") Then
-        cell(1, 9).Value = "Wire jumper"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
   
   
 
    If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello a staffa" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
         End If
         End If
    If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello inseribile" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
@@ -839,14 +832,14 @@ Set myplage = Range("A15:A1000")
         End If
         
            If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Insertable jumper" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
         End If
         End If
    If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Saddle jumper" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
@@ -863,14 +856,14 @@ Set myplage = Range("A15:A1000")
         
         
            If cell.Value = "XDE" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello a staffa" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
         End If
         End If
    If cell.Value = "XDE" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello inseribile" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
@@ -878,14 +871,14 @@ Set myplage = Range("A15:A1000")
         End If
         
            If cell.Value = "XDE" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Insertable jumper" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
         End If
         End If
    If cell.Value = "XDE" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Saddle jumper" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
@@ -902,14 +895,14 @@ Set myplage = Range("A15:A1000")
         
         
            If cell.Value = "XDT" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello a staffa" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
         End If
         End If
    If cell.Value = "XDT" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello inseribile" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
@@ -917,14 +910,14 @@ Set myplage = Range("A15:A1000")
         End If
         
            If cell.Value = "XDT" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Insertable jumper" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
         End If
         End If
    If cell.Value = "XDT" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Saddle jumper" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
