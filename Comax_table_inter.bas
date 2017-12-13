@@ -58,6 +58,10 @@ Dim i As Long
             Final.Range("AN" & i - 4).Value = 1
             Final.Range("AP" & i - 4).Value = 1
             Final.Range("BC" & i - 4).Value = 1
+        '----------Cut for ferules-- StrippingLength-----------------
+            Final.Range("O" & i - 4).Value = 10
+            Final.Range("P" & i - 4).Value = 10
+            'Final.Range("BA" & i - 4).Value = 1
 
         End If
     Next i

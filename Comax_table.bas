@@ -20,7 +20,14 @@ soft_by_colour.soft_by_colour
       MsgBox "Please add Project number in cell G1!!!"
        Exit Sub
         End If
-      
+        
+    '-----------------------Legend_of_feruless-----------------
+    answer = MsgBox("Is this a Marine project?" & vbNewLine & "If this is Marine project then press - Yes", vbYesNo + vbQuestion, "Clear the table")
+    If answer = vbYes Then
+    Marine_Legend_of_feruless.Marine_Legend_of_feruless
+    Else
+    Legend_of_feruless.Legend_of_feruless
+    End If
       '--------------------------- Clar teble-----------------
 
     Final.Range("A2").Select
@@ -60,7 +67,10 @@ soft_by_colour.soft_by_colour
             Final.Range("AN" & i - 13).Value = 1
             Final.Range("AP" & i - 13).Value = 1
             Final.Range("BC" & i - 13).Value = 1
-   
+       '----------Cut for ferules-- StrippingLength-----------------
+       
+            Final.Range("O" & i - 13).Value = Data.Range("T" & i).Value
+            Final.Range("BA" & i - 13).Value = 1
         End If
     Next i
 
