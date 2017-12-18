@@ -1,17 +1,15 @@
 Attribute VB_Name = "Legend_of_feruless"
 Sub Legend_of_feruless()
-
+Application.ScreenUpdating = False
 On Error Resume Next
-Set Final = Sheets("Comax")
-'------------------CLEAR COLOUR FIRST -------------------------
-
-If Not (Range("L:L10000").Value = "-" Or Range("L:L10000").Value = "Shielded cable") Then
+ Range("T14:T951").Select
+Selection.ClearContents
 
 
 '------------------Inside Wiring -------------------------
 
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A14:A1000")
 
     For Each cell In MyPlage
     
@@ -82,7 +80,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         
         If Left(cell.Value, 3) = "FCM" And Not (cell(1, 2).Value = 13 Or cell(1, 2).Value = 14 Or cell(1, 2).Value = 21 Or cell(1, 2).Value = 22) Then
-            cell(1, 20).Value = 15
+            cell(1, 20).Value = 14
         End If
                 If Left(cell.Value, 3) = "FCM" And (cell(1, 2).Value = 13 Or cell(1, 2).Value = 14 Or cell(1, 2).Value = 21 Or cell(1, 2).Value = 22) Then
             cell(1, 20).Value = 10
@@ -98,11 +96,11 @@ Set MyPlage = Range("A15:A1000")
 
         
         If cell.Value = "XDA" Then
-        cell(1, 20).Value = 15
+        cell(1, 20).Value = 14
         End If
 
         If cell.Value = "XDV" Then
-        cell(1, 20).Value = 15
+        cell(1, 20).Value = 14
         End If
 
         If Left(cell.Value, 3) = "XDI" Then
@@ -187,7 +185,7 @@ Set MyPlage = Range("A15:A1000")
     '----------------------------Door Wireing ----------------------------
     
     
-    Set MyPlage = Range("A15:A1000")
+    Set MyPlage = Range("A14:A1000")
         For Each cell In MyPlage
         
             If Left(cell.Value, 3) = "SPM" Then
@@ -328,12 +326,12 @@ Set MyPlage = Range("A15:A1000")
 
  '---------------------Wireing - 'Ref protection-----------------
  
-    Set MyPlage = Range("A15:A1000")
+    Set MyPlage = Range("A14:A1000")
 
     For Each cell In MyPlage
 
         If Left(cell.Value, 2) = "AA" And Left(cell(1, 2).Value, 5) = "-X130" Then
-            cell(1, 20).Value = 15
+            cell(1, 20).Value = 14
         End If
         If Left(cell.Value, 2) = "AA" And Not Left(cell(1, 2).Value, 5) = "-X130" Then
             cell(1, 20).Value = 10
@@ -384,7 +382,6 @@ Set MyPlage = Range("A15:A1000")
         
     Next
     
-    
-End If
+Application.ScreenUpdating = True
 
 End Sub

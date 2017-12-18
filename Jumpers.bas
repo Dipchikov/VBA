@@ -6,9 +6,9 @@ Application.ScreenUpdating = False
 
  '------------------Jumpers Primery -------------------------
  
-Set myplage = Range("G15:G1000")
+Set MyPlage = Range("G15:G1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
    If cell.Value = "Bridge" Then
             cell(1, 3).Value = "Insertable jumper"
@@ -19,11 +19,11 @@ Set myplage = Range("G15:G1000")
 '----------------- minimal wires crossection   --------------------
 Dim wire As String
 
-Set myplage = Range("G15:G1000")
+Set MyPlage = Range("G15:G1000")
 
 
 wire = InputBox("Please add minimal cross-section of conductors", "Read the General Arrangement Drawings", 1)
-For Each cell In myplage
+For Each cell In MyPlage
  If Not IsEmpty(cell.Value) And cell.Value < wire Then
  If Not (cell(1, 6).Value = "-" Or cell(1, 6).Value = "Shielded cable") Then
  cell.Value = wire
@@ -39,9 +39,9 @@ Next
 
 '---------------------------clear cells BAT-FCF -QAB -BGT -QCE -BCT- BCN- BAD- EB- EA-----------------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BAT" Then
             cell(1, 7).ClearContents
@@ -122,9 +122,9 @@ Set myplage = Range("A15:A1000")
        Next
                  
                  
- Set myplage = Range("D15:D1000")
+ Set MyPlage = Range("D15:D1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
     
 
           If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "BAT" Then
@@ -171,9 +171,9 @@ Set myplage = Range("A15:A1000")
         Next
  '------------------Jumpers between equipment -------------------------
  
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
    If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
             cell(1, 9).Value = "Conduttore/filo"
@@ -247,9 +247,9 @@ Set myplage = Range("A15:A1000")
         
  '------------------XDA -------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         
            If Left(cell.Value, 3) = "XDA" And cell.Value = cell(1, 4).Value Then
@@ -283,9 +283,9 @@ Set myplage = Range("A15:A1000")
         
 '------------------XDV -------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         
            If Left(cell.Value, 3) = "XDV" And cell.Value = cell(1, 4).Value Then
@@ -319,20 +319,20 @@ Set myplage = Range("A15:A1000")
      '------------------XDC -------------------------
 
     
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         
            If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello a staffa" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
         End If
         End If
    If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello inseribile" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
@@ -340,14 +340,14 @@ Set myplage = Range("A15:A1000")
         End If
         
            If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
         End If
         End If
    If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
@@ -355,11 +355,26 @@ Set myplage = Range("A15:A1000")
         End If
         
                  If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDC" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
-                 
         XDC = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDC
         cell(1, 8).Value = "bk"
         End If
+        
+   If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And IsEmpty(cell(1, 7).Value) Then
+    answer = MsgBox("Is posible to have XDC matal jumper?" & vbNewLine & "If this is posible to have XDC matal jumper - Yes", vbYesNo + vbQuestion, "Clear the table")
+    If answer = vbNo Then
+    XDC = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
+        cell(1, 7).Value = XDC
+        cell(1, 8).Value = "bk"
+        cell(1, 9).Value = "Wire jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        Else
+        End If
+        End If
+        End If
+
 
     Next
  
@@ -368,9 +383,9 @@ Set myplage = Range("A15:A1000")
  
      '------------------XDM -------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         
            If Left(cell.Value, 3) = "XDM" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
@@ -403,9 +418,9 @@ Set myplage = Range("A15:A1000")
  
  '--------------------------------------PGA to PGW------------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         
            If Left(cell.Value, 2) = "PG" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
@@ -439,9 +454,9 @@ Set myplage = Range("A15:A1000")
  
  '--------------------------------------Selector Switch------------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         
            If Left(cell.Value, 2) = "SF" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
@@ -474,9 +489,9 @@ Set myplage = Range("A15:A1000")
  
  '--------------------------------------BT- Thermostat------------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         
            If Left(cell.Value, 2) = "BT" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
@@ -509,9 +524,9 @@ Set myplage = Range("A15:A1000")
  
  '--------------------------------------TB------------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
         
            If Left(cell.Value, 2) = "TB" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
@@ -544,9 +559,9 @@ Set myplage = Range("A15:A1000")
 
 '------------------XDI -------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
 
             If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
@@ -668,9 +683,9 @@ Set myplage = Range("A15:A1000")
         
         Next
     '--------------------------------------RAR------------------------------
-    Set myplage = Range("A15:A1000")
+    Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
           If Left(cell.Value, 3) = "RAR" Then
           answer = MsgBox("Do you want to clear section between " & cell(1, 3).Value & " and " & cell(1, 6).Value, vbYesNo + vbQuestion, "RAR section")
@@ -682,9 +697,9 @@ Set myplage = Range("A15:A1000")
  Next
                  
                  
- Set myplage = Range("D15:D1000")
+ Set MyPlage = Range("D15:D1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
     
 
           If Left(cell.Value, 3) = "RAR" Then
@@ -698,9 +713,9 @@ Next
 
 '------------------XDX -------------------------
 
-Set myplage = Range("A15:A1000")
+Set MyPlage = Range("A15:A1000")
 
-    For Each cell In myplage
+    For Each cell In MyPlage
 
 
           If Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then

@@ -35,6 +35,10 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 40
         End If
         
+         If Left(cell.Value, 2) = "PJ" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
                   If Left(cell.Value, 2) = "PE" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If

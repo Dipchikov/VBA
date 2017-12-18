@@ -1,5 +1,7 @@
 Attribute VB_Name = "formula"
 Sub formula()
+On Error Resume Next
+ActiveSheet.ShowAllData
 Columns("C:C").Select
     Selection.NumberFormat = "General"
     Columns("F:F").Select

@@ -372,40 +372,49 @@ Set MyPlage = Range("A15:A1000")
   
         
             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 10 And cell(1, 5).Value = 11 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+            answer = MsgBox("Is the connection between XDV:10 and XDV:11  is with wire jumper ?", vbYesNo + vbQuestion, "-XDV jumpers")
+            If answer = vbYes Then
             cell(1, 9).Value = "Wire jumper"
             cell(1, 7).Value = "1,5"
             cell(1, 8).Value = "bk"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
-            
-   answer = MsgBox("Please check connection XDV:10 to XDV:11 if not wire jumper then remove ection and colour!!!", vbYes + vbQuestion, "")
+            Else
  End If
+ End If
+ 
              If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 10 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+            answer = MsgBox("Is the connection between XDV:10 and XDV:11  is with wire jumper ?", vbYesNo + vbQuestion, "-XDV jumpers")
+            If answer = vbYes Then
             cell(1, 9).Value = "Wire jumper"
             cell(1, 7).Value = "1,5"
             cell(1, 8).Value = "bk"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
-   answer = MsgBox("Please check connection XDV:10 to XDV:11 if not wire jumper then remove ection and colour!!!", vbYes + vbQuestion, "")
+End If
  End If
           
              If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 12 And cell(1, 5).Value = 13 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+            answer = MsgBox("Is the connection between XDV:12 and XDV:13  is with wire jumper ?", vbYesNo + vbQuestion, "-XDV jumpers")
+            If answer = vbYes Then
             cell(1, 9).Value = "Wire jumper"
             cell(1, 7).Value = "1,5"
             cell(1, 8).Value = "bk"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
-   answer = MsgBox("Please check connection XDV:12 to XDV:13 if not wire jumper then remove section and colour!!!", vbYes + vbQuestion, "")
+  End If
  End If
              If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 13 And cell(1, 5).Value = 12 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+            answer = MsgBox("Is the connection between XDV:12 and XDV:13  is with wire jumper ?", vbYesNo + vbQuestion, "-XDV jumpers")
+            If answer = vbYes Then
             cell(1, 9).Value = "Wire jumper"
             cell(1, 7).Value = "1,5"
             cell(1, 8).Value = "bk"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
-   answer = MsgBox("Please check connection XDV:12 to XDV:13 if not wire jumper then remove section and colour!!!", vbYes + vbQuestion, "")
+   
  End If
-                    
+    End If
 
     
     

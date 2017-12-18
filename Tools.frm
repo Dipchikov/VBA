@@ -151,7 +151,7 @@ End Sub
 
 Private Sub UserForm_Initialize()
 
-    Label8.Caption = "created by Hristo Dipchikov © vB10"
+    Label8.Caption = "created by Hristo Dipchikov © vR1.0"
     Me.StartUpPosition = 0
     Me.Top = 130
     Me.Left = Application.Left - 50 + Application.Width - Me.Width

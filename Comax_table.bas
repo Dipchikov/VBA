@@ -22,7 +22,7 @@ soft_by_colour.soft_by_colour
         End If
         
     '-----------------------Legend_of_feruless-----------------
-    answer = MsgBox("Is this a Marine project?" & vbNewLine & "If this is Marine project then press - Yes", vbYesNo + vbQuestion, "Clear the table")
+    answer = MsgBox("Is this a Marine project?" & vbNewLine & "And if this is a Marine project then press - Yes", vbYesNo + vbQuestion, "Comax table")
     If answer = vbYes Then
     Marine_Legend_of_feruless.Marine_Legend_of_feruless
     Else
@@ -72,7 +72,7 @@ soft_by_colour.soft_by_colour
             Final.Range("O" & i - 13).Value = Data.Range("T" & i).Value
             Final.Range("BA" & i - 13).Value = 1
         End If
-    Next i
+        Next i
 
 
 
