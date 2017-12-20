@@ -105,12 +105,12 @@ Set MyPlage = Range("A15:A1000")
             cell(1, 9).Font.Bold = True
         End If
         
-              'If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EB" Then
-           ' cell(1, 7).ClearContents
-           ' cell(1, 8).ClearContents
-           ' cell(1, 9).Font.ColorIndex = 3
-           ' cell(1, 9).Font.Bold = True
-       ' End If
+         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EB" Then
+            cell(1, 7).ClearContents
+            cell(1, 8).ClearContents
+            cell(1, 9).Font.ColorIndex = 3
+            cell(1, 9).Font.Bold = True
+        End If
         
                     '  If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EA" Then
           '  cell(1, 7).ClearContents
