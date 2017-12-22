@@ -61,26 +61,10 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 40
         End If
         
-                          If Left(cell.Value, 2) = "TS" Then
+          If Left(cell.Value, 2) = "TS" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
-         '  If cell.Value = "AA1" Then
-        'cell(1, 11).Interior.ColorIndex = 40
-        'End If
-        
-                   'If cell.Value = "AA2" Then
-        'cell(1, 11).Interior.ColorIndex = 40
-       ' End If
-        
-                   'If cell.Value = "AA3" Then
-        'cell(1, 11).Interior.ColorIndex = 40
-        'End If
-        
-                
-                   'If cell.Value = "AA4" Then
-        'cell(1, 11).Interior.ColorIndex = 40
-        'End If
-        
+    
                 If cell.Value = "XDB1" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
@@ -200,6 +184,13 @@ Set MyPlage = Range("A15:A1000")
            If Left(cell.Value, 3) = "XDS" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
+        
+        '------------When we have AA1 to  AA19--------------------
+        
+                  If Left(cell.Value, 2) = "AA" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
         
     Next
     
@@ -406,7 +397,7 @@ Set MyPlage = Range("A15:A1000")
 
     For Each cell In MyPlage
 
-        If Left(cell.Value, 2) = "AA" Then
+        If cell.Value = "AA" Then
             cell(1, 11).Interior.ColorIndex = 44
         End If
         If Left(cell.Value, 3) = "BCR" Then
