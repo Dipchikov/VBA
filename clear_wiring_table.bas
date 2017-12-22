@@ -10,7 +10,7 @@ ActiveSheet.ShowAllData
 '
 ' delete Macro
 '
-answer = MsgBox("Are you sure you want to clear the table? Did you press the Routing botton?", vbYesNo + vbQuestion, "Clear the table")
+answer = MsgBox("Are you sure you want to clear the table?" & vbNewLine & "Did you press the Routing botton?", vbYesNo + vbQuestion, "Clear the table")
 If answer = vbYes Then
 
 Range("A15:N1000").Interior.ColorIndex = 0
@@ -20,6 +20,8 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Range("O12").Select
     Selection.ClearContents
     Range("A15:L951").Select
+    Selection.ClearContents
+    Range("T15:T951").Select
     Selection.ClearContents
     Columns("C:C").Select
     Selection.NumberFormat = "General"
@@ -118,7 +120,7 @@ Range("A15:N1000").Interior.ColorIndex = 0
      
         Range("L15").Select
     ActiveCell.FormulaR1C1 = _
-        "=IFNA(INDEX(INDIRECT(R12C13),MATCH(RC[-4],'Type of cables '!R2C1:R15C1,0),MATCH(RC[-5],'Type of cables '!R2C1:R2C15,0)),""-"")"
+        "=IFNA(INDEX(INDIRECT(R12C13),MATCH(RC[-4],'Type of cables '!R2C1:R20C1,0),MATCH(RC[-5],'Type of cables '!R2C1:R2C20,0)),""-"")"
     Range("L15").Select
     Selection.AutoFill Destination:=Range("L15:L951")
     Range("L15:L951").Select
