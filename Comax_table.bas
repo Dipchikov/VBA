@@ -3,6 +3,7 @@ Sub Comax_table()
 
  On Error Resume Next
 If ActiveSheet.Name = "Wiring table" Then
+formula.formula
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 Set Data = Sheets("Wiring table")
@@ -10,6 +11,7 @@ Set Final = Sheets("Comax")
 Data.Active
 Data.ShowAllData
 Swap.Swap
+
 soft_by_colour.soft_by_colour
 
        If IsEmpty(Worksheets("Wiring table").Range("B1")) Then
