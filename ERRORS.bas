@@ -3,16 +3,7 @@ Sub Errors()
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 
-'---------fix cable-----------------
-Set MyPlage = Range("H15:H1000")
-  For Each cell In MyPlage
-  
-        
-    If (cell.Value = "black" Or cell.Value = "BLACK") Then
-        cell.Value = "bk"
-        End If
-        
-    Next
+
 '------------------XDA -------------------------
 'Range("G7:H1000").Interior.ColorIndex = 0
 Set MyPlage = Range("A15:A1000")
@@ -377,7 +368,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 10 And cell(1, 5).Value = 11 And Not (cell(1, 9).Value = "Wire jumper") Then
+            If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 10 And cell(1, 5).Value = 11 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
             answer = MsgBox("Is the connection between XDV:10 and XDV:11  is with wire jumper ?", vbYesNo + vbQuestion, "-XDV jumpers")
             If answer = vbYes Then
             cell(1, 9).Value = "Wire jumper"
@@ -389,7 +380,7 @@ Set MyPlage = Range("A15:A1000")
  End If
  End If
  
-             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 10 And Not (cell(1, 9).Value = "Wire jumper") Then
+             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 10 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
             answer = MsgBox("Is the connection between XDV:10 and XDV:11  is with wire jumper ?", vbYesNo + vbQuestion, "-XDV jumpers")
             If answer = vbYes Then
             cell(1, 9).Value = "Wire jumper"
@@ -400,7 +391,7 @@ Set MyPlage = Range("A15:A1000")
 End If
  End If
           
-             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 12 And cell(1, 5).Value = 13 And Not (cell(1, 9).Value = "Wire jumper") Then
+             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 12 And cell(1, 5).Value = 13 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
             answer = MsgBox("Is the connection between XDV:12 and XDV:13  is with wire jumper ?", vbYesNo + vbQuestion, "-XDV jumpers")
             If answer = vbYes Then
             cell(1, 9).Value = "Wire jumper"
@@ -410,7 +401,7 @@ End If
             cell(1, 9).Font.Bold = True
   End If
  End If
-             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 13 And cell(1, 5).Value = 12 And Not (cell(1, 9).Value = "Wire jumper") Then
+             If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 13 And cell(1, 5).Value = 12 And Not (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
             answer = MsgBox("Is the connection between XDV:12 and XDV:13  is with wire jumper ?", vbYesNo + vbQuestion, "-XDV jumpers")
             If answer = vbYes Then
             cell(1, 9).Value = "Wire jumper"

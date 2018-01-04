@@ -1,6 +1,9 @@
 Attribute VB_Name = "Translate"
 Sub translate()
+Application.ScreenUpdating = False
+Application.Calculation = xlCalculationManual
 
+ '---------Italian to English----------------
 Set MyPlage = Range("I15:I1000")
 
     For Each cell In MyPlage
@@ -29,7 +32,21 @@ Set MyPlage = Range("I15:I1000")
         If cell.Value = "Conduttore / filo" Then
         cell.Value = "Conductor / wire"
         End If
-        
-        
+  
         Next
+        
+        '---------fix cable----------------
+        
+    Set MyPlage = Range("H15:H1000")
+    For Each cell In MyPlage
+  
+        
+    If (cell.Value = "black" Or cell.Value = "BLACK") Then
+        cell.Value = "bk"
+        End If
+        
+    Next
+        
+        Application.ScreenUpdating = True
+        Application.Calculation = xlCalculationAutomatic
 End Sub

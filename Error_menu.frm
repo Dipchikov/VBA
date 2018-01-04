@@ -21,7 +21,6 @@ Private Sub CommandButton2_Click()
 Application.ScreenUpdating = False
 If CheckBox3.Value = True Then
 Range("A15:N1000").Interior.ColorIndex = 0
-translate.translate
 Swap.Swap
 Jumpers.Jumpers
 Errors.Errors
