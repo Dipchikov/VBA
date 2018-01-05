@@ -18,6 +18,7 @@ Private Sub CheckBox3_Click()
 End Sub
 
 Private Sub CommandButton2_Click()
+translate.translate
 Application.ScreenUpdating = False
 If CheckBox3.Value = True Then
 Range("A15:N1000").Interior.ColorIndex = 0
