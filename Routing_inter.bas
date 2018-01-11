@@ -5,7 +5,7 @@ Set MyPlage = Worksheets("Routing").Range("A15:A1000")
 
     For Each cell In MyPlage
     If IsEmpty(Worksheets("Interconnections").Range("B2")) Then
-        MsgBox "Please add scheme number in cell B2!!!"
+        Rou = MsgBox("Please add scheme number in cell B2!!!", vbExclamation)
             Exit Sub
           
             End If

@@ -5,9 +5,10 @@ On Error Resume Next
 
 '------------------------------------auto filter--------------------------------------
     ActiveSheet.ShowAllData
+        lr = Range("A" & Rows.Count).End(xlUp).Row
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Clear
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add Key _
-        :=Range("A14:A551"), SortOn:=xlSortOnValues, Order:=xlAscending, _
+        :=Range("A14:A" & lr), SortOn:=xlSortOnValues, order:=xlAscending, _
         DataOption:=xlSortNormal
     With ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort
         .Header = xlYes
@@ -227,6 +228,10 @@ Set MyPlage = Range("A15:A1000")
             cell(1, 8).Interior.ColorIndex = 37
         End If
                If cell.Value = "XDB89" Then
+            cell(1, 8).Interior.ColorIndex = 37
+        End If
+        
+             If cell.Value = "XDB90" Then
             cell(1, 8).Interior.ColorIndex = 37
         End If
 

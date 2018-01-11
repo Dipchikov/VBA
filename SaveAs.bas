@@ -5,14 +5,14 @@ Sub SaveAs()
 '---------------------------------
 If ActiveSheet.Name = "Wiring table" Then
 
-Routing_inter.Routing_inter
+
 
     Dim lr As Long
     Dim InitialFoldr$
      ActiveWorkbook.Save
     
        If IsEmpty(Worksheets("Wiring table").Range("B1")) Then
-        MsgBox "Please add scheme number in cell B1!!!"
+        OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbExclamation)
         Exit Sub
         End If
     
@@ -75,3 +75,4 @@ ActiveWorkbook.SaveAs sFileSaveName
 End If
 End If
 End Sub
+

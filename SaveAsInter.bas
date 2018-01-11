@@ -7,15 +7,18 @@ If ActiveSheet.Name = "Interconnections" Then
     Dim lr As Long
     Dim InitialFoldr$
 
-        If IsEmpty(Worksheets("Interconnections").Range("B1")) Then
-        MsgBox "Please add scheme number in cell B1!!!"
-        Exit Sub
-        End If
-       If IsEmpty(Worksheets("Interconnections").Range("B2")) Then
-        MsgBox "Please add scheme number in cell B2!!!"
-        Exit Sub
 
+       If IsEmpty(Worksheets("Interconnections").Range("B1")) Then
+        OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbExclamation)
+        Exit Sub
         End If
+     If IsEmpty(Worksheets("Interconnections").Range("B2")) Then
+      OutPut = MsgBox("Please add Project number in cell B2!!!", vbOKOnly + vbExclamation)
+       Exit Sub
+       End If
+
+
+       
      On Error Resume Next
     
     ActiveWorkbook.Save

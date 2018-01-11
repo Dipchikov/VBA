@@ -5,6 +5,15 @@ Sub Comax_table_inter()
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 If ActiveSheet.Name = "Interconnections" Then
+       If IsEmpty(Worksheets("Interconnections").Range("B1")) Then
+        OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbCritical)
+        Exit Sub
+        End If
+     If IsEmpty(Worksheets("Interconnections").Range("B2")) Then
+      OutPut = MsgBox("Please add Project number in cell B2!!!", vbOKOnly + vbCritical)
+       Exit Sub
+       End If
+
 Set Data = Sheets("Interconnections")
 Set Final = Sheets("Comax")
 Data.Active
@@ -12,14 +21,7 @@ Data.ShowAllData
 Swap.Swap
 soft_by_colour.soft_by_colour
 
-       If IsEmpty(Worksheets("Interconnections").Range("B1")) Then
-        MsgBox "Please add scheme number in cell B1!!!"
-        Exit Sub
-        End If
-     If IsEmpty(Worksheets("Interconnections").Range("B2")) Then
-      MsgBox "Please add Project number in cell B2!!!"
-       Exit Sub
-        End If
+
         
 
         
@@ -61,7 +63,7 @@ Dim i As Long
         '----------Cut for ferules-- StrippingLength-----------------
             Final.Range("O" & i - 4).Value = 10
             Final.Range("P" & i - 4).Value = 10
-            'Final.Range("BA" & i - 4).Value = 1
+            Final.Range("BA" & i - 4).Value = 1
 
         End If
     Next i

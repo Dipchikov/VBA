@@ -20,7 +20,7 @@ End Sub
 Private Sub CommandButton2_Click()
 
 If CheckBox1.Value = True And CheckBox2.Value = True Then
-answer = MsgBox("You can select only one option in XDB !!!", vbOKOnly + vbQuestion, "Option in XDB")
+answer = MsgBox("You can select only one option in XDB !!!", vbOKOnly + vbExclamation, "Option in XDB")
 If answer = vbOK Then
 Exit Sub
 End If
@@ -36,7 +36,9 @@ Jumpers.Jumpers
 Errors.Errors
 tfm.tfm
 Legend_of_colours.Legend_of_colours
+soft_by_colour.soft_by_colour
 Error_number_of_conections.Error_number_of_conections
+
 
 '------------------------- Jumpers clear cells"----------------------------------
  End If
@@ -65,7 +67,7 @@ If CheckBox1.Value = True And CheckBox2.Value = False Then
        ErrorsRefs.ErrorsRefs
   End If
 CountColorValue.CountColorValue
-MsgBox "Now" & vbNewLine & "1. Check Ref numbers of connections" & vbNewLine & "2. Chack all metal jumpes for XDA ,XDV ,XDI,XDX and numbers of conections for them" & vbNewLine & "3. Check all wires sections"
+info = MsgBox("Now:" & vbNewLine & "1. Check Ref numbers of connections." & vbNewLine & "2. Chack all metal jumpes for XDA ,XDV ,XDI,XDX and numbers of conections for them." & vbNewLine & "3. Check all wires sections.", vbExclamation)
 Application.ScreenUpdating = True
 Unload Me
 End Sub

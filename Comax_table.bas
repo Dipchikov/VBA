@@ -3,6 +3,16 @@ Sub Comax_table()
 
  On Error Resume Next
 If ActiveSheet.Name = "Wiring table" Then
+
+       If IsEmpty(Worksheets("Wiring table").Range("B1")) Then
+        OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbCritical)
+        Exit Sub
+        End If
+     If IsEmpty(Worksheets("Wiring table").Range("G1")) Then
+      OutPut = MsgBox("Please add Project number in cell G1!!!", vbOKOnly + vbCritical)
+       Exit Sub
+        End If
+
 formula.formula
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
@@ -11,17 +21,10 @@ Set Final = Sheets("Comax")
 Data.Active
 Data.ShowAllData
 Swap.Swap
-
+Legend_of_colours.Legend_of_colours
 soft_by_colour.soft_by_colour
 
-       If IsEmpty(Worksheets("Wiring table").Range("B1")) Then
-        MsgBox "Please add scheme number in cell B1!!!"
-        Exit Sub
-        End If
-     If IsEmpty(Worksheets("Wiring table").Range("G1")) Then
-      MsgBox "Please add Project number in cell G1!!!"
-       Exit Sub
-        End If
+
         
     '-----------------------Legend_of_feruless-----------------
     answer = MsgBox("Is this a Marine project?" & vbNewLine & "And if this is a Marine project then press - Yes", vbYesNo + vbQuestion, "Comax table")

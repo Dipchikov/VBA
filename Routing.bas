@@ -4,7 +4,7 @@ Set MyPlage = Worksheets("Routing").Range("A15:A1000")
 
     For Each cell In MyPlage
         If IsEmpty(Worksheets("Wiring table").Range("B1")) Then
-        MsgBox "Please add scheme number in cell B1!!!"
+        rou = MsgBox("Please add scheme number in cell B1!!!", vbExclamation)
             Exit Sub
             End If
           If cell.Value = Worksheets("Wiring table").Range("B1") Then
