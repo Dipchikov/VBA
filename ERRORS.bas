@@ -388,8 +388,8 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If cell.Value = "XDB91" Then
-answer = MsgBox("Please check for other connection between XDB93 and XDB91!!!", vbYes + vbQuestion, "")
+If cell.Value = "XDB91" Then
+answer = MsgBox("Please check for other connection between XDB93 and XDB91!!!", vbOKOnly + vbExclamation, "Connection between XDB93 and XDB91")
  End If
 
           
@@ -397,27 +397,12 @@ Next
 Set MyPlage = Range("D15:D1000")
   For Each cell In MyPlage
   
-        
-            If cell.Value = "XDB91" Then
-answer = MsgBox("Please check for other connection between XDB93 and XDB91!!!", vbYes + vbQuestion, "")
+ If cell.Value = "XDB91" Then
+answer = MsgBox("Please check for other connection between XDB93 and XDB91!!!", vbOKOnly + vbExclamation, "Connection between XDB93 and XDB91")
  End If
 
           
 Next
-
- 
-
-Set MyPlage = Range("D15:D1000")
-  For Each cell In MyPlage
-  
-        
-            If cell.Value = "XDB91" Then
-answer = MsgBox("Please check for other connection between XDB93 and XDB91!!!", vbYes + vbQuestion, "")
- End If
-
-          
-Next
-
 
 
 
