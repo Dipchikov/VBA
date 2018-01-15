@@ -6,11 +6,11 @@ Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 If ActiveSheet.Name = "Interconnections" Then
        If IsEmpty(Worksheets("Interconnections").Range("B1")) Then
-        OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbCritical)
+        OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbExclamation)
         Exit Sub
         End If
      If IsEmpty(Worksheets("Interconnections").Range("B2")) Then
-      OutPut = MsgBox("Please add Project number in cell B2!!!", vbOKOnly + vbCritical)
+      OutPut = MsgBox("Please add Project number in cell B2!!!", vbOKOnly + vbExclamation)
        Exit Sub
        End If
 
@@ -18,15 +18,11 @@ Set Data = Sheets("Interconnections")
 Set Final = Sheets("Comax")
 Data.Active
 Data.ShowAllData
-Swap.Swap
-soft_by_colour.soft_by_colour
+'Swap.Swap
+'soft_by_colour.soft_by_colour
 
 
-        
 
-        
-     
-    
       '--------------------------- Clar teble-----------------
 
     Final.Range("A2").Select

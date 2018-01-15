@@ -5,11 +5,11 @@ Sub Comax_table()
 If ActiveSheet.Name = "Wiring table" Then
 
        If IsEmpty(Worksheets("Wiring table").Range("B1")) Then
-        OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbCritical)
+        OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbExclamation)
         Exit Sub
         End If
      If IsEmpty(Worksheets("Wiring table").Range("G1")) Then
-      OutPut = MsgBox("Please add Project number in cell G1!!!", vbOKOnly + vbCritical)
+      OutPut = MsgBox("Please add Project number in cell G1!!!", vbOKOnly + vbExclamation)
        Exit Sub
         End If
 
@@ -21,8 +21,9 @@ Set Final = Sheets("Comax")
 Data.Active
 Data.ShowAllData
 Swap.Swap
-Legend_of_colours.Legend_of_colours
-soft_by_colour.soft_by_colour
+
+'Legend_of_colours.Legend_of_colours
+'soft_by_colour.soft_by_colour
 
 
         
