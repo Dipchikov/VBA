@@ -196,12 +196,10 @@ Next
     Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
-        
             If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDI8" And cell(1, 7).Value < 4 Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = 4
-
         End If
        
  Next
@@ -227,11 +225,12 @@ Next
   
         
             If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDI2" And cell(1, 7).Value < "2,5" Then
+            If Not Left(cell(1, 5).Value, 1) = "A" Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = "2,5"
         End If
-              
+        End If
 Next
 
     Set MyPlage = Range("D15:D1000")
@@ -239,10 +238,11 @@ Next
   
         
             If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDI2" And cell(1, 4).Value < "2,5" Then
+            If Not Left(cell.Offset(1, -2).Value, 1) = "A" Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = "2,5"
-
+        End If
         End If
                
 
@@ -255,11 +255,12 @@ Set MyPlage = Range("A15:A1000")
   
         
             If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDI3" And cell(1, 7).Value < "2,5" Then
+            If Not Left(cell(1, 5).Value, 1) = "A" Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = "2,5"
         End If
-                
+        End If
 Next
         
     Set MyPlage = Range("D15:D1000")
@@ -267,11 +268,12 @@ Next
   
         
             If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDI3" And cell(1, 4).Value < "2,5" Then
+            If Not Left(cell.Offset(1, -2).Value, 1) = "A" Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = "2,5"
         End If
-               
+        End If
 Next
          
       '--------------------------------PGA--------------------------------------------
