@@ -57,10 +57,16 @@ Dim i As Long
             Final.Range("AP" & i - 4).Value = 1
             Final.Range("BC" & i - 4).Value = 1
         '----------Cut for ferules-- StrippingLength-----------------
+        If Not Data.Range("H" & i).Value = 4 Then
             Final.Range("O" & i - 4).Value = 10
             Final.Range("P" & i - 4).Value = 10
             Final.Range("BA" & i - 4).Value = 1
-
+            Else
+            Final.Range("O" & i - 4).Value = 12
+            Final.Range("P" & i - 4).Value = 12
+            Final.Range("BA" & i - 4).Value = 1
+        End If
+        
         End If
     Next i
     

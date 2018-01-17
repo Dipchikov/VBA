@@ -46,20 +46,20 @@ Set MyPlage = Range("A14:A1000")
         cell(1, 20).Value = 10
         End If
          '  If cell.Value = "AA1" Then
-        'cell(1, 20).value = 10
+        'cell(1, 20).Value = 10
         'End If
         
                    'If cell.Value = "AA2" Then
-        'cell(1, 20).value = 10
+        'cell(1, 20).Value = 10
        ' End If
         
                    'If cell.Value = "AA3" Then
-        'cell(1, 20).value = 10
+        'cell(1, 20).Value = 10
         'End If
         
                 
                    'If cell.Value = "AA4" Then
-        'cell(1, 20).value = 10
+        'cell(1, 20).Value = 10
         'End If
         
                 If cell.Value = "XDB1" Then
@@ -335,49 +335,101 @@ Set MyPlage = Range("A14:A1000")
         If Left(cell.Value, 2) = "AA" And Left(cell(1, 2).Value, 5) = "-X130" Then
             cell(1, 20).Value = 14
         End If
-        If Left(cell.Value, 2) = "AA" And Not Left(cell(1, 2).Value, 5) = "-X130" Then
+        If Left(cell.Value, 2) = "AA" And Not Left(cell(1, 2).Value, 5) = "-X130" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
+        End If
+            If Left(cell.Value, 2) = "AA" And Not Left(cell(1, 2).Value, 5) = "-X130" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 14
         End If
         
         
-        If Left(cell.Value, 3) = "BCR" Then
+           If Left(cell.Value, 3) = "BCR" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-                If Left(cell.Value, 3) = "BET" Then
+            If Left(cell.Value, 3) = "BCR" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+        
+                If Left(cell.Value, 3) = "BET" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-             If Left(cell.Value, 3) = "BCP" Then
+          If Left(cell.Value, 3) = "BET" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+
+             If Left(cell.Value, 3) = "BCP" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-             If Left(cell.Value, 3) = "BCM" Then
+             If Left(cell.Value, 3) = "BCP" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+        
+             If Left(cell.Value, 3) = "BCM" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-            If Left(cell.Value, 3) = "BCG" Then
+                     If Left(cell.Value, 3) = "BCM" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+            If Left(cell.Value, 3) = "BCG" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-            If Left(cell.Value, 3) = "BCD" Then
+             If Left(cell.Value, 3) = "BCG" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+        
+            If Left(cell.Value, 3) = "BCD" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-            If Left(cell.Value, 3) = "BCF" Then
+                    If Left(cell.Value, 3) = "BCD" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+        
+            If Left(cell.Value, 3) = "BCF" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-            If Left(cell.Value, 3) = "BCP" Then
+                    If Left(cell.Value, 3) = "BCF" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+        
+            If Left(cell.Value, 3) = "BCP" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-             If Left(cell.Value, 3) = "BCZ" Then
+                    If Left(cell.Value, 3) = "BCP" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+        
+        
+             If Left(cell.Value, 3) = "BCZ" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-            If Left(cell.Value, 3) = "BEF" Then
+                     If Left(cell.Value, 3) = "BCZ" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+        
+            If Left(cell.Value, 3) = "BEF" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-             If Left(cell.Value, 3) = "BER" Then
+             If Left(cell.Value, 3) = "BEF" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+        
+             If Left(cell.Value, 3) = "BER" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-             If Left(cell.Value, 3) = "BES" Then
+              If Left(cell.Value, 3) = "BER" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+             If Left(cell.Value, 3) = "BES" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-            If Left(cell.Value, 3) = "BAR" Then
+             If Left(cell.Value, 3) = "BES" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
+        End If
+            If Left(cell.Value, 3) = "BAR" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
+        End If
+            If Left(cell.Value, 3) = "BAR" And cell(1, 7).Value = 4 Then
+            cell(1, 20).Value = 12
         End If
         
         

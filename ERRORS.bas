@@ -175,8 +175,7 @@ If Left(cell.Value, 3) = "FCM" And cell(1, 2).Value = 3 And cell(1, 4).Value = "
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = "1,5"
         End If
-
- Next
+Next
         
     
  Set MyPlage = Range("D15:d1000")
@@ -197,27 +196,25 @@ Next
   For Each cell In MyPlage
   
             If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDI8" And cell(1, 7).Value < 4 Then
+            If Not Left(cell(1, 5).Value, 1) = "A" Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = 4
         End If
-       
+        End If
+        
+            If Not IsEmpty(cell(1, 7).Value) And cell(1, 4).Value = "XDI8" And cell(1, 7).Value < 4 Then
+            If Not Left(cell(1, 2).Value, 1) = "A" Then
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
+        cell(1, 7).Value = 4
+        End If
+        End If
+        
+        
+        
  Next
     
-    
-    Set MyPlage = Range("D15:D1000")
-  For Each cell In MyPlage
-  
-        
-           If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDI8" And cell(1, 4).Value < 4 Then
-
-        cell(1, 4).Font.ColorIndex = 3
-        cell(1, 4).Font.Bold = True
-        cell(1, 4).Value = 4
-        
-        End If
-               
-Next
 
    '---------------------------XDI2----------------------------------------------
   Set MyPlage = Range("A15:A1000")
@@ -231,22 +228,19 @@ Next
         cell(1, 7).Value = "2,5"
         End If
         End If
-Next
-
-    Set MyPlage = Range("D15:D1000")
-  For Each cell In MyPlage
-  
         
-            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDI2" And cell(1, 4).Value < "2,5" Then
-            If Not Left(cell.Offset(1, -2).Value, 1) = "A" Then
-        cell(1, 4).Font.ColorIndex = 3
-        cell(1, 4).Font.Bold = True
-        cell(1, 4).Value = "2,5"
+        
+             If Not IsEmpty(cell(1, 7).Value) And cell(1, 4).Value = "XDI2" And cell(1, 7).Value < "2,5" Then
+            If Not Left(cell(1, 2).Value, 1) = "A" Then
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
+        cell(1, 7).Value = "2,5"
         End If
         End If
-               
+ 
+    Next
 
-Next
+
          
          
       '---------------------------XDI3----------------------------------------------
@@ -261,19 +255,15 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 7).Value = "2,5"
         End If
         End If
-Next
-        
-    Set MyPlage = Range("D15:D1000")
-  For Each cell In MyPlage
-  
-        
-            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDI3" And cell(1, 4).Value < "2,5" Then
-            If Not Left(cell.Offset(1, -2).Value, 1) = "A" Then
-        cell(1, 4).Font.ColorIndex = 3
-        cell(1, 4).Font.Bold = True
-        cell(1, 4).Value = "2,5"
+             If Not IsEmpty(cell(1, 7).Value) And cell(1, 4).Value = "XDI3" And cell(1, 7).Value < "2,5" Then
+            If Not Left(cell(1, 2).Value, 1) = "A" Then
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
+        cell(1, 7).Value = "2,5"
         End If
         End If
+
+
 Next
          
       '--------------------------------PGA--------------------------------------------
