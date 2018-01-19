@@ -19,9 +19,6 @@ On Error Resume Next
     End With
     
 
-'------------------CLEAR COLOUR FIRST -------------------------
-
-Range("A15:L1000").Interior.ColorIndex = 0
 
 
 '------------------Inside Wiring -------------------------
@@ -224,7 +221,8 @@ Set MyPlage = Range("A15:A1000")
            If cell.Value = "XDB10" Then
             cell(1, 8).Interior.ColorIndex = 37
         End If
-                   If cell.Value = "XDB89" Then
+        
+              If cell.Value = "XDB89" Then
             cell(1, 8).Interior.ColorIndex = 37
         End If
                If cell.Value = "XDB89" Then

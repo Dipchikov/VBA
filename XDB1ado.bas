@@ -67,9 +67,24 @@ Application.ScreenUpdating = False
 Next
 
 
+
+'---------------------------XDB1-XDB is Direct connection---------------------------------------------
+         Set MyPlage = Range("A15:A1000")
+        For Each cell In MyPlage
+       
+         If cell.Value = "XDB1" And cell(1, 4).Value = "XDB" And cell(1, 9).Value = "Direct connection" Then
+        cell(1, 9).Value = "Conductor / wire"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+       
+        
+        End If
+Next
+
       '-------------------------Connections"----------------------------------
+      
    
-XDB1ado_connections.XDB1ado_connections
+        XDB1ado_connections.XDB1ado_connections
 
 
     Application.Calculation = xlCalculationAutomatic

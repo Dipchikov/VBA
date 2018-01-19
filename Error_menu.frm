@@ -27,18 +27,18 @@ End If
 End If
 
 translate.translate
-Application.ScreenUpdating = False
 
+'------------------CLEAR COLOUR FIRST -------------------------
+
+Range("A15:L1000").Interior.ColorIndex = 0
+
+Application.ScreenUpdating = False
 If CheckBox3.Value = True Then
 Range("A15:N1000").Interior.ColorIndex = 0
 Swap.Swap
 Jumpers.Jumpers
 Errors.Errors
 tfm.tfm
-Legend_of_colours.Legend_of_colours
-soft_by_colour.soft_by_colour
-Error_number_of_conections.Error_number_of_conections
-
 
 '------------------------- Jumpers clear cells"----------------------------------
  End If
@@ -66,6 +66,9 @@ If CheckBox1.Value = True And CheckBox2.Value = False Then
          If CheckBox4.Value = False Then
        ErrorsRefs.ErrorsRefs
   End If
+Legend_of_colours.Legend_of_colours
+soft_by_colour.soft_by_colour
+Error_number_of_conections.Error_number_of_conections
 CountColorValue.CountColorValue
 info = MsgBox("Now:" & vbNewLine & "1. Check Ref numbers of connections." & vbNewLine & "2. Chack all metal jumpes for XDA ,XDV ,XDI,XDX and numbers of conections for them." & vbNewLine & "3. Check all wires sections.", vbExclamation)
 Application.ScreenUpdating = True

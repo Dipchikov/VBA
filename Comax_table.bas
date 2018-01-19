@@ -28,7 +28,7 @@ Swap.Swap
 
         
     '-----------------------Legend_of_feruless-----------------
-    answer = MsgBox("Is this a Marine project?" & vbNewLine & "And if this is a Marine project then press - Yes", vbYesNo + vbQuestion, "Comax table")
+    answer = MsgBox("Is this a Marine project?" & vbNewLine & "And if this is a Marine project then press - Yes", vbYesNo + vbQuestion + vbDefaultButton2, "Comax table")
     If answer = vbYes Then
     Marine_Legend_of_feruless.Marine_Legend_of_feruless
     Else
