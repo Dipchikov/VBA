@@ -36,7 +36,8 @@ Dim i As Long
     For i = Rng.Cells(1, 1).Row To Rng.Cells(1, 1).End(xlDown).Row
         '----------Condition If cell is empty-------------------
         If Not (Data.Range("J" & i).Value = "-" Or Data.Range("J" & i).Value = "Shielded cable") Then
-            Final.Range("A" & i - 4).Value = "INTERP" & Left(Data.Range("E1").Value, 2) & "." & Final.Range("CO" & i - 4).Value
+            'Final.Range("A" & i - 4).Value = "INTERP" & Left(Data.Range("E1").Value, 2) & "." & Final.Range("CO" & i - 4).Value
+            Final.Range("A" & i - 4).Value = Data.Range("B2").Value & "." & Final.Range("CO" & i - 4).Value
             Final.Range("C" & i - 4).Value = 1
             Final.Range("D" & i - 4).Value = 1
             Final.Range("E" & i - 4).Value = "WA for " & Data.Range("B2").Value
@@ -91,7 +92,7 @@ Application.CutCopyMode = False 'esp
 Dim sFileSaveName As Variant
 Dim sPath As String
 'sPath = Workbooks("Comax_form.csv").ActiveSheet.Range("A2").Value
-sPath = Left(Workbooks("Comax_form.csv").ActiveSheet.Range("A2").Value, 8) & "k"
+sPath = "Inter_" & Workbooks("Comax_form.csv").ActiveSheet.Range("A2").Value
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
 sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.csv), *.xlsm")
 If sFileSaveName <> False Then
