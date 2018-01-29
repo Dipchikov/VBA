@@ -8,6 +8,22 @@ Application.ScreenUpdating = False
 'Legend_of_colours.Legend_of_colours
 
     lr = Range("A" & Rows.Count).End(xlUp).Row
+    
+    ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Clear
+    ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add Key _
+        :=Range("A15:A" & lr), SortOn:=xlSortOnValues, order:=xlAscending, _
+        DataOption:=xlSortNormal
+    ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add Key _
+        :=Range("B15:B" & lr), SortOn:=xlSortOnValues, order:=xlAscending, _
+        DataOption:=xlSortTextAsNumbers
+    With ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort
+        .Header = xlYes
+        .MatchCase = True
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+
 
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Clear
     '--------------------Refs-----------------------------------------------------
@@ -38,6 +54,7 @@ Application.ScreenUpdating = False
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add(Range( _
         "K15:K" & lr), xlSortOnCellColor, xlAscending, , xlSortNormal).SortOnValue.Color _
         = RGB(128, 128, 128)
+    
     With ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort
         .Header = xlYes
         .MatchCase = False
