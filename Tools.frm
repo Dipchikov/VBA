@@ -108,7 +108,7 @@ Private Sub CommandButton24_Click()
   ActiveSheet.ShowAllData
   ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Clear
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add Key _
-        :=Range("A14:A550"), SortOn:=xlSortOnValues, Order:=xlAscending, _
+        :=Range("A14:A550"), SortOn:=xlSortOnValues, order:=xlAscending, _
         DataOption:=xlSortNormal
     With ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort
         .Header = xlYes
@@ -151,7 +151,7 @@ End Sub
 
 Private Sub UserForm_Initialize()
 
-    Label8.Caption = "created by Hristo Dipchikov © vR1.3"
+    Label8.Caption = "created by Hristo Dipchikov © vR1.8"
     Me.StartUpPosition = 0
     Me.Top = 130
     Me.Left = Application.Left - 50 + Application.Width - Me.Width
