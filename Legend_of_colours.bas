@@ -204,6 +204,24 @@ Set MyPlage = Range("A15:A1000")
 
     Next
     
+    '-----------------Lolours of cable--------------------------------
+        Set MyPlage = Range("H15:H1000")
+
+    For Each cell In MyPlage
+    
+        If cell.Value = "bn" Or cell.Value = "BN" Then
+            cell(1, 5).Interior.ColorIndex = 46
+        End If
+        
+           If cell.Value = "bu" Or cell.Value = "BU" Then
+            cell(1, 5).Interior.ColorIndex = 33
+        End If
+
+    Next
+    
+    
+    
+    
      '---------------------Wireing - XDB----------------------------
     
     Set MyPlage = Range("D15:D1000")
