@@ -216,6 +216,11 @@ Set MyPlage = Range("A15:A1000")
            If cell.Value = "bu" Or cell.Value = "BU" Then
             cell(1, 5).Interior.ColorIndex = 33
         End If
+        
+        If cell.Value = "gr" Or cell.Value = "GR" Then
+            cell(1, 5).Interior.ColorIndex = 15
+        End If
+
 
     Next
     
