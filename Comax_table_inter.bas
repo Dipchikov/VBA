@@ -32,40 +32,40 @@ Data.ShowAllData
     Final.Range("A2").Select
     
 Dim i As Long
-    Set Rng = Data.Range("J6:J1048576")
+    Set Rng = Data.Range("J12:J1048576")
     For i = Rng.Cells(1, 1).Row To Rng.Cells(1, 1).End(xlDown).Row
         '----------Condition If cell is empty-------------------
         If Not (Data.Range("J" & i).Value = "-" Or Data.Range("J" & i).Value = "Shielded cable") Then
-            'Final.Range("A" & i - 4).Value = "INTERP" & Left(Data.Range("E1").Value, 2) & "." & Final.Range("CO" & i - 4).Value
-            Final.Range("A" & i - 4).Value = Data.Range("B2").Value & "." & Final.Range("CO" & i - 4).Value
-            Final.Range("C" & i - 4).Value = 1
-            Final.Range("D" & i - 4).Value = 1
-            Final.Range("E" & i - 4).Value = "WA for " & Data.Range("B2").Value
-            Final.Range("G" & i - 4).Value = Final.Range("A" & i - 4).Value
-            Final.Range("I" & i - 4).Value = Final.Range("E" & i - 4).Value
-            Final.Range("H" & i - 4).Value = "Italy\UniSec\" & Right(Data.Range("B1").Value, 4) & "####"
-            Final.Range("M" & i - 4).Value = Data.Range("I" & i).Value * 1000
-            Final.Range("K" & i - 4).Value = Data.Range("J" & i).Value
-            Final.Range("AG" & i - 4).Value = "'" & Data.Range("C" & i).Value
-            Final.Range("AH" & i - 4).Value = "'" & Data.Range("C" & i).Value
-            Final.Range("AI" & i - 4).Value = "'" & Data.Range("C" & i).Value
-            Final.Range("AJ" & i - 4).Value = 0
-            Final.Range("AK" & i - 4).Value = "'" & Data.Range("F" & i).Value
-            Final.Range("AL" & i - 4).Value = "'" & Data.Range("F" & i).Value
-            Final.Range("AM" & i - 4).Value = "'" & Data.Range("F" & i).Value
-            Final.Range("AO" & i - 4).Value = "'" & Data.Range("F" & i).Value
-            Final.Range("AN" & i - 4).Value = 1
-            Final.Range("AP" & i - 4).Value = 1
-            Final.Range("BC" & i - 4).Value = 1
+            'Final.Range("A" & i - 10).Value = "INTERP" & Left(Data.Range("E1").Value, 2) & "." & Final.Range("CO" & i - 10).Value
+            Final.Range("A" & i - 10).Value = Data.Range("B2").Value & "." & Final.Range("CO" & i - 10).Value
+            Final.Range("C" & i - 10).Value = 1
+            Final.Range("D" & i - 10).Value = 1
+            Final.Range("E" & i - 10).Value = "WA for " & Data.Range("B2").Value
+            Final.Range("G" & i - 10).Value = Final.Range("A" & i - 10).Value
+            Final.Range("I" & i - 10).Value = Final.Range("E" & i - 10).Value
+            Final.Range("H" & i - 10).Value = "Italy\UniSec\" & Right(Data.Range("B1").Value, 4) & "####"
+            Final.Range("M" & i - 10).Value = Data.Range("I" & i).Value * 1000
+            Final.Range("K" & i - 10).Value = Data.Range("J" & i).Value
+            Final.Range("AG" & i - 10).Value = "'" & Data.Range("C" & i).Value
+            Final.Range("AH" & i - 10).Value = "'" & Data.Range("C" & i).Value
+            Final.Range("AI" & i - 10).Value = "'" & Data.Range("C" & i).Value
+            Final.Range("AJ" & i - 10).Value = 0
+            Final.Range("AK" & i - 10).Value = "'" & Data.Range("F" & i).Value
+            Final.Range("AL" & i - 10).Value = "'" & Data.Range("F" & i).Value
+            Final.Range("AM" & i - 10).Value = "'" & Data.Range("F" & i).Value
+            Final.Range("AO" & i - 10).Value = "'" & Data.Range("F" & i).Value
+            Final.Range("AN" & i - 10).Value = 1
+            Final.Range("AP" & i - 10).Value = 1
+            Final.Range("BC" & i - 10).Value = 1
         '----------Cut for ferules-- StrippingLength-----------------
         If Not Data.Range("H" & i).Value = 4 Then
-            Final.Range("O" & i - 4).Value = 10
-            Final.Range("P" & i - 4).Value = 10
-            Final.Range("BA" & i - 4).Value = 1
+            Final.Range("O" & i - 10).Value = 10
+            Final.Range("P" & i - 10).Value = 10
+            Final.Range("BA" & i - 10).Value = 1
             Else
-            Final.Range("O" & i - 4).Value = 12
-            Final.Range("P" & i - 4).Value = 12
-            Final.Range("BA" & i - 4).Value = 1
+            Final.Range("O" & i - 10).Value = 12
+            Final.Range("P" & i - 10).Value = 12
+            Final.Range("BA" & i - 10).Value = 1
         End If
         
         End If
@@ -92,9 +92,9 @@ Application.CutCopyMode = False 'esp
 Dim sFileSaveName As Variant
 Dim sPath As String
 'sPath = Workbooks("Comax_form.csv").ActiveSheet.Range("A2").Value
-sPath = "Inter_" & Workbooks("Comax_form.csv").ActiveSheet.Range("A2").Value
+sPath = "Inter_" & Right(Data.Range("B1").Value, 4) & "_" & Workbooks("Comax_form.csv").ActiveSheet.Range("A2").Value
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=Left(sPath, 21), fileFilter:="Excel Files (*.csv), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=Left(sPath, 26), fileFilter:="Excel Files (*.csv), *.xlsm")
 If sFileSaveName <> False Then
 ActiveWorkbook.SaveAs sFileSaveName, FileFormat:=xlCSV, Local:=True
 
