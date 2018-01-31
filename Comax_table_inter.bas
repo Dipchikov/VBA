@@ -94,7 +94,7 @@ Dim sPath As String
 'sPath = Workbooks("Comax_form.csv").ActiveSheet.Range("A2").Value
 sPath = "Inter_" & Workbooks("Comax_form.csv").ActiveSheet.Range("A2").Value
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.csv), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=Left(sPath, 21), fileFilter:="Excel Files (*.csv), *.xlsm")
 If sFileSaveName <> False Then
 ActiveWorkbook.SaveAs sFileSaveName, FileFormat:=xlCSV, Local:=True
 
