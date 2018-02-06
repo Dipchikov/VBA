@@ -200,6 +200,10 @@ Set MyPlage = Range("A15:A1000")
     
         If cell.Value = "Shielded cable" Then
             cell.Interior.ColorIndex = 6
+            cell(1, -1).Interior.ColorIndex = 6
+            cell(1, -2).Interior.ColorIndex = 6
+            cell(1, -3).Interior.ColorIndex = 6
+            cell(1, -4).Interior.ColorIndex = 6
         End If
 
     Next

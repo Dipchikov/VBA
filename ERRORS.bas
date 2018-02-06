@@ -555,8 +555,17 @@ End If
             cell(1, 9).Font.Bold = True
    
  End If
-    End If
+ End If
+ Next
+ '--------------------- - 'Ref protection- Connector 130----------------
+ 
+    Set MyPlage = Range("A14:A1000")
 
+    For Each cell In MyPlage
+
+        If Left(cell.Value, 2) = "AA" And Left(cell(1, 2).Value, 5) = "-X130" And cell(1, 7).Value > "2,5" Then
+            cell(1, 7).Interior.ColorIndex = 3
+        End If
     
     
 Next

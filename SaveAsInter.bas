@@ -36,18 +36,24 @@ If ActiveSheet.Name = "Interconnections" Then
     Range("A1").PasteSpecial Paste:=xlPasteValues
     
     ActiveSheet.Name = Range("B2").Value
+    
+             '-------------add user in Footer ---------------
+    With ActiveSheet.PageSetup
+    .LeftFooter = "&D" & Chr(13) & Application.UserName
+    End With
+    
          '-------------Formulas---------------
     
-    Range("C6").Select
+    Range("C12").Select
     ActiveCell.FormulaR1C1 = "=""=""&RC[-2]&"":""&RC[-1]"
-    Range("C6").Select
-    Selection.AutoFill Destination:=Range("C6:C" & lr), Type:=xlFillDefault
-    Range("C6:C" & lr).Select
-    Range("F6").Select
+    Range("C12").Select
+    Selection.AutoFill Destination:=Range("C12:C" & lr), Type:=xlFillDefault
+    Range("C12:C" & lr).Select
+    Range("F12").Select
     ActiveCell.FormulaR1C1 = "=""=""&RC[-2]&"":""&RC[-1]"
-    Range("F6").Select
-    Selection.AutoFill Destination:=Range("F6:F" & lr), Type:=xlFillDefault
-    Range("F6:F" & lr).Select
+    Range("F12").Select
+    Selection.AutoFill Destination:=Range("F12:F" & lr), Type:=xlFillDefault
+    Range("F12:F" & lr).Select
     Range("A6").Select
     
     

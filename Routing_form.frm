@@ -31,13 +31,13 @@ If answer = vbYes Then
 
 Range("A15:L1000").Interior.ColorIndex = 0
 
-    Range("A4").Select
-    Selection.ClearContents
+   'Range("A4").Select
+    'Selection.ClearContents
         Range("B4").Select
     Selection.ClearContents
-    Range("A17:e36").Select
+    Range("A17:e46").Select
     Selection.ClearContents
-Range("A40:E51").Select
+    Range("A50:E61").Select
     Selection.ClearContents
    
    
@@ -54,6 +54,10 @@ End Sub
 
 Private Sub CommandButton21_Click()
 SaveAsRouting.SaveAsRouting
+End Sub
+
+Private Sub Label8_Click()
+
 End Sub
 
 Private Sub UserForm_Initialize()

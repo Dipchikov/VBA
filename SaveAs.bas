@@ -19,6 +19,10 @@ If ActiveSheet.Name = "Wiring table" Then
      On Error Resume Next
      '-----------------scrips--------------------
     ActiveSheet.ShowAllData
+    '------------------CLEAR COLOUR FIRST -------------------------
+
+    Range("A15:L1000").Interior.ColorIndex = 0
+    '-----------------scrips--------------------
     Swap.Swap
     Legend_of_colours.Legend_of_colours
     soft_by_colour.soft_by_colour
@@ -40,8 +44,14 @@ If ActiveSheet.Name = "Wiring table" Then
     ActiveSheet.Paste
     Range("A1").PasteSpecial Paste:=xlPasteValues
     'Range("A1").PasteSpecial Paste:=xlPasteFormats
-    
+
     ActiveSheet.Name = Range("B1").Value
+    
+         '-------------add user in Footer ---------------
+    With ActiveSheet.PageSetup
+    .LeftFooter = "&D" & Chr(13) & Application.UserName
+    End With
+    
        '-------------Edit style---------------
     Columns("C:C").Select
     Selection.NumberFormat = "General"

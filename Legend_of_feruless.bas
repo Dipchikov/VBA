@@ -43,22 +43,23 @@ Set MyPlage = Range("A14:A1000")
                           If Left(cell.Value, 2) = "TS" Then
         cell(1, 20).Value = 10
         End If
-         '  If cell.Value = "AA1" Then
-        'cell(1, 20).Value = 10
-        'End If
         
-                   'If cell.Value = "AA2" Then
-        'cell(1, 20).Value = 10
-       ' End If
+           If cell.Value = "AA1" Then
+        cell(1, 20).Value = 10
+        End If
         
-                   'If cell.Value = "AA3" Then
-        'cell(1, 20).Value = 10
-        'End If
+                   If cell.Value = "AA2" Then
+        cell(1, 20).Value = 10
+        End If
+        
+                  If cell.Value = "AA3" Then
+        cell(1, 20).Value = 10
+        End If
         
                 
-                   'If cell.Value = "AA4" Then
-        'cell(1, 20).Value = 10
-        'End If
+                   If cell.Value = "AA4" Then
+        cell(1, 20).Value = 10
+        End If
         
                 If cell.Value = "XDB1" Then
         cell(1, 20).Value = ""
@@ -79,10 +80,10 @@ Set MyPlage = Range("A14:A1000")
         cell(1, 20).Value = 10
         End If
         
-        If Left(cell.Value, 3) = "FCM" And Not (cell(1, 2).Value = 13 Or cell(1, 2).Value = 14 Or cell(1, 2).Value = 21 Or cell(1, 2).Value = 22) Then
+        If Left(cell.Value, 3) = "FCM" And Not (cell(1, 2).Value = 13 Or cell(1, 2).Value = 14 Or cell(1, 2).Value = 21 Or cell(1, 2).Value = 22 Or cell(1, 2).Value = 96 Or cell(1, 2).Value = 95 Or cell(1, 2).Value = 98) Then
             cell(1, 20).Value = 14
         End If
-                If Left(cell.Value, 3) = "FCM" And (cell(1, 2).Value = 13 Or cell(1, 2).Value = 14 Or cell(1, 2).Value = 21 Or cell(1, 2).Value = 22) Then
+                If Left(cell.Value, 3) = "FCM" And (cell(1, 2).Value = 13 Or cell(1, 2).Value = 14 Or cell(1, 2).Value = 21 Or cell(1, 2).Value = 22 Or cell(1, 2).Value = 96 Or cell(1, 2).Value = 95 Or cell(1, 2).Value = 98) Then
             cell(1, 20).Value = 10
         End If
                 
@@ -168,7 +169,7 @@ Set MyPlage = Range("A14:A1000")
         End If
            
         If Left(cell.Value, 3) = "RAR" Then
-        cell(1, 20).Value = 10
+        cell(1, 20).Value = ""
         End If
                    
         If Left(cell.Value, 2) = "XE" Then
