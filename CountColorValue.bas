@@ -18,8 +18,8 @@ For Each c In Rng
 Next c
 'Message box with the value of numbers, change to display
 'however you'd like
-MsgBox ("Numbers of fixed errors  is = " & numbers)
-
+Err = MsgBox("Numbers of fixed errors  is = " & numbers, vbOKOnly + vbCritical)
+Range("l10").Value = numbers
 End Sub
 
 

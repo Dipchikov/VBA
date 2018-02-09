@@ -17,7 +17,7 @@ If ActiveSheet.Name = "Interconnections" Then
        Exit Sub
        End If
 
-
+   Sheets("Interconnection_form").Range("A12:a1048576").EntireRow.Delete
        
      On Error Resume Next
     
@@ -29,14 +29,32 @@ If ActiveSheet.Name = "Interconnections" Then
     lr = Range("A" & Rows.Count).End(xlUp).Row
 
     Range("A1:j" & lr).Copy
-    Workbooks.Open Filename:="C:\UniSec\Interconnection_form.xls", ReadOnly:=True
-    Workbooks("Interconnection_form.xls").Activate
-    Sheets("Interconnection").Select
-    Range("A1").PasteSpecial Paste:=xlPasteFormats
+    'Workbooks.Open Filename:="C:\UniSec\Interconnection_form.xls", ReadOnly:=True
+    'Workbooks("Interconnection_form.xls").Activate
+    
+    Sheets("Interconnection_form").Select
+    Range("A1").Select
+    ActiveSheet.Paste
     Range("A1").PasteSpecial Paste:=xlPasteValues
+    Range("A1").PasteSpecial Paste:=xlPasteFormats
+
+    Sheets("Interconnections").Select
+    Range("A12").Select
+
+    'ActiveSheet.Name = Range("B1").Value
+
     
+    Dim wb As Workbook
+    Set wb = Workbooks.Add
+    Application.CopyObjectsWithCells = False
+    ThisWorkbook.Sheets("Interconnection_form").Copy Before:=wb.Sheets(1)
     ActiveSheet.Name = Range("B2").Value
+    Application.CopyObjectsWithCells = True
+
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
     
+
              '-------------add user in Footer ---------------
     With ActiveSheet.PageSetup
     .LeftFooter = "&D" & Chr(13) & Application.UserName

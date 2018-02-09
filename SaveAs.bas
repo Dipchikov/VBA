@@ -4,7 +4,8 @@ Sub SaveAs()
 
 '---------------------------------
 If ActiveSheet.Name = "Wiring table" Then
-
+    Application.Calculation = xlCalculationManual
+    Application.ScreenUpdating = False
 
 
     Dim lr As Long
@@ -29,25 +30,41 @@ If ActiveSheet.Name = "Wiring table" Then
     Routing.Routing
 
 
+    Sheets("CONNECTION_LIST_form").Range("A15:L1048576").EntireRow.Delete
 
 
    
     'Workbooks("CALCULATION OF CABLE LENGHTS_TEMPLATE - Italy Secondary.xlsm").Activate
     Sheets("Wiring table").Select
     lr = Range("A" & Rows.Count).End(xlUp).Row
-
     Range("A1:l" & lr).Copy
-    Workbooks.Open Filename:="C:\UniSec\CONNECTION_LIST_form.xls", ReadOnly:=True
-    Workbooks("CONNECTION_LIST_form.xls").Activate
-    Sheets("LISTA CONNESSIONI1").Select
+    'Workbooks.Open Filename:="C:\UniSec\CONNECTION_LIST_form.xls", ReadOnly:=True
+    'Workbooks("CONNECTION_LIST_form.xls").Activate
+    Sheets("CONNECTION_LIST_form").Select
     Range("A1").Select
     ActiveSheet.Paste
     Range("A1").PasteSpecial Paste:=xlPasteValues
-    'Range("A1").PasteSpecial Paste:=xlPasteFormats
+    Range("A1").PasteSpecial Paste:=xlPasteFormats
 
-    ActiveSheet.Name = Range("B1").Value
+    Sheets("Wiring table").Select
+    Range("A15").Select
+
+    'ActiveSheet.Name = Range("B1").Value
+
     
-         '-------------add user in Footer ---------------
+    Dim wb As Workbook
+    Set wb = Workbooks.Add
+    Application.CopyObjectsWithCells = False
+    ThisWorkbook.Sheets("CONNECTION_LIST_form").Copy Before:=wb.Sheets(1)
+    ActiveSheet.Name = Range("B1").Value
+    Application.CopyObjectsWithCells = True
+
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
+    
+
+    
+   '-------------add user in Footer ---------------
     With ActiveSheet.PageSetup
     .LeftFooter = "&D" & Chr(13) & Application.UserName
     End With
@@ -69,20 +86,19 @@ If ActiveSheet.Name = "Wiring table" Then
     Selection.AutoFill Destination:=Range("F15:F" & lr), Type:=xlFillDefault
     Range("F15:F" & lr).Select
     Range("A15").Select
-
     Application.CutCopyMode = False 'esp
 
 
 Dim sFileSaveName As Variant
 Dim sPath As String
 
-
-sPath = Workbooks("CONNECTION_LIST_form.xls").ActiveSheet.Range("B1").Value & "_CONNECTION_LIST_reworked"
+sPath = ActiveSheet.Range("B1").Value & "_CONNECTION_LIST_reworked"
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
 sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xls), *.xlsm")
 If sFileSaveName <> False Then
 ActiveWorkbook.SaveAs sFileSaveName
 End If
 End If
+
 End Sub
 

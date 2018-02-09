@@ -20,7 +20,6 @@ Sub XDB1_connectors_number()
         End If
 
         
-        
                 If Left(cell.Value, 3) = "XDE" And cell(1, 11).Value > 2 Then
         cell(1, 2).Interior.ColorIndex = 3
         End If

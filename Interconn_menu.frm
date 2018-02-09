@@ -19,7 +19,7 @@ Clear_Interconnections.Clear_Interconnections
 End Sub
 
 Private Sub CommandButton19_Click()
-Comax_table_inter.Comax_table_inter
+Komax_table_inter.Komax_table_inter
 End Sub
 
 Private Sub CommandButton20_Click()

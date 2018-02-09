@@ -4,7 +4,7 @@ Attribute number.VB_ProcData.VB_Invoke_Func = " \n14"
 '
 ' number Macro
 '
-Sheets("Comax").Select
+Sheets("Komax").Select
     Range("CO2").Select
     ActiveCell.FormulaR1C1 = "1"
     Range("CO2").Select
