@@ -4,6 +4,9 @@ Sub SaveAs()
 
 '---------------------------------
 If ActiveSheet.Name = "Wiring table" Then
+
+   
+    
     Application.Calculation = xlCalculationManual
     Application.ScreenUpdating = False
 
@@ -20,6 +23,7 @@ If ActiveSheet.Name = "Wiring table" Then
      On Error Resume Next
      '-----------------scrips--------------------
     ActiveSheet.ShowAllData
+    formula.formula
     '------------------CLEAR COLOUR FIRST -------------------------
 
     Range("A15:L1000").Interior.ColorIndex = 0
@@ -59,9 +63,6 @@ If ActiveSheet.Name = "Wiring table" Then
     ActiveSheet.Name = Range("B1").Value
     Application.CopyObjectsWithCells = True
 
-    Application.Calculation = xlCalculationAutomatic
-    Application.ScreenUpdating = True
-    
 
     
    '-------------add user in Footer ---------------
@@ -88,6 +89,9 @@ If ActiveSheet.Name = "Wiring table" Then
     Range("A15").Select
     Application.CutCopyMode = False 'esp
 
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
+    
 
 Dim sFileSaveName As Variant
 Dim sPath As String
