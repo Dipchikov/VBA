@@ -32,19 +32,15 @@ If ActiveSheet.Name = "Wiring table" Then
     Legend_of_colours.Legend_of_colours
     soft_by_colour.soft_by_colour
     Routing.Routing
+    
+    '-----------------Изтриване и копиране в WCT-------------------
 
+    Sheets("WCT_form").Range("A15:L1048576").EntireRow.Delete
 
-    Sheets("CONNECTION_LIST_form").Range("A15:L1048576").EntireRow.Delete
-
-
-   
-    'Workbooks("CALCULATION OF CABLE LENGHTS_TEMPLATE - Italy Secondary.xlsm").Activate
     Sheets("Wiring table").Select
     lr = Range("A" & Rows.Count).End(xlUp).Row
     Range("A1:l" & lr).Copy
-    'Workbooks.Open Filename:="C:\UniSec\CONNECTION_LIST_form.xls", ReadOnly:=True
-    'Workbooks("CONNECTION_LIST_form.xls").Activate
-    Sheets("CONNECTION_LIST_form").Select
+    Sheets("WCT_form").Select
     Range("A1").Select
     ActiveSheet.Paste
     Range("A1").PasteSpecial Paste:=xlPasteValues
@@ -53,17 +49,20 @@ If ActiveSheet.Name = "Wiring table" Then
     Sheets("Wiring table").Select
     Range("A15").Select
 
-    'ActiveSheet.Name = Range("B1").Value
 
-    
+    '---------Генериране на Нова страница------------------
     Dim wb As Workbook
     Set wb = Workbooks.Add
     Application.CopyObjectsWithCells = False
-    ThisWorkbook.Sheets("CONNECTION_LIST_form").Copy Before:=wb.Sheets(1)
+    ThisWorkbook.Sheets("WCT_form").Copy Before:=wb.Sheets(1)
     ActiveSheet.Name = Range("B1").Value
     Application.CopyObjectsWithCells = True
-
-
+    
+    '---------Изтриване на Sheet1------------------
+    Application.DisplayAlerts = False
+    Sheets("Sheet1").Delete
+    Application.DisplayAlerts = True
+    
     
    '-------------add user in Footer ---------------
     With ActiveSheet.PageSetup
@@ -98,7 +97,7 @@ Dim sPath As String
 
 sPath = ActiveSheet.Range("B1").Value & "_CONNECTION_LIST_reworked"
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xls), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xlsx), *.xlsm")
 If sFileSaveName <> False Then
 ActiveWorkbook.SaveAs sFileSaveName
 End If

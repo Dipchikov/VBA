@@ -82,6 +82,7 @@ ws.Cells(iRow, 5).Value = Me.CheckBox11.Caption
 'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox4.Value & ":" & Me.CheckBox10.Caption
 ws.Cells(iRow, 7).Value = Me.ComboBox1.Value
 ws.Cells(iRow, 8).Value = Me.ComboBox2.Value
+iRow = iRow + 1
 End If
 
 
@@ -112,9 +113,10 @@ ws.Cells(iRow, 5).Value = Me.CheckBox21.Caption
 ws.Cells(iRow, 7).Value = Me.ComboBox7.Value
 ws.Cells(iRow, 8).Value = Me.ComboBox8.Value
 iRow = iRow + 1
-MsgBox "Data added", vbOKOnly + vbInformation, "Data Added"
-Me.TextBox1.SetFocus
+'MsgBox "Data added", vbOKOnly + vbInformation, "Data Added"
+'Me.TextBox1.SetFocus
 End If
+
 If CheckBox18.Value = True And CheckBox23.Value = True Then
 ws.Cells(iRow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox3.Value
 ws.Cells(iRow, 2).Value = Me.CheckBox18.Caption
@@ -201,7 +203,7 @@ ComboBox9.List = ComboBox1.List
 ComboBox2.List = Array("0,2", "0,5", "0,8", "1", "1,5", "2,5", "4", "6")
 ComboBox8.List = ComboBox2.List
 ComboBox10.List = ComboBox2.List
-ComboBox3.List = Array("XDI", "XDI1", "XDI2", "XDI3", "XDI4", "XDI5", "XDI6", "XDI9")
+ComboBox3.List = Array("XDI", "XDI1", "XDI2", "XDI3", "XDI4", "XDI5", "XDI6", "XDI7", "XDI8", "XDI9")
 ComboBox4.List = ComboBox3.List
 ComboBox5.List = ComboBox3.List
 ComboBox11.List = ComboBox3.List
