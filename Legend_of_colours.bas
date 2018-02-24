@@ -183,6 +183,10 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 40
         End If
         
+                 If Left(cell.Value, 3) = "TFC" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
         '------------When we have AA1 to  AA19--------------------
         
                   If Left(cell.Value, 2) = "AA" Then
@@ -215,14 +219,31 @@ Set MyPlage = Range("A15:A1000")
     
         If cell.Value = "bn" Or cell.Value = "BN" Then
             cell(1, 5).Interior.ColorIndex = 46
+            'cell(1, 1).Interior.ColorIndex = 46
+            'cell(1, 2).Interior.ColorIndex = 46
+            'cell(1, 3).Interior.ColorIndex = 46
         End If
         
            If cell.Value = "bu" Or cell.Value = "BU" Then
             cell(1, 5).Interior.ColorIndex = 33
+            'cell(1, 1).Interior.ColorIndex = 33
+            'cell(1, 2).Interior.ColorIndex = 33
+            'cell(1, 3).Interior.ColorIndex = 33
+            
         End If
         
         If cell.Value = "gr" Or cell.Value = "GR" Then
             cell(1, 5).Interior.ColorIndex = 15
+            'cell(1, 1).Interior.ColorIndex = 15
+            'cell(1, 2).Interior.ColorIndex = 15
+            'cell(1, 3).Interior.ColorIndex = 15
+        End If
+        
+        If cell.Value = "gr" Or cell.Value = "GY" Then
+            cell(1, 5).Interior.ColorIndex = 15
+            'cell(1, 1).Interior.ColorIndex = 15
+            'cell(1, 2).Interior.ColorIndex = 15
+            'cell(1, 3).Interior.ColorIndex = 15
         End If
 
 
@@ -346,6 +367,10 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 43
         End If
         
+                   If Left(cell.Value, 3) = "PFF" Then
+        cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
             If Left(cell.Value, 3) = "PFR" Then
             cell(1, 11).Interior.ColorIndex = 43
         End If
@@ -402,6 +427,8 @@ Set MyPlage = Range("A15:A1000")
         If Left(cell.Value, 3) = "SFV" Then
         cell(1, 11).Interior.ColorIndex = 43
         End If
+        
+
         
             If Left(cell.Value, 2) = "SF" Then
         cell(1, 11).Interior.ColorIndex = 43
@@ -547,17 +574,24 @@ Set MyPlage = Range("I15:I1000")
             
         
             
-              '-------------------------Slap"----------------------------------
+              '-------------------------Swap"----------------------------------
              On Error Resume Next
              Set MyPlage = Range("K15:K1000")
 
             For Each cell In MyPlage
             If cell.Value = "Swap" Then
             cell(1, 1).Interior.ColorIndex = 0
-         End If
+            End If
+            Next
+              '-------------------------Empty"----------------------------------
+             On Error Resume Next
+             Set MyPlage = Range("I15:I1000")
 
-            
- Next
+            For Each cell In MyPlage
+            If (cell.Value = "Conductor / wire" Or cell.Value = "Wire jumper") And cell(1, 3).Value = "-" Then
+            cell(1, 3).Interior.ColorIndex = 0
+            End If
+            Next
 
 
 End Sub

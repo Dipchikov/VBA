@@ -5,6 +5,10 @@ Sub SaveAs()
 '---------------------------------
 If ActiveSheet.Name = "Wiring table" Then
 
+   
+    
+    Application.Calculation = xlCalculationManual
+    Application.ScreenUpdating = False
 
 
     Dim lr As Long
@@ -19,6 +23,7 @@ If ActiveSheet.Name = "Wiring table" Then
      On Error Resume Next
      '-----------------scrips--------------------
     ActiveSheet.ShowAllData
+    formula.formula
     '------------------CLEAR COLOUR FIRST -------------------------
 
     Range("A15:L1000").Interior.ColorIndex = 0
@@ -27,29 +32,43 @@ If ActiveSheet.Name = "Wiring table" Then
     Legend_of_colours.Legend_of_colours
     soft_by_colour.soft_by_colour
     Routing.Routing
+    
+    '-----------------Изтриване и копиране в WCT-------------------
 
+    Sheets("WCT_form").Range("A15:L1048576").EntireRow.Delete
 
-
-
-   
-    'Workbooks("CALCULATION OF CABLE LENGHTS_TEMPLATE - Italy Secondary.xlsm").Activate
     Sheets("Wiring table").Select
     lr = Range("A" & Rows.Count).End(xlUp).Row
-
     Range("A1:l" & lr).Copy
-    Workbooks.Open Filename:="C:\UniSec\CONNECTION_LIST_form.xls", ReadOnly:=True
-    Workbooks("CONNECTION_LIST_form.xls").Activate
-    Sheets("LISTA CONNESSIONI1").Select
+    Sheets("WCT_form").Select
     Range("A1").Select
     ActiveSheet.Paste
     Range("A1").PasteSpecial Paste:=xlPasteValues
-    'Range("A1").PasteSpecial Paste:=xlPasteFormats
+    Range("A1").PasteSpecial Paste:=xlPasteFormats
 
+    Sheets("Wiring table").Select
+    Range("A15").Select
+
+
+    '---------Генериране на Нова страница------------------
+    Dim wb As Workbook
+    Set wb = Workbooks.Add
+    Application.CopyObjectsWithCells = False
+    ThisWorkbook.Sheets("WCT_form").Copy Before:=wb.Sheets(1)
     ActiveSheet.Name = Range("B1").Value
+    Application.CopyObjectsWithCells = True
     
-         '-------------add user in Footer ---------------
+    '---------Изтриване на Sheet1------------------
+    Application.DisplayAlerts = False
+    Sheets("Sheet1").Delete
+    Application.DisplayAlerts = True
+    
+    
+   '-------------add user in Footer ---------------
     With ActiveSheet.PageSetup
-    .LeftFooter = "&D" & Chr(13) & Application.UserName
+    .LeftFooter = "&D" & Chr(13) & "&9" & Application.UserName
+    .RightFooter = "Page " & "&P" & Chr(13) & "&9" & Tools.Label8.Caption
+
     End With
     
        '-------------Edit style---------------
@@ -69,20 +88,22 @@ If ActiveSheet.Name = "Wiring table" Then
     Selection.AutoFill Destination:=Range("F15:F" & lr), Type:=xlFillDefault
     Range("F15:F" & lr).Select
     Range("A15").Select
-
     Application.CutCopyMode = False 'esp
 
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
+    
 
 Dim sFileSaveName As Variant
 Dim sPath As String
 
-
-sPath = Workbooks("CONNECTION_LIST_form.xls").ActiveSheet.Range("B1").Value & "_CONNECTION_LIST_reworked"
+sPath = ActiveSheet.Range("B1").Value & "_WCT_reworked"
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xls), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xlsx), *.xlsm")
 If sFileSaveName <> False Then
 ActiveWorkbook.SaveAs sFileSaveName
 End If
 End If
+
 End Sub
 

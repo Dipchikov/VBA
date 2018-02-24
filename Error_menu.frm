@@ -43,8 +43,8 @@ tfm.tfm
 '------------------------- Jumpers clear cells"----------------------------------
  End If
  
-    If CheckBox6.Value = True Then
-       FCM3.FCM3
+  If CheckBox6.Value = True Then
+  FCM3.FCM3
   End If
  
 

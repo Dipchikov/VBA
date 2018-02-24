@@ -33,13 +33,13 @@ End Sub
 
 Private Sub CommandButton1_Click()
 
-Dim iRow As Long
+Dim irow As Long
 Dim ws As Worksheet
 Set ws = ActiveWorkbook.ActiveSheet
 
 'find first empty row in database
 'iRow = ws.Cells.Find(What:="*", SearchOrder:=xlRows, SearchDirection:=xlPrevious, LookIn:=xlValues).Row + 1
-iRow = ws.Cells(Rows.Count, 1).End(xlUp).Offset(1, 0).Row
+irow = ws.Cells(Rows.Count, 1).End(xlUp).Offset(1, 0).Row
 'check for a Name number
 If Trim(Me.TextBox1.Value) = "" Then
 Me.TextBox1.SetFocus
@@ -49,39 +49,40 @@ End If
 
 If CheckBox2.Value = True And CheckBox7.Value = True Then
 'copy the data to the database
-ws.Cells(iRow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox5.Value
-ws.Cells(iRow, 2).Value = Me.CheckBox2.Caption
+ws.Cells(irow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox5.Value
+ws.Cells(irow, 2).Value = Me.CheckBox2.Caption
 'ws.Cells(iRow, 3).Value = " = " & Me.TextBox1.Value & ":" & Me.ComboBox5.Value & ":" & Me.CheckBox1.Caption
-ws.Cells(iRow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox4.Value
-ws.Cells(iRow, 5).Value = Me.CheckBox7.Caption
+ws.Cells(irow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox4.Value
+ws.Cells(irow, 5).Value = Me.CheckBox7.Caption
 'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox4.Value & ":" & Me.CheckBox2.Caption
-ws.Cells(iRow, 7).Value = Me.ComboBox1.Value
-ws.Cells(iRow, 8).Value = Me.ComboBox2.Value
-iRow = iRow + 1
+ws.Cells(irow, 7).Value = Me.ComboBox1.Value
+ws.Cells(irow, 8).Value = Me.ComboBox2.Value
+irow = irow + 1
 End If
 
 If CheckBox4.Value = True And CheckBox9.Value = True Then
 
-ws.Cells(iRow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox5.Value
-ws.Cells(iRow, 2).Value = Me.CheckBox4.Caption
+ws.Cells(irow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox5.Value
+ws.Cells(irow, 2).Value = Me.CheckBox4.Caption
 'ws.Cells(iRow, 3).Value = " = " & Me.TextBox1.Value & ":" & Me.ComboBox5.Value & ":" & Me.CheckBox4.Caption
-ws.Cells(iRow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox4.Value
-ws.Cells(iRow, 5).Value = Me.CheckBox9.Caption
+ws.Cells(irow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox4.Value
+ws.Cells(irow, 5).Value = Me.CheckBox9.Caption
 'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox4.Value & ":" & Me.CheckBox9.Caption
-ws.Cells(iRow, 7).Value = Me.ComboBox1.Value
-ws.Cells(iRow, 8).Value = Me.ComboBox2.Value
-iRow = iRow + 1
+ws.Cells(irow, 7).Value = Me.ComboBox1.Value
+ws.Cells(irow, 8).Value = Me.ComboBox2.Value
+irow = irow + 1
 
 End If
 If CheckBox6.Value = True And CheckBox11.Value = True Then
-ws.Cells(iRow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox5.Value
-ws.Cells(iRow, 2).Value = Me.CheckBox6.Caption
+ws.Cells(irow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox5.Value
+ws.Cells(irow, 2).Value = Me.CheckBox6.Caption
 'ws.Cells(iRow, 3).Value = " = " & Me.TextBox1.Value & ":" & Me.ComboBox5.Value & ":" & Me.CheckBox6.Caption
-ws.Cells(iRow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox4.Value
-ws.Cells(iRow, 5).Value = Me.CheckBox11.Caption
+ws.Cells(irow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox4.Value
+ws.Cells(irow, 5).Value = Me.CheckBox11.Caption
 'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox4.Value & ":" & Me.CheckBox10.Caption
-ws.Cells(iRow, 7).Value = Me.ComboBox1.Value
-ws.Cells(iRow, 8).Value = Me.ComboBox2.Value
+ws.Cells(irow, 7).Value = Me.ComboBox1.Value
+ws.Cells(irow, 8).Value = Me.ComboBox2.Value
+irow = irow + 1
 End If
 
 
@@ -89,54 +90,55 @@ End If
 
 If CheckBox14.Value = True And CheckBox19.Value = True Then
 'copy the data to the database
-ws.Cells(iRow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox3.Value
-ws.Cells(iRow, 2).Value = Me.CheckBox14.Caption
+ws.Cells(irow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox3.Value
+ws.Cells(irow, 2).Value = Me.CheckBox14.Caption
 'ws.Cells(iRow, 3).Value = " = " & Me.TextBox1.Value & ":" & Me.ComboBox3.Value & ":" & Me.CheckBox14.Caption
-ws.Cells(iRow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox6.Value
-ws.Cells(iRow, 5).Value = Me.CheckBox19.Caption
+ws.Cells(irow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox6.Value
+ws.Cells(irow, 5).Value = Me.CheckBox19.Caption
 'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox6.Value & ":" & Me.CheckBox19.Caption
-ws.Cells(iRow, 7).Value = Me.ComboBox7.Value
-ws.Cells(iRow, 8).Value = Me.ComboBox8.Value
-iRow = iRow + 1
+ws.Cells(irow, 7).Value = Me.ComboBox7.Value
+ws.Cells(irow, 8).Value = Me.ComboBox8.Value
+irow = irow + 1
 
 End If
 
 If CheckBox16.Value = True And CheckBox21.Value = True Then
 
-ws.Cells(iRow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox3.Value
-ws.Cells(iRow, 2).Value = Me.CheckBox16.Caption
+ws.Cells(irow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox3.Value
+ws.Cells(irow, 2).Value = Me.CheckBox16.Caption
 'ws.Cells(iRow, 3).Value = " = " & Me.TextBox1.Value & ":" & Me.ComboBox3.Value & ":" & Me.CheckBox16.Caption
-ws.Cells(iRow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox6.Value
-ws.Cells(iRow, 5).Value = Me.CheckBox21.Caption
+ws.Cells(irow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox6.Value
+ws.Cells(irow, 5).Value = Me.CheckBox21.Caption
 'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox6.Value & ":" & Me.CheckBox21.Caption
-ws.Cells(iRow, 7).Value = Me.ComboBox7.Value
-ws.Cells(iRow, 8).Value = Me.ComboBox8.Value
-iRow = iRow + 1
-MsgBox "Data added", vbOKOnly + vbInformation, "Data Added"
-Me.TextBox1.SetFocus
+ws.Cells(irow, 7).Value = Me.ComboBox7.Value
+ws.Cells(irow, 8).Value = Me.ComboBox8.Value
+irow = irow + 1
+'MsgBox "Data added", vbOKOnly + vbInformation, "Data Added"
+'Me.TextBox1.SetFocus
 End If
-If CheckBox18.Value = True And CheckBox23.Value = True Then
-ws.Cells(iRow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox3.Value
-ws.Cells(iRow, 2).Value = Me.CheckBox18.Caption
-'ws.Cells(iRow, 3).Value = " = " & Me.TextBox1.Value & ":" & Me.ComboBox3.Value & ":" & Me.CheckBox18.Caption
-ws.Cells(iRow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox6.Value
-ws.Cells(iRow, 5).Value = Me.CheckBox23.Caption
-'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox6.Value & ":" & Me.CheckBox23.Caption
-ws.Cells(iRow, 7).Value = Me.ComboBox7.Value
-ws.Cells(iRow, 8).Value = Me.ComboBox8.Value
 
-iRow = iRow + 1
+If CheckBox18.Value = True And CheckBox23.Value = True Then
+ws.Cells(irow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox3.Value
+ws.Cells(irow, 2).Value = Me.CheckBox18.Caption
+'ws.Cells(iRow, 3).Value = " = " & Me.TextBox1.Value & ":" & Me.ComboBox3.Value & ":" & Me.CheckBox18.Caption
+ws.Cells(irow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox6.Value
+ws.Cells(irow, 5).Value = Me.CheckBox23.Caption
+'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox6.Value & ":" & Me.CheckBox23.Caption
+ws.Cells(irow, 7).Value = Me.ComboBox7.Value
+ws.Cells(irow, 8).Value = Me.ComboBox8.Value
+
+irow = irow + 1
 End If
 If TextBox5 = Empty And TextBox6 = Empty Then
  Else
-ws.Cells(iRow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox11.Value
-ws.Cells(iRow, 2).Value = TextBox5.Value
+ws.Cells(irow, 1).Value = Me.TextBox1.Value & ":" & Me.ComboBox11.Value
+ws.Cells(irow, 2).Value = TextBox5.Value
 'ws.Cells(iRow, 3).Value = " = " & Me.TextBox1.Value & ":" & Me.ComboBox3.Value & ":" & Me.CheckBox18.Caption
-ws.Cells(iRow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox12.Value
-ws.Cells(iRow, 5).Value = TextBox6.Value
+ws.Cells(irow, 4).Value = Me.TextBox4.Value & ":" & Me.ComboBox12.Value
+ws.Cells(irow, 5).Value = TextBox6.Value
 'ws.Cells(iRow, 6).Value = " = " & Me.TextBox4.Value & ":" & Me.ComboBox6.Value & ":" & Me.CheckBox23.Caption
-ws.Cells(iRow, 7).Value = Me.ComboBox9.Value
-ws.Cells(iRow, 8).Value = Me.ComboBox10.Value
+ws.Cells(irow, 7).Value = Me.ComboBox9.Value
+ws.Cells(irow, 8).Value = Me.ComboBox10.Value
 End If
 MsgBox "Data added", vbOKOnly + vbInformation, "Data Added"
 Me.TextBox1.SetFocus
@@ -201,7 +203,7 @@ ComboBox9.List = ComboBox1.List
 ComboBox2.List = Array("0,2", "0,5", "0,8", "1", "1,5", "2,5", "4", "6")
 ComboBox8.List = ComboBox2.List
 ComboBox10.List = ComboBox2.List
-ComboBox3.List = Array("XDI", "XDI1", "XDI2", "XDI3", "XDI4", "XDI5", "XDI6", "XDI9")
+ComboBox3.List = Array("XDI", "XDI1", "XDI2", "XDI3", "XDI4", "XDI5", "XDI6", "XDI7", "XDI8", "XDI9")
 ComboBox4.List = ComboBox3.List
 ComboBox5.List = ComboBox3.List
 ComboBox11.List = ComboBox3.List

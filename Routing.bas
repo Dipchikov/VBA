@@ -1,5 +1,6 @@
 Attribute VB_Name = "Routing"
 Sub Routing()
+
 Set MyPlage = Worksheets("Routing").Range("A15:A1000")
 
     For Each cell In MyPlage

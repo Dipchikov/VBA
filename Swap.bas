@@ -34,9 +34,9 @@ Dim FirstAddress As String
             'formula cell that evaluates to "ron"
 
             Set Rng = .Find(What:=MyArr(i), _
-                            After:=.Cells(.Cells.Count), _
+                            after:=.Cells(.Cells.Count), _
                             LookIn:=xlValues, _
-                            LookAt:=xlWhole, _
+                            Lookat:=xlWhole, _
                             SearchOrder:=xlByRows, _
                             SearchDirection:=xlNext, _
                             MatchCase:=False)

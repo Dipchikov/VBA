@@ -427,7 +427,7 @@ Set MyPlage = Range("A15:A1000")
         
    If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And IsEmpty(cell(1, 7).Value) Then
-    answer = MsgBox("Is posible to have XDC matal jumper?" & vbNewLine & "If this is posible to have XDC matal jumper - Yes", vbYesNo + vbQuestion, "XDC matal jumper")
+    answer = MsgBox("Is connection between " & cell(1, 3) & " and " & cell(1, 6) & " is " & cell(1, 9), vbYesNo + vbQuestion, "XDC matal jumper")
     If answer = vbNo Then
     XDC = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
         If XDC = vbOK Then
@@ -436,8 +436,8 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
-        End If
         Else
+        End If
         End If
         End If
         End If
@@ -641,7 +641,7 @@ Set MyPlage = Range("A15:A1000")
 
             If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Conductor / wire" Then
-           answer = MsgBox("Is it posible to have XDI wire jumper?" & vbNewLine & "If this is posible to have XDI Wire jumper - Yes", vbYesNo + vbQuestion, "XDI jumper")
+           answer = MsgBox("Is connection between" & cell(1, 3).Value & " And " & cell(1, 6).Value & " is " & cell(1, 9).Value, vbYesNo + vbQuestion, "XDI jumper")
         If answer = vbNo Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
@@ -654,7 +654,7 @@ Set MyPlage = Range("A15:A1000")
         End If
                   If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
                   If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Wire jumper" Then
-                  answer = MsgBox("Is it posible to have XDI wire jumper?" & vbNewLine & "If this is posible to have XDI Wire jumper - Yes", vbYesNo + vbQuestion, "XDI jumper")
+                  answer = MsgBox("Is connection between" & cell(1, 3).Value & " And " & cell(1, 6).Value & " is " & cell(1, 9).Value, vbYesNo + vbQuestion, "XDI jumper")
         If answer = vbNo Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
@@ -691,7 +691,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         End If
         
-           If Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
+         If Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello a staffa" Then
         cell(1, 9).Value = "Ponticello a filo"
         cell(1, 9).Font.ColorIndex = 3
@@ -714,6 +714,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         End If
+        
          If Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 9).Value = "Wire jumper"
@@ -757,8 +758,8 @@ Set MyPlage = Range("A15:A1000")
         End If
         End If
         
-                         If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
-        XDI = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
+           If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+        XDI = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDI
         cell(1, 8).Value = "bk"
         End If

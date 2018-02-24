@@ -51,9 +51,9 @@ Private Sub CommandButton1_Click()
             'formula cell that evaluates to "ron"
 
             Set Rng = .Find(What:=MyArr(i), _
-                            After:=.Cells(.Cells.Count), _
+                            after:=.Cells(.Cells.Count), _
                             LookIn:=xlFormulas, _
-                            LookAt:=xlWhole, _
+                            Lookat:=xlWhole, _
                             SearchOrder:=xlByRows, _
                             SearchDirection:=xlNext, _
                             MatchCase:=False)

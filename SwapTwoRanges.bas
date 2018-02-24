@@ -16,7 +16,7 @@ rng2.Interior.ColorIndex = 15
 arr1 = Rng1.Value
 arr2 = rng2.Value
 Rng1.Interior.ColorIndex = 0
-'Rng2.Interior.ColorIndex = 0
+rng2.Interior.ColorIndex = 0
 Rng1.Value = arr2
 rng2.Value = arr1
 

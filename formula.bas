@@ -12,13 +12,13 @@ Columns("C:C").Select
     Range("C15").Select
     ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
     Range("C15").Select
-    Selection.AutoFill Destination:=Range("C15:C951"), Type:=xlFillDefault
-    Range("C15:C951").Select
+    Selection.AutoFill Destination:=Range("C15:C960"), Type:=xlFillDefault
+    Range("C15:C960").Select
     Range("F15").Select
     ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
     Range("F15").Select
-    Selection.AutoFill Destination:=Range("F15:F951"), Type:=xlFillDefault
-    Range("F15:F951").Select
+    Selection.AutoFill Destination:=Range("F15:F960"), Type:=xlFillDefault
+    Range("F15:F960").Select
     
         Columns("C:C").Select
     Selection.NumberFormat = "@"
