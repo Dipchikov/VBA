@@ -246,6 +246,28 @@ Set MyPlage = Range("A15:A1000")
             'cell(1, 3).Interior.ColorIndex = 15
         End If
 
+        If cell.Value = "rd" Or cell.Value = "RD" Then
+            cell(1, 5).Interior.ColorIndex = 3
+            'cell(1, 1).Interior.ColorIndex = 15
+            'cell(1, 2).Interior.ColorIndex = 15
+            'cell(1, 3).Interior.ColorIndex = 15
+        End If
+        
+             If cell.Value = "vt" Or cell.Value = "VT" Then
+            cell(1, 5).Interior.ColorIndex = 39
+            'cell(1, 1).Interior.ColorIndex = 15
+            'cell(1, 2).Interior.ColorIndex = 15
+            'cell(1, 3).Interior.ColorIndex = 15
+        End If
+        
+                     If cell.Value = "og" Or cell.Value = "OG" Then
+            cell(1, 5).Interior.ColorIndex = 44
+            'cell(1, 1).Interior.ColorIndex = 15
+            'cell(1, 2).Interior.ColorIndex = 15
+            'cell(1, 3).Interior.ColorIndex = 15
+        End If
+        
+        
 
     Next
     
