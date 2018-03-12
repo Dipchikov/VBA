@@ -6,7 +6,7 @@ Dim Rng As Range, c As Range
 'Find the last row
 lastrow = Range("G" & Rows.Count).End(xlUp).Row
 'Set the range you want to search through
-Set Rng = Range("G15:I" & lastrow)
+Set Rng = Range("G15:I15" & lastrow)
 
 'Iterate through each cell in the range
 For Each c In Rng
@@ -16,6 +16,7 @@ For Each c In Rng
         numbers = numbers + 1
     End If
 Next c
+
 'Message box with the value of numbers, change to display
 'however you'd like
 Err = MsgBox("Numbers of fixed errors  is = " & numbers, vbOKOnly + vbCritical)
