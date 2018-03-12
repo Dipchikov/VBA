@@ -9,7 +9,7 @@ Set MyPlage = Worksheets("Routing").Range("A15:A1000")
             Exit Sub
             End If
           If cell.Value = Worksheets("Wiring table").Range("B1") Then
-        cell(1, 2).Value = Worksheets("Wiring table").Range("L8")
+        cell(1, 2).Value = Worksheets("Wiring table").Range("F10")
         cell(1, 5).Value = 1
         End If
         Next
