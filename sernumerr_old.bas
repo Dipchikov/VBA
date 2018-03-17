@@ -1,7 +1,6 @@
-Attribute VB_Name = "sernumerr"
-Sub sernumerr()
+Attribute VB_Name = "sernumerr_old"
+Sub sernumerr_old()
 ' ----дефиниране-------------
-Dim my_FileName As Variant
 Dim shematic As String
 Dim err As Single
 Dim connections As Single
@@ -19,13 +18,21 @@ shematic = Range("B1").Value
   Exit Sub
   End If
 
-my_FileName = Application.GetOpenFilename(FileFilter:="Excel Files,*.xl*;*.xm*")
-
-If my_FileName <> False Then
-
-Workbooks.Open FileName:=my_FileName
-
+If IsFileOpen("\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!!!____Serial Numbers__Main Labels\Serial Numbers-Unisec_v6.1.xlsm") Then
+Set myserr = Workbooks("Serial Numbers-Unisec_v6.1.xlsm")
+myserr.Activate
 Sheets("Register").Select
+Set MyPlage = Range("E15:E1048576")
+    For Each cell In MyPlage
+        If cell.Value = shematic Then
+        cell(1, 12).Value = connections
+        cell(1, 13).Value = err
+        End If
+        Next
+        Else
+Set myserr = Workbooks.Open("\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!!!____Serial Numbers__Main Labels\Serial Numbers-Unisec_v6.1.xlsm")
+
+myserr.Sheets("Register").Select
 
 Set MyPlage = Range("E15:E1048576")
     For Each cell In MyPlage
@@ -35,10 +42,6 @@ Set MyPlage = Range("E15:E1048576")
         End If
         Next
         End If
-    Application.DisplayAlerts = False
-    ActiveWorkbook.Save
-    Application.DisplayAlerts = True
-    'ActiveWorkbook.Close
     mydata.Activate
-
-End Sub
+  End Sub
+    
