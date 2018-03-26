@@ -53,7 +53,7 @@ Swap.Swap
         '----------Condition If cell is empty------------------
         
         If Not (Data.Range("L" & i).Value = "-" Or Data.Range("L" & i).Value = "Shielded cable") Then
-        '-----------------------Дефиниране на прагрямя под 99 реда-----------------
+        '-----------------------Дефиниране на праграма под 99 реда-----------------
             If lRow <= 113 Then
             Final.Range("A" & i - 13).Value = Left(Data.Range("B1").Value, 10) & "W" & Right(Data.Range("B1").Value, 4)
             Else
