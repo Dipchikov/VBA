@@ -32,7 +32,7 @@ If ActiveSheet.Name = "Wiring table" Then
     Legend_of_colours.Legend_of_colours
     soft_by_colour.soft_by_colour
     Routing.Routing
-    
+    CountColorValue.CountColorValue
     '-----------------Изтриване и копиране в WCT-------------------
 
     Sheets("WCT_form").Range("A15:L1048576").EntireRow.Delete
@@ -99,7 +99,7 @@ Dim sPath As String
 
 sPath = ActiveSheet.Range("B1").Value & "_WCT_reworked"
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xlsx), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, FileFilter:="Excel Files (*.xlsx), *.xlsm")
 If sFileSaveName <> False Then
 ActiveWorkbook.SaveAs sFileSaveName
 End If
