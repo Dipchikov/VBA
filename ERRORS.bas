@@ -5,7 +5,11 @@ Application.ScreenUpdating = False
 
 Dim XDA As String
 Dim XDV As String
-Dim motor As String
+'----------default values----------
+XDV = "1,5"
+XDA = 4
+'------------------------------
+
 Set MyPlage = Range("A15:A1000")
 Set myCell = MyPlage.Find(What:="XDA", LookIn:=xlValues)
 If Not myCell Is Nothing Then
