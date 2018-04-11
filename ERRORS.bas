@@ -1,25 +1,13 @@
 Attribute VB_Name = "ERRORS"
-Sub Errors()
+Public Sub Errors()
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 
-Dim XDA As String
+Dim XDA As Single
 Dim XDV As String
 '----------default values----------
-XDV = "1,5"
-XDA = 4
-'------------------------------
-
-Set MyPlage = Range("A15:A1000")
-Set myCell = MyPlage.Find(What:="XDA", LookIn:=xlValues)
-If Not myCell Is Nothing Then
-XDA = InputBox("Please add cross-section of conductors current circuit" & vbNewLine & "Cross-section of conductors for current circuit  by default is = 4mm", "Cross-Section for current circuit", 4)
-End If
-Set myCell = MyPlage.Find(What:="XDV", LookIn:=xlValues)
-If Not myCell Is Nothing Then
-XDV = InputBox("Please add cross-section of conductors voltage circuit" & vbNewLine & "Cross-section of conductors for voltage circuit  by default is = 1,5", "Cross-Section for voltage circuit", "1,5")
-End If
-
+XDA = XDA1
+XDV = XDV1
 '------------------XDA -------------------------
 'Range("G7:H1000").Interior.ColorIndex = 0
 Set MyPlage = Range("A15:A1000")
