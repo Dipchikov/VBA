@@ -5,19 +5,22 @@ Dim my_FileName As Variant
 Dim shematic As String
 Dim err As Single
 Dim connections As Single
+Dim Routing As Single
 Dim mydata As Workbook
 Dim myserr As Workbook
 
 ' ----'присвояване на стойности-------------
-Set mydata = Workbooks("Main Italy Secondary table vR2.4.xlsm")
+Set mydata = ThisWorkbook
 Sheets("Wiring table").Select
 err = Range("H10").Value
 connections = Range("L10").Value
+Routing = Range("F10").Value * 0.1 + 0.97
 shematic = Range("B1").Value
- If shematic = "" Then
+If shematic = "" Then
  rou = MsgBox("Please add scheme number in cell B1!!!", vbExclamation)
-  Exit Sub
-  End If
+Exit Sub
+End If
+
 
 my_FileName = Application.GetOpenFilename(FileFilter:="Excel Files,*.xl*;*.xm*")
 
@@ -32,8 +35,11 @@ Set MyPlage = Range("E15:E1048576")
         If cell.Value = shematic Then
         cell(1, 12).Value = connections
         cell(1, 13).Value = err
+        cell(1, 15).Value = Routing
         End If
         Next
+        Else
+        Exit Sub
         End If
     Application.DisplayAlerts = False
     ActiveWorkbook.Save
