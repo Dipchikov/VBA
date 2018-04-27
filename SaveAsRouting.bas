@@ -36,9 +36,11 @@ Dim sFileSaveName As Variant
 Dim sPath As String
 sPath = "Routing_" & Right(ActiveSheet.Range("A4").Value, 4) & "_" & ActiveSheet.Range("B4").Value
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xlsx), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, FileFilter:="Excel Files (*.xlsx), *.xlsm")
 If sFileSaveName <> False Then
+Application.DisplayAlerts = False
 ActiveWorkbook.SaveAs sFileSaveName
+Application.DisplayAlerts = True
 End If
 End If
 End Sub
