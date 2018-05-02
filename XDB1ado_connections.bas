@@ -7,8 +7,12 @@ Sub XDB1ado_connections()
   For Each cell In MyPlage
   
         
-        If Left(cell.Value, 4) = "XDB1" And cell(1, 11).Value > 4 Then
+        If Left(cell.Value, 4) = "XDB1" And cell(1, 11).Value > 3 Then
         cell(1, 2).Interior.ColorIndex = 3
+        End If
+        
+           If Left(cell.Value, 4) = "XDB1" And cell(1, 11).Value <= 3 Then
+        cell(1, 2).Interior.ColorIndex = 0
         End If
 
 Next
@@ -17,8 +21,13 @@ Next
   For Each cell In MyPlage
   
         
-        If Left(cell.Value, 4) = "XDB1" And cell(1, 13).Value > 4 Then
+        If Left(cell.Value, 4) = "XDB1" And cell(1, 13).Value > 3 Then
         cell(1, 2).Interior.ColorIndex = 3
         End If
+        
+        If Left(cell.Value, 4) = "XDB1" And cell(1, 13).Value <= 3 Then
+        cell(1, 2).Interior.ColorIndex = 0
+        End If
+        
         Next
 End Sub
