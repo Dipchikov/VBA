@@ -4,7 +4,7 @@ Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 
 Dim XDA As Single
-Dim XDV As String
+Dim XDV As Single
 '----------default values----------
 XDA = XDA1
 XDV = XDV1
@@ -14,7 +14,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-    If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDA" And cell(1, 7).Value < XDA Then
+    If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDA" And cell(1, 7).Value <> XDA Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDA
@@ -25,7 +25,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "XDA" And cell(1, 4).Value < XDA Then
+            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "XDA" And cell(1, 4).Value <> XDA Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDA
@@ -41,7 +41,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDV" And cell(1, 7).Value < XDV Then
+            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDV" And cell(1, 7).Value <> XDV Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDV
@@ -53,7 +53,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "XDV" And cell(1, 4).Value < XDV Then
+            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "XDV" And cell(1, 4).Value <> XDV Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDV
@@ -174,7 +174,7 @@ Next
          Set MyPlage = Range("A15:A1000")
         For Each cell In MyPlage
  
-If Left(cell.Value, 3) = "FCM" And cell(1, 2).Value = 3 And cell(1, 4).Value = "XDI6" And cell(1, 7).Value < XDV Then
+If Left(cell.Value, 3) = "FCM" And cell(1, 2).Value = 3 And cell(1, 4).Value = "XDI6" And cell(1, 7).Value <> XDV Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDV
@@ -186,7 +186,7 @@ Next
   For Each cell In MyPlage
   
         
-If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDI6" And cell(1, 4).Value < XDV Then
+If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDI6" And cell(1, 4).Value <> XDV Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDV
@@ -199,7 +199,7 @@ Next
     Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
-            If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDI8" And cell(1, 7).Value < XDA Then
+            If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDI8" And cell(1, 7).Value <> XDA Then
             If Not Left(cell(1, 5).Value, 1) = "A" Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
@@ -207,7 +207,7 @@ Next
         End If
         End If
         
-            If Not IsEmpty(cell(1, 7).Value) And cell(1, 4).Value = "XDI8" And cell(1, 7).Value < XDA Then
+            If Not IsEmpty(cell(1, 7).Value) And cell(1, 4).Value = "XDI8" And cell(1, 7).Value <> XDA Then
             If Not Left(cell(1, 2).Value, 1) = "A" Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
@@ -342,7 +342,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "PGA" And cell(1, 7).Value < XDA Then
+            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "PGA" And cell(1, 7).Value <> XDA Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDA
@@ -354,7 +354,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "PGA" And cell(1, 4).Value < XDA Then
+            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "PGA" And cell(1, 4).Value <> XDA Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDA
@@ -371,7 +371,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "PGV" And cell(1, 7).Value < XDV Then
+            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "PGV" And cell(1, 7).Value <> XDV Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDV
@@ -382,7 +382,7 @@ Next
   For Each cell In MyPlage
   
         
-            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "PGV" And cell(1, 4).Value < XDV Then
+            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "PGV" And cell(1, 4).Value <> XDV Then
 
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True

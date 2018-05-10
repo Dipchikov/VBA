@@ -13,7 +13,7 @@ End If
 Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
  
-              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM1" And cell(1, 7).Value < XDM1 Then
+              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM1" And cell(1, 7).Value <> XDM1 Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDM1
@@ -25,7 +25,7 @@ Set MyPlage = Range("A15:A1000")
     Set MyPlage = Range("D15:D1000")
   For Each cell In MyPlage
        
-            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM1" And cell(1, 4).Value < XDM1 Then
+            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM1" And cell(1, 4).Value <> XDM1 Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDM1
@@ -44,7 +44,7 @@ End If
 Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
  
-              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM2" And cell(1, 7).Value < XDM2 Then
+              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM2" And cell(1, 7).Value <> XDM2 Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDM2
@@ -56,7 +56,7 @@ Set MyPlage = Range("A15:A1000")
     Set MyPlage = Range("D15:D1000")
   For Each cell In MyPlage
        
-            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM2" And cell(1, 4).Value < XDM2 Then
+            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM2" And cell(1, 4).Value <> XDM2 Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDM2
@@ -75,7 +75,7 @@ End If
 Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
  
-              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM3" And cell(1, 7).Value < XDM3 Then
+              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM3" And cell(1, 7).Value <> XDM3 Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDM3
@@ -87,7 +87,7 @@ Set MyPlage = Range("A15:A1000")
     Set MyPlage = Range("D15:D1000")
   For Each cell In MyPlage
        
-            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM3" And cell(1, 4).Value < XDM3 Then
+            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM3" And cell(1, 4).Value <> XDM3 Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDM3
@@ -106,7 +106,7 @@ End If
 Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
  
-              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM4" And cell(1, 7).Value < XDM4 Then
+              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM4" And cell(1, 7).Value <> XDM4 Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDM4
@@ -118,7 +118,7 @@ Set MyPlage = Range("A15:A1000")
     Set MyPlage = Range("D15:D1000")
   For Each cell In MyPlage
        
-            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM4" And cell(1, 4).Value < XDM4 Then
+            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM4" And cell(1, 4).Value <> XDM4 Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDM4
@@ -137,7 +137,7 @@ End If
 Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
  
-              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM5" And cell(1, 7).Value < XDM5 Then
+              If Not IsEmpty(cell(1, 7).Value) And cell.Value = "XDM5" And cell(1, 7).Value <> XDM5 Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDM5
@@ -149,7 +149,7 @@ Set MyPlage = Range("A15:A1000")
     Set MyPlage = Range("D15:D1000")
   For Each cell In MyPlage
        
-            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM5" And cell(1, 4).Value < XDM5 Then
+            If Not IsEmpty(cell(1, 4).Value) And cell.Value = "XDM5" And cell(1, 4).Value <> XDM5 Then
         cell(1, 4).Font.ColorIndex = 3
         cell(1, 4).Font.Bold = True
         cell(1, 4).Value = XDM5
