@@ -37,13 +37,20 @@ Next
 
 
 
-'---------------------------clear cells BAT-FCF -QAB -BGT -QCE -BCT- BCN- BAD- EB- EA- BGB-QBM2 - BPS--------------------------------
+'---------------------------clear cells BAT-FCF -QAB -BGT -QCE -BCT- BCN- BAD- EB- EA- BGB-QBM2 - BPS- QBS-------------------------------
 
 Set MyPlage = Range("A15:A1000")
 
     For Each cell In MyPlage
 
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BAT" Then
+            cell(1, 7).ClearContents
+            cell(1, 8).ClearContents
+            cell(1, 9).Font.ColorIndex = 3
+            cell(1, 9).Font.Bold = True
+          End If
+          
+                  If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "QBS" And Left(cell(1, 4).Value, 3) = "XDC" Then
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -324,7 +331,7 @@ Set MyPlage = Range("A15:A1000")
    If Left(cell.Value, 3) = "XDA" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
          cell(1, 7).ClearContents
-            cell(1, 8).ClearContents
+         cell(1, 8).ClearContents
 
         End If
         End If
@@ -339,6 +346,17 @@ Set MyPlage = Range("A15:A1000")
          If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
+        End If
+        End If
+        
+        
+           If cell.Value = "XDA" And cell.Value = cell(1, 4).Value Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And Not (cell(1, 9).Value = "Insertable jumper" Or cell(1, 9).Value = "Saddle jumper") Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
         End If
         End If
         
@@ -374,6 +392,16 @@ Set MyPlage = Range("A15:A1000")
          If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
+        End If
+        End If
+        
+               If cell.Value = "XDV" And cell.Value = cell(1, 4).Value Then
+         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And Not (cell(1, 9).Value = "Insertable jumper" Or cell(1, 9).Value = "Saddle jumper") Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
         End If
         End If
         
