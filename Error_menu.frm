@@ -27,7 +27,7 @@ End If
 End If
 
 translate.translate
-
+section.section
 '------------------CLEAR COLOUR FIRST -------------------------
 
 Range("A15:L1000").Interior.ColorIndex = 0
@@ -39,7 +39,8 @@ Swap.Swap
 Jumpers.Jumpers
 Errors.Errors
 tfm.tfm
-
+renumber.renumber
+formula.formula
 '------------------------- Jumpers clear cells"----------------------------------
  End If
  

@@ -1,7 +1,7 @@
 Attribute VB_Name = "XDMs_errors"
 Sub XDMs_errors()
 
-Dim XDM1 As String
+Dim XDM1 As Single
 
 Set MyPlage = Range("A15:d1000")
 
@@ -33,7 +33,7 @@ Set MyPlage = Range("A15:A1000")
         
 Next
 
- Dim XDM2 As String
+ Dim XDM2 As Single
 Set MyPlage = Range("A15:d1000")
 
 
@@ -64,7 +64,7 @@ Set MyPlage = Range("A15:A1000")
         
 Next
 
-Dim XDM3 As String
+Dim XDM3 As Single
 Set MyPlage = Range("A15:d1000")
 
 
@@ -95,7 +95,7 @@ Set MyPlage = Range("A15:A1000")
         
 Next
    
-Dim XDM4 As String
+Dim XDM4 As Single
 Set MyPlage = Range("A15:d1000")
 
 
@@ -126,7 +126,7 @@ Set MyPlage = Range("A15:A1000")
         
 Next
 
-Dim XDM5 As String
+Dim XDM5 As Single
 Set MyPlage = Range("A15:d1000")
 
 

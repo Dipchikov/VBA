@@ -8,7 +8,7 @@ Dim Shielded_cable As String
 Set MyPlage = Range("L15:L1000")
 Set myCell = MyPlage.Find(What:="Shielded cable", LookIn:=xlValues)
 If Not myCell Is Nothing Then
-Shielded_cable = InputBox("Please add cross-section for Shielded cable", , "0,8")
+Shielded_cable = InputBox("Please add cross-section for Shielded cable", , Range("G" & myCell.Row))
 End If
 
 Set MyPlage = Range("G15:G1000")
