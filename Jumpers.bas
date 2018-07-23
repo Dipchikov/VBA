@@ -17,7 +17,7 @@ Set MyPlage = Range("G15:G1000")
     Next
 
 '----------------- minimal wires crossection   --------------------
-Dim wire As String
+Dim wire As Single
 
 Set MyPlage = Range("G15:G1000")
 
@@ -190,7 +190,7 @@ Set MyPlage = Range("A15:A1000")
         
         Next
  '------------------Jumpers between equipment -------------------------
- 
+ Dim x As Single
 Set MyPlage = Range("A15:A1000")
 
     For Each cell In MyPlage
@@ -228,6 +228,7 @@ Set MyPlage = Range("A15:A1000")
     End If
     End If
     
+    
         If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Ponticello a filo" Then
          x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
             cell(1, 9).Value = "Conduttore/filo"
@@ -261,7 +262,7 @@ Set MyPlage = Range("A15:A1000")
     cell(1, 8).Font.Bold = True
     End If
     End If
-      
+     
                  If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Saddle jumper" Then
             x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
             cell(1, 9).Value = "Conductor / wire"
@@ -295,6 +296,7 @@ Set MyPlage = Range("A15:A1000")
              cell(1, 8).Font.Bold = True
     End If
     End If
+   
                 If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Ponticello a filo" Then
             x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
             cell(1, 9).Value = "Conduttore/filo"
@@ -360,6 +362,79 @@ Set MyPlage = Range("A15:A1000")
         End If
         End If
         
+        
+        '-------------Black jumpers----------------------------------
+        
+        If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 2 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 6 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                
+                If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 9 And cell(1, 5).Value = 11 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                        If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 13 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+        
+        
+          If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 1 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 7 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 3 And cell(1, 5).Value = 6 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 6 And cell(1, 5).Value = 9 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+        
+        
+        
  Next
         
 '------------------XDV -------------------------
@@ -404,6 +479,76 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         End If
+        
+          '-------------Black jumpers----------------------------------
+        
+        If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 2 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 6 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                
+                If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 9 And cell(1, 5).Value = 11 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                        If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 13 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+        
+        
+          If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 1 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 7 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 3 And cell(1, 5).Value = 6 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
+                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 6 And cell(1, 5).Value = 9 And Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+        
         
  Next
         

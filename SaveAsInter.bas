@@ -25,6 +25,8 @@ If ActiveSheet.Name = "Interconnections" Then
      On Error Resume Next
     
     ActiveWorkbook.Save
+    '---------wire colous------------
+    wire_colours.wire_colours
     Routing_inter.Routing_inter
    
 
@@ -84,17 +86,18 @@ If ActiveSheet.Name = "Interconnections" Then
     End With
     
          '-------------Formulas---------------
-    
-    Range("C12").Select
-    ActiveCell.FormulaR1C1 = "=""=""&RC[-2]&"":""&RC[-1]"
-    Range("C12").Select
-    Selection.AutoFill Destination:=Range("C12:C" & lr), Type:=xlFillDefault
-    Range("C12:C" & lr).Select
-    Range("F12").Select
-    ActiveCell.FormulaR1C1 = "=""=""&RC[-2]&"":""&RC[-1]"
-    Range("F12").Select
-    Selection.AutoFill Destination:=Range("F12:F" & lr), Type:=xlFillDefault
-    Range("F12:F" & lr).Select
+    Range("C12:C" & lr).formula = "=""-""&RC[-2]&"":""&RC[-1]"
+    'Range("C12").Select
+    'ActiveCell.FormulaR1C1 = "=""=""&RC[-2]&"":""&RC[-1]"
+    'Range("C12").Select
+    'Selection.AutoFill Destination:=Range("C12:C" & lr), Type:=xlFillDefault
+    'Range("C12:C" & lr).Select
+    Range("F12:F" & lr).formula = "=""-""&RC[-2]&"":""&RC[-1]"
+    'Range("F12").Select
+    'ActiveCell.FormulaR1C1 = "=""=""&RC[-2]&"":""&RC[-1]"
+   ' Range("F12").Select
+    'Selection.AutoFill Destination:=Range("F12:F" & lr), Type:=xlFillDefault
+    'Range("F12:F" & lr).Select
     Range("A6").Select
     
     
@@ -107,7 +110,7 @@ Dim sFileSaveName As Variant
 Dim sPath As String
 sPath = "Interconnection_" & Right(ActiveSheet.Range("B1").Value, 4) & "_" & "Pos_" & ActiveSheet.Range("E1").Value
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xlsx), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, FileFilter:="Excel Files (*.xlsx), *.xlsm")
 If sFileSaveName <> False Then
 ActiveWorkbook.SaveAs sFileSaveName
 End If

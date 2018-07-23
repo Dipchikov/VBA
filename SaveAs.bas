@@ -7,8 +7,8 @@ If ActiveSheet.Name = "Wiring table" Then
 
    
     
-    Application.Calculation = xlCalculationManual
-    Application.ScreenUpdating = False
+
+
 
 
     Dim lr As Long
@@ -34,9 +34,10 @@ If ActiveSheet.Name = "Wiring table" Then
     Routing.Routing
     CountColorValue.CountColorValue
     '-----------------Изтриване и копиране в WCT-------------------
-
+    Application.ScreenUpdating = False
+    Application.Calculation = xlCalculationManual
+    
     Sheets("WCT_form").Range("A15:L1048576").EntireRow.Delete
-
     Sheets("Wiring table").Select
     lr = Range("A" & Rows.Count).End(xlUp).Row
     Range("A1:l" & lr).Copy
@@ -45,7 +46,6 @@ If ActiveSheet.Name = "Wiring table" Then
     ActiveSheet.Paste
     Range("A1").PasteSpecial Paste:=xlPasteValues
     Range("A1").PasteSpecial Paste:=xlPasteFormats
-
     Sheets("Wiring table").Select
     Range("A15").Select
 
@@ -77,16 +77,18 @@ If ActiveSheet.Name = "Wiring table" Then
     Columns("F:F").Select
     Selection.NumberFormat = "General"
         '-------------Formulas---------------
-    Range("C15").Select
-    ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
-    Range("C15").Select
-    Selection.AutoFill Destination:=Range("C15:C" & lr), Type:=xlFillDefault
-    Range("C15:C" & lr).Select
-    Range("F15").Select
-    ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
-    Range("F15").Select
-    Selection.AutoFill Destination:=Range("F15:F" & lr), Type:=xlFillDefault
-    Range("F15:F" & lr).Select
+    Range("C15:C" & lr).formula = "=""-""&RC[-2]&"":""&RC[-1]"
+   ' Range("C15").Select
+    'ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
+   ' Range("C15").Select
+    'Selection.AutoFill Destination:=Range("C15:C" & lr), Type:=xlFillDefault
+    'Range("C15:C" & lr).Select
+    Range("F15:F" & lr).formula = "=""-""&RC[-2]&"":""&RC[-1]"
+    'Range("F15").Select
+    'ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
+    'Range("F15").Select
+   ' Selection.AutoFill Destination:=Range("F15:F" & lr), Type:=xlFillDefault
+    'Range("F15:F" & lr).Select
     Range("A15").Select
     Application.CutCopyMode = False 'esp
 
