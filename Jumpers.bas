@@ -365,7 +365,7 @@ Set MyPlage = Range("A15:A1000")
         
         '-------------Black jumpers----------------------------------
         
-        If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 2 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = "Saddle jumper" Then
+        If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 2 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -373,7 +373,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 6 And Not cell(1, 9).Value = "Saddle jumper" Then
+                If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 6 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -382,7 +382,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         
                 
-                If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 9 And cell(1, 5).Value = 11 And Not cell(1, 9).Value = "Saddle jumper" Then
+                If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 9 And cell(1, 5).Value = 11 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -390,7 +390,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                        If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 13 And Not cell(1, 9).Value = "Saddle jumper" Then
+                        If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 13 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -400,7 +400,7 @@ Set MyPlage = Range("A15:A1000")
         
         
         
-          If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 1 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = "Saddle jumper" Then
+          If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 1 And cell(1, 5).Value = 4 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -408,7 +408,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 7 And Not cell(1, 9).Value = "Saddle jumper" Then
+                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 7 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -416,7 +416,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 3 And cell(1, 5).Value = 6 And Not cell(1, 9).Value = "Saddle jumper" Then
+                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 3 And cell(1, 5).Value = 6 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -424,7 +424,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 6 And cell(1, 5).Value = 9 And Not cell(1, 9).Value = "Saddle jumper" Then
+                  If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 6 And cell(1, 5).Value = 9 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -482,7 +482,7 @@ Set MyPlage = Range("A15:A1000")
         
           '-------------Black jumpers----------------------------------
         
-        If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 2 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = "Saddle jumper" Then
+        If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 2 And cell(1, 5).Value = 4 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -490,7 +490,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 6 And Not cell(1, 9).Value = "Saddle jumper" Then
+                If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 6 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -499,7 +499,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         
                 
-                If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 9 And cell(1, 5).Value = 11 And Not cell(1, 9).Value = "Saddle jumper" Then
+                If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 9 And cell(1, 5).Value = 11 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -507,7 +507,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                        If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 13 And Not cell(1, 9).Value = "Saddle jumper" Then
+                        If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 11 And cell(1, 5).Value = 13 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -517,7 +517,7 @@ Set MyPlage = Range("A15:A1000")
         
         
         
-          If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 1 And cell(1, 5).Value = 4 And Not cell(1, 9).Value = "Saddle jumper" Then
+          If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 1 And cell(1, 5).Value = 4 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -525,7 +525,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 7 And Not cell(1, 9).Value = "Saddle jumper" Then
+                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 4 And cell(1, 5).Value = 7 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -533,7 +533,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 3 And cell(1, 5).Value = 6 And Not cell(1, 9).Value = "Saddle jumper" Then
+                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 3 And cell(1, 5).Value = 6 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
@@ -541,7 +541,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         
-                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 6 And cell(1, 5).Value = 9 And Not cell(1, 9).Value = "Saddle jumper" Then
+                  If cell.Value = "XDV" And cell.Value = cell(1, 4).Value And cell(1, 2).Value = 6 And cell(1, 5).Value = 9 And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Value = "Insertable jumper"
