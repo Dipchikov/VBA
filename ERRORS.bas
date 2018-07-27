@@ -41,7 +41,7 @@ Set MyPlage = Range("A15:A1000")
   For Each cell In MyPlage
   
         
-            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDV" And cell(1, 7).Value <> XDV Then
+            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDV" And Not (Left(cell(1, 4).Value, 2) = "XE" Or Left(cell(1, 4).Value, 2) = "PE") And cell(1, 7).Value <> XDV Then
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         cell(1, 7).Value = XDV
