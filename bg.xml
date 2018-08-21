@@ -161,7 +161,7 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="maps_submenu_only_use_local_storage">Използвай само локалното хранилище</string>
 <string name="maps_submenu_show_storage_coverage">Покритие на локалното хранилищее</string>
 <string name="maps_submenu_correct_china_shift">Правилни компенсации над Китай</string>
-<string name="maps_submenu_favorites_title">Любими карти &amp; настройки</string>
+<string name="maps_submenu_favorites_title">Предпочитани карти и комплексни карти</string>
 
 <string name="landmarks_submenu_title">Маркери</string>
 <string name="landmarks_submenu_browse">Преглед на маркерите</string>
@@ -346,63 +346,63 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <!-- Application main texts -->
 
-<string name="application_eula">Before using the application, please read, understand and agree the Psyberia EULA:</string>
-<string name="application_disclaimer">All images, values and measurements given by this application are indicative and may contain errors, please use with caution.</string>
+<string name="application_eula">Преди да използвате приложението, моля прочетете, разберете и приемете Psyberia EULA:</string>
+<string name="application_disclaimer">Всички изображения, стойности, измервания и дадени в това приложение, са показателни и могат да съдържат грешки. Моля, използвайте внимателно.</string>
 
-<string name="core_loader_loading">Loading components&#8230;</string>
-<string name="core_loader_restoring">Restoring items&#8230;</string>
+<string name="core_loader_loading">Зареждане на компоненти&#8230;</string>
+<string name="core_loader_restoring">Възстановяване на елементи&#8230;</string>
 
-<string name="canvas_feature_disabled">Due to legal issues, this feature is disabled for the following map(s):</string>
+<string name="canvas_feature_disabled">Поради правни проблеми тази функция е деактивирана за следните карта (и):</string>
 
-<string name="core_toolkit_error_report_message_1p">Thanks for sending us this report containing %s error(s).</string>
+<string name="core_toolkit_error_report_message_1p">Благодарим Ви, че ни изпратихте този отчет, съдържащ грешка %s.</string>
 
-<string name="core_workspace_switch">Switch workspace</string>
-<string name="core_workspace_default">Default workspace</string>
+<string name="core_workspace_switch">Промяна на работното пространство</string>
+<string name="core_workspace_default">Стандартно работно пространство</string>
 
-<string name="core_custom_submenu_item">Custom item</string>
+<string name="core_custom_submenu_item">Персонализиран бутон</string>
 
 
 
 
 <!-- Maps feature main texts -->
 
-<string name="maps_context_menu_layer">Add as layer</string>
-<string name="maps_context_menu_opacity">Layer opacity</string>
-<string name="maps_context_menu_key">Map key</string>
+<string name="maps_context_menu_layer">Добавете като слой</string>
+<string name="maps_context_menu_opacity">Прозрачност на слоя</string>
+<string name="maps_context_menu_key">Легенда на картата</string>
 
-<string name="maps_confirm_outbound_title">Out-of-bounds map</string>
-<string name="maps_confirm_outbound_desc">The map you\'ve selected contains no data at the current location, which will result in an empty screen.</string>
-<string name="maps_confirm_outbound_desc_slide">Do you want to slide the map view to a covered area?</string>
+<string name="maps_confirm_outbound_title">Извън картата</string>
+<string name="maps_confirm_outbound_desc">Картата, която сте избрали не съдържа данни за текущото местоположение, което ще доведе до празен екран.</string>
+<string name="maps_confirm_outbound_desc_slide">Искате ли да преместите изгледа на картата в зона покритие?</string>
 
-<string name="maps_favorites_save">Save as favorite set</string>
-<string name="maps_favorites_set_name">Favorite set</string>
-<string name="maps_favorites_set_empty">No favorite map or set defined yet</string>
+<string name="maps_favorites_save">Запази в предпочитани</string>
+<string name="maps_favorites_set_name">Предпочитани</string>
+<string name="maps_favorites_set_empty">Няма създадени и добавени в предпочитани карти</string>
 
-<string name="maps_online_provider_title">On-demand maps</string>
-<string name="maps_online_installed">Installed maps</string>
-<string name="maps_online_clear_data">Clear data</string>
-<string name="maps_online_clear_data_confirm">Clear all the stored data of this map?</string>
-<string name="maps_online_add_new">Add new maps</string>
-<string name="maps_online_add_new_desc">You can browse and install new maps from the community:</string>
-<string name="maps_online_suggest">Suggest</string>
+<string name="maps_online_provider_title">Карти</string>
+<string name="maps_online_installed">Инсталирани карти</string>
+<string name="maps_online_clear_data">Изчистване на данните</string>
+<string name="maps_online_clear_data_confirm">Да се изтрият ли всички запазени данни на тази карта?</string>
+<string name="maps_online_add_new">Добавете нови карти?</string>
+<string name="maps_online_add_new_desc">Можете да прегледате и инсталирате карти от общността:</string>
+<string name="maps_online_suggest">Предлагам</string>
 
-<string name="maps_elevation_title">Elevation data</string>
-<string name="maps_elevation_dem">Digital elevation model (DEM)</string>
-<string name="maps_elevation_dem_activate">Download and use elevation data</string>
-<string name="maps_elevation_dem_map">DEM storage visualisation</string>
-<string name="maps_elevation_dem_source_1p">Indicative data from %s</string>
+<string name="maps_elevation_title">Надморска височина</string>
+<string name="maps_elevation_dem">Цифров модел на релефа(DEM)</string>
+<string name="maps_elevation_dem_activate">Използвай данни за висичината</string>
+<string name="maps_elevation_dem_map">Показване на зони със съхранени данни за релефа</string>
+<string name="maps_elevation_dem_source_1p">Индикативни данни от %s</string>
 
-<string name="maps_area_downloader_creator_zoom">Zoom</string>
-<string name="maps_area_downloader_creator_cell_tile_1p">%s tile</string>
-<string name="maps_area_downloader_creator_cell_tiles_1p">%s tiles</string>
-<string name="maps_area_downloader_process_terminated">Successfully completed</string>
-<string name="maps_area_downloader_process_working">Process running</string>
-<string name="maps_area_downloader_settings_update">Update data already stored.</string>
+<string name="maps_area_downloader_creator_zoom">Мащаб</string>
+<string name="maps_area_downloader_creator_cell_tile_1p">%s елемент</string>
+<string name="maps_area_downloader_creator_cell_tiles_1p">%s елемента</string>
+<string name="maps_area_downloader_process_terminated">Успешно завършено</string>
+<string name="maps_area_downloader_process_working">В процес на запазване</string>
+<string name="maps_area_downloader_settings_update">Актуализиране на вече съхранените данни.</string>
 
-<string name="maps_onboard_provider_title">File based maps</string>
-<string name="maps_onboard_import_folder_name">Imported maps</string>
-<string name="maps_onboard_explorer_group_inbounds">In-bounds maps</string>
-<string name="maps_onboard_explorer_group_outbounds">Out-of-bounds maps</string>
+<string name="maps_onboard_provider_title">Карти от файл</string>
+<string name="maps_onboard_import_folder_name">Импортирани карти</string>
+<string name="maps_onboard_explorer_group_inbounds">Карти в границите</string>
+<string name="maps_onboard_explorer_group_outbounds">Карти извън границите</string>
 
 
 
