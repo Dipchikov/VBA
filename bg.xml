@@ -489,16 +489,16 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <!-- Search feature main texts -->
 
-<string name="search_title">Search a location</string>
-<string name="search_save_folder_name">Recent searches</string>
-<string name="search_name_scanner">Location name</string>
-<string name="search_text_single">Single field (for copy/paste)</string>
-<string name="search_text_format">Search format</string>
-<string name="search_dialog_incorrect_location">Incorrect location format.</string>
-<string name="search_dialog_geocoder_failed">The search failed.\nYou need to have an Internet data access to search a location by name.</string>
-<string name="search_dialog_no_results">No result found.</string>
-<string name="search_dialog_main_results">Main results</string>
-<string name="search_dialog_other_results">Other results</string>
+<string name="search_title">Търсене на местоположение</string>
+<string name="search_save_folder_name">Последно търсени</string>
+<string name="search_name_scanner">Име</string>
+<string name="search_text_single">Едно поле (за копиране / поставяне)</string>
+<string name="search_text_format">Формат на търсене</string>
+<string name="search_dialog_incorrect_location">Неправилен формат на местоположението.</string>
+<string name="search_dialog_geocoder_failed">Неуспешно търсене.\n Вие трябва да имате достъп до интернет, за да търсите местоположение по име.</string>
+<string name="search_dialog_no_results">Няма намерен резултат.</string>
+<string name="search_dialog_main_results">Основни резултати</string>
+<string name="search_dialog_other_results">Други резултати</string>
 
 
 
@@ -512,16 +512,16 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <!-- Orientation feature main texts -->
 
-<string name="orientation_heading">Heading</string>
-<string name="orientation_bearing">Bearing</string>
-<string name="orientation_direction">Direction</string>
-<string name="orientation_declination">Declin.</string>
-<string name="orientation_compass_not_available">Cannot activate the compass: no magnetic sensor on this device.</string>
-<string name="orientation_setting_sensor">Sensor</string>
-<string name="orientation_setting_compass_standard_name">Standard</string>
-<string name="orientation_setting_compass_standard_desc">Moving needle over still graduations</string>
-<string name="orientation_setting_compass_topochaix_desc">Moving needle and graduations</string>
-<string name="orientation_setting_declination">Compute declination to get true north</string>
+<string name="orientation_heading">Посока</string>
+<string name="orientation_bearing">Азимут</string>
+<string name="orientation_direction">Посока</string>
+<string name="orientation_declination">Деклинация</string>
+<string name="orientation_compass_not_available">Не може да се активира компасът.На това устройство няма магнитен датчик.</string>
+<string name="orientation_setting_sensor">Сензор</string>
+<string name="orientation_setting_compass_standard_name">Стандарт</string>
+<string name="orientation_setting_compass_standard_desc">Стрелката се върти, а мащабът е неподвижен</string>
+<string name="orientation_setting_compass_topochaix_desc">Стрелката и мащабът се въртят</string>
+<string name="orientation_setting_declination">Изчисляване на деклинацията, за да получаване на истинския север</string>
 
 
 
