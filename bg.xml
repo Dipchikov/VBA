@@ -223,7 +223,7 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="core_button_move_top">Премести в горната част на списъка</string>
 <string name="core_button_move_up">Премести нагоре</string>
 <string name="core_button_no">Не</string>
-<string name="core_button_none">Не</string>
+<string name="core_button_none">Без</string>
 <string name="core_button_ok">OK</string>
 <string name="core_button_online_help">Онлайн помощ</string>
 <string name="core_button_open">Отвори</string>
@@ -245,9 +245,9 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="core_button_whats_new">Какво е новото</string>
 <string name="core_button_yes">Да</string>
 
-<string name="core_button_leave_comment">Leave a comment</string>
-<string name="core_button_support_forum">Support forum</string>
-<string name="core_button_terms_of_use">Terms of use</string>
+<string name="core_button_leave_comment">Оставете коментар</string>
+<string name="core_button_support_forum">Форум за поддръжка</string>
+<string name="core_button_terms_of_use">Условия за ползване</string>
 
 
 
@@ -270,8 +270,8 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="core_utils_units_distance_meter_abbrev">м</string>
 <string name="core_utils_units_distance_kilometer_abbrev">км</string>
 <string name="core_utils_units_speed_abbrev">км/ч</string>
-<string name="core_utils_units_area_hectare_abbrev">ha</string>
-<string name="core_utils_units_area_are_abbrev">are</string>
+<string name="core_utils_units_area_hectare_abbrev">ха</string>
+<string name="core_utils_units_area_are_abbrev">ар</string>
 <string name="core_utils_units_pressure_hpa_abbrev">hPa</string>
 <string name="core_utils_units_pressure_mmhg_abbrev">mmHg</string>
 
@@ -281,44 +281,44 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="core_toolkit_share_location_list_empty">Няма местоположение за показване.</string>
 
 <string name="core_toolkit_loading">Зареждане</string>
-<string name="core_toolkit_please_wait">Моля изчакайте</string>
+<string name="core_toolkit_please_wait">Моля изчакайте..</string>
 <string name="core_toolkit_success">Успех</string>
 <string name="core_toolkit_error">Грешка</string>
 <string name="core_toolkit_error_no_network">Няма мрежа</string>
 <string name="core_toolkit_error_network">Мрежова грешка</string>
 <string name="core_toolkit_error_unknown">Неизестна грешка</string>
 
-<string name="core_toolkit_error_occured_s">An error occurred.</string>
-<string name="core_toolkit_error_data_corrupted_s">Local data may be corrupted.</string>
-<string name="core_toolkit_error_action_failed_s_1p">The requested action \"%s\" failed.</string>
-<string name="core_toolkit_error_coupon_invalid_s">This coupon is not valid or has expired.</string>
-<string name="core_toolkit_error_out_of_memory_s">Running out of memory. Please restart the application.</string>
-<string name="core_toolkit_error_storage_s">Failed to detect or use a suitable storage location.</string>
-<string name="core_toolkit_error_storage_configure_s">Would you like to configure it now?</string>
-<string name="core_toolkit_error_limited_features_s">Functionalities will be limited.</string>
-<string name="core_toolkit_error_write_no_space_left_s">No more space available on this storage.</string>
-<string name="core_toolkit_error_write_no_grants_s">This storage is not writable.</string>
-<string name="core_toolkit_error_permission_s">You must allow the permission to use this feature.</string>
-<string name="core_toolkit_error_intent_input_s">Unable to handle external content.</string>
-<string name="core_toolkit_error_service_unavailable_s">Service is unavailable.</string>
+<string name="core_toolkit_error_occured_s">Възникна грешка.</string>
+<string name="core_toolkit_error_data_corrupted_s">Локалните данни може да са повредени.</string>
+<string name="core_toolkit_error_action_failed_s_1p">Исканото действие\"%s\" се провали.</string>
+<string name="core_toolkit_error_coupon_invalid_s">Този купон не е валиден или е изтекъл.</string>
+<string name="core_toolkit_error_out_of_memory_s">Паметта е изчерпана. Моля, рестартирайте приложението.</string>
+<string name="core_toolkit_error_storage_s">Неуспешно откриване или използване на подходящо място за съхранение.</string>
+<string name="core_toolkit_error_storage_configure_s">Искате ли да го конфигурирате сега?</string>
+<string name="core_toolkit_error_limited_features_s">Функционалността ще бъде ограничена.</string>
+<string name="core_toolkit_error_write_no_space_left_s">Няма повече място в това хранилище.</string>
+<string name="core_toolkit_error_write_no_grants_s">Не може да се записва.</string>
+<string name="core_toolkit_error_permission_s">Трябва да активирате разрешението за да използвате тази функция.</string>
+<string name="core_toolkit_error_intent_input_s">Не може да се обработва външно съдържание.</string>
+<string name="core_toolkit_error_service_unavailable_s">Услугата е недостъпна.</string>
 
-<string name="core_toolkit_message_item_saved_s">Item correctly saved.</string>
+<string name="core_toolkit_message_item_saved_s">Елементът е запазен.</string>
 
-<string name="core_toolkit_question_are_you_sure_s">Are you sure?</string>
-<string name="core_toolkit_question_confirm_exit_s">Close the application?</string>
-<string name="core_toolkit_question_file_already_imported_s">This file has already been imported. Open existing or import again?</string>
-<string name="core_toolkit_question_replace_existing_item_s">This item already exists, replace it?</string>
+<string name="core_toolkit_question_are_you_sure_s">Сигурен ли си?</string>
+<string name="core_toolkit_question_confirm_exit_s">Затваряне на приложението.</string>
+<string name="core_toolkit_question_file_already_imported_s">Този файл вече е импортиран. Отваряне на съществуващия или импортиране отново?</string>
+<string name="core_toolkit_question_replace_existing_item_s">Този файл вече съществува, искате ли да го замените?</string>
 
-<string name="core_create_dialog_field_required">This field is required</string>
-<string name="core_create_dialog_field_optional">Optional</string>
+<string name="core_create_dialog_field_required">Това поле е задължително</string>
+<string name="core_create_dialog_field_optional">По избор</string>
 
-<string name="core_explorer_address_device">Device</string>
-<string name="core_explorer_address_sdcard">SD Card</string>
-<string name="core_explorer_address_storage">Device storage</string>
-<string name="core_explorer_address_downloads">My downloads</string>
-<string name="core_explorer_cell_empty">This place is empty.</string>
-<string name="core_explorer_scanning_1p">Scanning \"%s\"&#8230;</string>
-<string name="core_explorer_folder_create_desc">Creates a folder to sort your items.</string>
+<string name="core_explorer_address_device">Устройство</string>
+<string name="core_explorer_address_sdcard">Карта памет</string>
+<string name="core_explorer_address_storage">Памет на устройството</string>
+<string name="core_explorer_address_downloads">Моите изтеглени файлове</string>
+<string name="core_explorer_cell_empty">Това място е празно.</string>
+<string name="core_explorer_scanning_1p">Сканиране\"%s\"&#8230;</string>
+<string name="core_explorer_folder_create_desc">Създава папка за сортиране на елементи</string>
 
 <string name="core_explorer_item_delete_q">Елемента ще бъде изтрит?</string>
 <string name="core_explorer_item_delete_success_s">Eлемета е изтрит.</string>
