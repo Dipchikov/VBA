@@ -415,19 +415,19 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="landmarks_explorer_category_paths">Пътища</string>
 <string name="landmarks_explorer_category_routes">Маршрути</string>
 <string name="landmarks_explorer_category_segments">Записани сегменти</string>
-<string name="landmarks_explorer_category_sets">Набор от точки</string>
+<string name="landmarks_explorer_category_sets">Набор от ориентири</string>
 <string name="landmarks_explorer_category_tracks">Записи</string>
-<string name="landmarks_explorer_category_waypoints">Точки</string>
+<string name="landmarks_explorer_category_waypoints">Ориентири</string>
 <string name="landmarks_explorer_name_area">Област</string>
 <string name="landmarks_explorer_name_file">Файл с етикети</string>
 <string name="landmarks_explorer_name_landmark">Етикети</string>
 <string name="landmarks_explorer_name_location">Позиция</string>
 <string name="landmarks_explorer_name_path">Път</string>
-<string name="landmarks_explorer_name_picture">Снимка на ориентира</string>
+<string name="landmarks_explorer_name_picture">Точка със снимка</string>
 <string name="landmarks_explorer_name_route">Маршрут</string>
-<string name="landmarks_explorer_name_proximity">Известие за предупреждение</string>
+<string name="landmarks_explorer_name_proximity">Известие при наближаване</string>
 <string name="landmarks_explorer_name_segment">Записан сегмент</string>
-<string name="landmarks_explorer_name_set">Набор от точки</string>
+<string name="landmarks_explorer_name_set">Набор от Ориентири</string>
 <string name="landmarks_explorer_name_slope">Наклон</string>
 <string name="landmarks_explorer_name_target">Цел</string>
 <string name="landmarks_explorer_name_track">Сегмент</string>
@@ -455,8 +455,8 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <string name="landmarks_create_waypoint_desc">Маркирайте местоположение на картата с известна информация.</string>
 <string name="landmarks_create_picture_desc">Маркирайте местоположение на картата със снимка и информация.</string>
-<string name="landmarks_create_set_desc">Маркирайте няколко точки на картата и ги управявайте заедно.</string>
-<string name="landmarks_create_route_desc">Маркирайте множество подредени точки на картата.</string>
+<string name="landmarks_create_set_desc">Маркирайте няколко ориентира на картата и ги управявайте заедно.</string>
+<string name="landmarks_create_route_desc">Маркирайте множество подредени ориентира на картата.</string>
 <string name="landmarks_create_area_desc">Ръчно изчертайте контура върху картата.</string>
 <string name="landmarks_create_path_desc">Ръчно изчертайте пътя върху картата.</string>
 <string name="landmarks_create_file_desc">Създайте празен файл за етикети.</string>
@@ -467,22 +467,22 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="landmarks_create_slope_desc">Изчислява наклона между две или повече точки въз основа на въведени от потребителя точки.</string>
 <string name="landmarks_create_autorouting_title">Авто-маршрут</string>
 <string name="landmarks_create_autorouting_desc">Автоматично изчертава маршрут следвайки пътищата на картата.</string>
-<string name="landmarks_create_quick_waypoint">Бърза точка</string>
+<string name="landmarks_create_quick_waypoint">Бърз ориентир</string>
 
 <string name="landmarks_create_dialog_category_tools">Инструменти</string>
 <string name="landmarks_create_proximity_repeat">Повтаряне на известието</string>
-<string name="landmarks_create_side_title">Създател на етикети</string>
+<string name="landmarks_create_side_title">Създател на маркери</string>
 <string name="landmarks_create_side_add">Добави местоположение</string>
 <string name="landmarks_create_side_draw">Изчертай</string>
 <string name="landmarks_create_side_save">Запази и затвори</string>
 <string name="landmarks_create_side_move_to_center">Премести в центъра</string>
 
-<string name="landmarks_folder_name_my_landmarks">Моите етекети</string>
+<string name="landmarks_folder_name_my_landmarks">Моите маркери/string>
 
-<string name="landmarks_offline_provider_title">Локални етикети</string>
-<string name="landmarks_offline_folder_unsorted">Несортирани етикети</string>
-<string name="landmarks_offline_folder_import">Импортирани етикети</string>
-<string name="landmarks_offline_folder_export">Експортирани етикети</string>
+<string name="landmarks_offline_provider_title">Локални маркери</string>
+<string name="landmarks_offline_folder_unsorted">Несортирани маркери</string>
+<string name="landmarks_offline_folder_import">Импортирани маркери</string>
+<string name="landmarks_offline_folder_export">Експортирани маркери</string>
 
 
 
@@ -528,68 +528,68 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <!-- Barometer feature main texts -->
 
-<string name="barometer_calibrate_title">Calibrate barometer</string>
-<string name="barometer_calibrate_text">To get precise results using the barometer, you need to calibrate it.\nPlace yourself at a known elevation (you may use the GPS altitude) and enter it as a reference.</string>
-<string name="barometer_calibrate_current_2p" formatted="false">The current reference pressure is %s at %s.</string>
-<string name="barometer_calibrate_elevation">Current elevation</string>
-<string name="barometer_forecast_1p">Forecast: %s</string>
-<string name="barometer_forecast_good">Fair</string>
-<string name="barometer_forecast_variable">Change</string>
-<string name="barometer_forecast_bad">Rain</string>
+<string name="barometer_calibrate_title">Калибриране на барометъра</string>
+<string name="barometer_calibrate_text">За да получите точни резултати използвайки барометъра вие трябва да го калибрирате.\nПоставете се на известна надморска височина (може да използвате GPS надморска височина) и я въведете, като референтна.</string>
+<string name="barometer_calibrate_current_2p" formatted="false">Настоящото контролно налягане е %s в %s.</string>
+<string name="barometer_calibrate_elevation">Текуща надморска височина</string>
+<string name="barometer_forecast_1p">Прогноза: %s</string>
+<string name="barometer_forecast_good">Ясно</string>
+<string name="barometer_forecast_variable">Променливо</string>
+<string name="barometer_forecast_bad">Лошо</string>
 
 
 
 
 <!-- Tracker feature main texts -->
 
-<string name="tracker_action_stop">Save &amp; Stop</string>
-<string name="tracker_action_resume">Resume</string>
-<string name="tracker_action_start_new">Start new</string>
-<string name="tracker_state_desc_binding">Connecting to service</string>
-<string name="tracker_state_desc_loading">Loading track data</string>
-<string name="tracker_state_desc_paused">Track recorder is paused</string>
-<string name="tracker_state_desc_stopped">Track recorder is stopped</string>
-<string name="tracker_save_folder_name">Recorded tracks</string>
-<string name="tracker_save_desc_1p">AlpineQuest Track %s</string>
-<string name="tracker_group_last_track">Last recorded track</string>
-<string name="tracker_message_resume_track">Resume current track or start a new one?</string>
-<string name="tracker_message_save_track_failed">Failed to save the current track. Delete the data?</string>
-<string name="tracker_settings_ignore_distance">Skip locations if I\'m not moving</string>
-<string name="tracker_settings_use_barometer_desc">Record pressure values to compute more precise barometric elevations</string>
-<string name="tracker_settings_warn">Warn me if the GPS signal is lost or too weak</string>
+<string name="tracker_action_stop">Запази и спри</string>
+<string name="tracker_action_resume">Поднови</string>
+<string name="tracker_action_start_new">Започни нов</string>
+<string name="tracker_state_desc_binding">Свързване към услугата</string>
+<string name="tracker_state_desc_loading">Зареждане на данни от маршрута</string>
+<string name="tracker_state_desc_paused">Записът е на паузапауза</string>
+<string name="tracker_state_desc_stopped">Записът е спрян</string>
+<string name="tracker_save_folder_name">Записани маршрути</string>
+<string name="tracker_save_desc_1p">AlpineQuest маршрути %s</string>
+<string name="tracker_group_last_track">Последния записан маршрут</string>
+<string name="tracker_message_resume_track">Да продължи ли текущия маршрут или да стартира нов?</string>
+<string name="tracker_message_save_track_failed">Запазването на текущия маршрут не бе успешно. Да бъдат ли изтрити данните?</string>
+<string name="tracker_settings_ignore_distance">Пропускане на местоположенията, ако няма движение</string>
+<string name="tracker_settings_use_barometer_desc">Записване стойностите на налягането за по-добро изчисляване на барометричните височини./string>
+<string name="tracker_settings_warn">Предупреждение при слаб или изгубен GPS сигнал</string>
 
 
 
 
 <!-- Location service texts -->
 
-<string name="geolocation_state_waiting">Waiting for a fix</string>
-<string name="geolocation_state_not_active">Not active</string>
-<string name="geolocation_source">Source</string>
-<string name="geolocation_rate">Freq.</string>
+<string name="geolocation_state_waiting">Изчаква се връзка с GPS</string>
+<string name="geolocation_state_not_active">Не е активен</string>
+<string name="geolocation_source">Източник</string>
+<string name="geolocation_rate">Честота</string>
 
-<string name="geolocation_source_title">Location source</string>
-<string name="geolocation_source_disabled">Source is disabled.</string>
-<string name="geolocation_source_none_title">None</string>
-<string name="geolocation_source_none_desc">There is no location source available on this device.</string>
-<string name="geolocation_source_auto_title">Automatic selection</string>
-<string name="geolocation_source_auto_desc">Uses locations provided by Outdoor GPS and Network.</string>
-<string name="geolocation_source_gps_title">Outdoor GPS</string>
-<string name="geolocation_source_gps_desc">Provides accurate locations computed from the GPS satellites (no network needed). Requires view of sky and initializing time.</string>
-<string name="geolocation_source_network_title">Network geolocation</string>
-<string name="geolocation_source_network_desc">Provides inaccurate locations retrieved from the wireless networks.</string>
-<string name="geolocation_source_passive_title">External locations</string>
-<string name="geolocation_source_passive_desc">Uses locations provided by other applications.</string>
+<string name="geolocation_source_title">Източник на позициониране</string>
+<string name="geolocation_source_disabled">Източникът е деактивиран.</string>
+<string name="geolocation_source_none_title">Без</string>
+<string name="geolocation_source_none_desc">На това устройство няма наличен източник на позициониране.</string>
+<string name="geolocation_source_auto_title">Автоматичен избор</string>
+<string name="geolocation_source_auto_desc">Местоположения осигурени от GPS и безжична мрежа</string>
+<string name="geolocation_source_gps_title">GPS</string>
+<string name="geolocation_source_gps_desc">Точното местоположение чрез GPS сателити. Изисква отворено пространство и време за инициализация.</string>
+<string name="geolocation_source_network_title">Безжична мрежа</string>
+<string name="geolocation_source_network_desc">Предоставя неточни местоположения.</string>
+<string name="geolocation_source_passive_title">Външни източници</string>
+<string name="geolocation_source_passive_desc">Използва местоположения предоставени от други приложения.</string>
 
-<string name="geolocation_rate_title">Update frequency</string>
-<string name="geolocation_rate_second">Update every second</string>
-<string name="geolocation_rate_seconds_1p">Update every %ss</string>
-<string name="geolocation_rate_precise_title">Precise tracking</string>
-<string name="geolocation_rate_precise_desc">Battery consuming, for short runs with volatile speed.</string>
-<string name="geolocation_rate_medium_title">Medium tracking</string>
-<string name="geolocation_rate_medium_desc">Recommended for few hours hikes.</string>
-<string name="geolocation_rate_economy_title">Long tracking</string>
-<string name="geolocation_rate_economy_desc">Economy mode recommended for day long hikes.</string>
+<string name="geolocation_rate_title">Интервал на записване</string>
+<string name="geolocation_rate_second">Всяка секунда</string>
+<string name="geolocation_rate_seconds_1p">Всяка %s сек.</string>
+<string name="geolocation_rate_precise_title">Висока точност</string>
+<string name="geolocation_rate_precise_desc">Повишена консумация на енергия.\nПрепоръчва се за сравнително къси разстояния с променлива скорост.</string>
+<string name="geolocation_rate_medium_title">Средна точност</string>
+<string name="geolocation_rate_medium_desc">Умерена консумация на енергия.\nПрепоръчва се за няколко часасови преходи.</string>
+<string name="geolocation_rate_economy_title">Приемлива точност</string>
+<string name="geolocation_rate_economy_desc">Ниска консумация на енергия.\nПрепоръчва се за многодневни  преходи.</string>
 
 
 
@@ -597,62 +597,62 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <!-- Service agent texts -->
 
 <string name="agent_status_title">AlpineQuest Agent</string>
-<string name="agent_status_waiting_location_1p">Waiting a fix from %s&#8230;</string>
-<string name="agent_status_no_source_1p">Location source %s is deactivated!</string>
-<string name="agent_status_no_params">The agent has been killed by the system!</string>
-<string name="agent_tracking_title_1p">Recording %s&#8230;</string>
-<string name="agent_follow_path_title">Follow path</string>
-<string name="agent_proximity_alerts_title">Proximity alerts</string>
+<string name="agent_status_waiting_location_1p">В очакване на комуникацията с %s&#8230;</string>
+<string name="agent_status_no_source_1p">Източникът %s е деактивиран!</string>
+<string name="agent_status_no_params">Услугата е спряна от системата!</string>
+<string name="agent_tracking_title_1p">Запис %s&#8230;</string>
+<string name="agent_follow_path_title">Следване на маршрута</string>
+<string name="agent_proximity_alerts_title">Известие при наближаване</string>
 
 
 
 
 <!-- Settings common texts -->
 
-<string name="settings_activity_name">Settings</string>
+<string name="settings_activity_name">Настройки</string>
 
-<string name="settings_default">default</string>
+<string name="settings_default">по подразбиране</string>
 
-<string name="settings_display_location_import_import_desc">Enter any EPSG/ESRI/SR-ORG coordinate system id from:</string>
-<string name="settings_display_location_import_not_supported_1p">Coordinate system \"%s\" not supported yet. Please contact us on our support forum so we can work on it.</string>
+<string name="settings_display_location_import_import_desc">Въведете кода на координатната система EPSG/ESRI/SR-ORG:</string>
+<string name="settings_display_location_import_not_supported_1p">Координатна система \"%s\" все още не се поддържа. Моля, свържете се с нас на нашия форум за поддръжка.</string>
 
 
 
 
 <!-- Settings texts -->
 
-<string name="settings_display_category">Display units</string>
-<string name="settings_display_distances_title">Distance unit</string>
-<string name="settings_display_distances_metric">Metric</string>
-<string name="settings_display_distances_metric_desc">m, km</string>
-<string name="settings_display_distances_imperial">Imperial</string>
-<string name="settings_display_distances_imperial_desc">ft, yd, mi</string>
-<string name="settings_display_distances_imperial_chains_desc">ft, yd, ch, mi</string>
-<string name="settings_display_distances_imperial_hybrid_desc">ft, yd, mi, metric elevations</string>
-<string name="settings_display_distances_imperial_noyards_desc">ft, mi, no yards</string>
-<string name="settings_display_distances_imperial_noyards_deci_desc">ft, deci. mi, no yards</string>
-<string name="settings_display_distances_nautical">Nautical</string>
-<string name="settings_display_distances_nautical_metric_desc">m, nmi</string>
-<string name="settings_display_distances_nautical_imperial_desc">ft, nmi</string>
+<string name="settings_display_category">Мерни единици</string>
+<string name="settings_display_distances_title">Формат за разстояние</string>
+<string name="settings_display_distances_metric">Mетричен</string>
+<string name="settings_display_distances_metric_desc">метър, километър</string>
+<string name="settings_display_distances_imperial">Английски</string>
+<string name="settings_display_distances_imperial_desc">фут, ярд, миля</string>
+<string name="settings_display_distances_imperial_chains_desc">фут, ярд, чейн, миля</string>
+<string name="settings_display_distances_imperial_hybrid_desc">фут, ярд, миля, метрична височина</string>
+<string name="settings_display_distances_imperial_noyards_desc">фут, миля, без ярдове</string>
+<string name="settings_display_distances_imperial_noyards_deci_desc">фут, десетична миля, без ярдове</string>
+<string name="settings_display_distances_nautical">Морски</string>
+<string name="settings_display_distances_nautical_metric_desc">метър, морска миля</string>
+<string name="settings_display_distances_nautical_imperial_desc">фут, морска миля</string>
 
-<string name="settings_display_location_title">Location format</string>
-<string name="settings_display_location_secondary_title">Secondary loc. format</string>
-<string name="settings_display_location_wgs84_second">Lat/Long (Deg Min Sec)</string>
-<string name="settings_display_location_wgs84_minute">Lat/Long (Deg Min)</string>
-<string name="settings_display_location_wgs84_degree">Lat/Long (Deg)</string>
+<string name="settings_display_location_title">Формат за местоположението</string>
+<string name="settings_display_location_secondary_title">Допълнителен формат на местоположението</string>
+<string name="settings_display_location_wgs84_second">Ширина/Дължина (Градуси, Минути, Секунди)</string>
+<string name="settings_display_location_wgs84_minute">Ширина/Дължина (Градуси, Минути)</string>
+<string name="settings_display_location_wgs84_Градусиree">Ширина/Дължина (Градуси)</string>
 <string name="settings_display_location_imported">Imported formats</string>
 
-<string name="settings_display_bearings_title">Bearing unit</string>
-<string name="settings_display_bearings_degrees">Degrees</string>
-<string name="settings_display_bearings_mils">Mils</string>
+<string name="settings_display_bearings_title">Азимут</string>
+<string name="settings_display_bearings_degrees">Градуси</string>
+<string name="settings_display_bearings_mils">Мили</string>
 
-<string name="settings_display_slopes_title">Slope unit</string>
-<string name="settings_display_slopes_percents">Percents</string>
-<string name="settings_display_slopes_degrees">Degrees</string>
+<string name="settings_display_slopes_title">Формат за наклон</string>
+<string name="settings_display_slopes_percents">Проценти</string>
+<string name="settings_display_slopes_degrees">Градуси</string>
 
-<string name="settings_display_pressures_title">Pressure unit</string>
-<string name="settings_display_pressures_pascals">Hectopascals</string>
-<string name="settings_display_pressures_mmhg">Millimetres of mercury</string>
+<string name="settings_display_pressures_title">Формат за налягане</string>
+<string name="settings_display_pressures_pascals">Хектопаскали</string>
+<string name="settings_display_pressures_mmhg">Милиметри живачен стълб</string>
 
 <string name="settings_technical_category">Technical settings</string>
 <string name="settings_technical_fullscreen_title">Fullscreen map</string>
