@@ -654,81 +654,81 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="settings_display_pressures_pascals">Хектопаскали</string>
 <string name="settings_display_pressures_mmhg">Милиметри живачен стълб</string>
 
-<string name="settings_technical_category">Technical settings</string>
-<string name="settings_technical_fullscreen_title">Fullscreen map</string>
-<string name="settings_technical_fullscreen_desc">When in fullscreen mode, use the menu button to display the status bar.</string>
-<string name="settings_technical_immersive_title">Immersive mode</string>
-<string name="settings_technical_immersive_desc">Also hide the software navigation bar when displaying the map in full screen.</string>
-<string name="settings_technical_screen_on_title">Screen always on</string>
-<string name="settings_technical_screen_on_desc">Never turn the screen off when displaying the map view.</string>
-<string name="settings_technical_disable_keyguard_title">Disable keyguard</string>
-<string name="settings_technical_disable_keyguard_desc">Disable the keyguard screen lock when the application is started.</string>
-<string name="settings_technical_volume_zoom_title">Volume buttons zoom</string>
-<string name="settings_technical_volume_zoom_desc">Use the volume buttons to zoom in or zoom out the map.</string>
-<string name="settings_technical_confirm_exit_title">Confirm exit</string>
-<string name="settings_technical_confirm_exit_desc">Ask exit confirmation before exiting.</string>
-<string name="settings_technical_path_title">Storage location</string>
-<string name="settings_technical_path_desc">Define where to store downloaded maps.</string>
-<string name="settings_technical_path_dialog_app_path">Application path</string>
-<string name="settings_technical_path_dialog_message_read_only">Your system prevents usage of this location.</string>
-<string name="settings_technical_path_dialog_message_removable">This location will be deleted by the system when you uninstall the application.</string>
-<string name="settings_technical_path_dialog_restart_app">Please restart the application.</string>
+<string name="settings_technical_category">Общи настройки</string>
+<string name="settings_technical_fullscreen_title">Карта на цял екран</string>
+<string name="settings_technical_fullscreen_desc">За да излезете от режим на цял екран, използвайте бутона меню</string>
+<string name="settings_technical_immersive_title">Скриващ режим</string>
+<string name="settings_technical_immersive_desc">Скрива панела за навигация на устройството в режим на цял екран</string>
+<string name="settings_technical_screen_on_title">Винаги е включен екран</string>
+<string name="settings_technical_screen_on_desc">Екрана няма да се изключи, докато на картата е активна.</string>
+<string name="settings_technical_disable_keyguard_title">Отключване на екрана</string>
+<string name="settings_technical_disable_keyguard_desc">Премахва закрючването на екрана, когато приложението е стартирано</string>
+<string name="settings_technical_volume_zoom_title">Мащабиране с бутоните за сила на звука</string>
+<string name="settings_technical_volume_zoom_desc">Използвайте бутоните за сила на звука за да увеличите или намалите мащаба на картата.</string>
+<string name="settings_technical_confirm_exit_title">Потвърждение при изход</string>
+<string name="settings_technical_confirm_exit_desc">Искане на разрешение при излизане</string>
+<string name="settings_technical_path_title">Място за съхранение</string>
+<string name="settings_technical_path_desc">Определете къде да съхранявате изтеглените карти.</string>
+<string name="settings_technical_path_dialog_app_path">Директория за съхранение</string>
+<string name="settings_technical_path_dialog_message_read_only">Въвеждането на данни в определената директория е блокирано от операционната система.</string>
+<string name="settings_technical_path_dialog_message_removable">Тази директория ще бъде изтрита от системата, когато деинсталирате приложението.</string>
+<string name="settings_technical_path_dialog_restart_app">Моля, рестартирайте приложението.</string>
 
-<string name="settings_canvas_category">Map canvas settings</string>
-<string name="settings_canvas_text_size_title">Information boxes size</string>
-<string name="settings_canvas_text_size_desc">Define the size of texts in the information boxes displayed on the map.</string>
-<string name="settings_canvas_infobox_background_title">Information boxes colour</string>
-<string name="settings_canvas_infobox_background_desc">Define the background colour of the information boxes displayed on the map.</string>
-<string name="settings_canvas_zoom_type_title">Zoom controls</string>
-<string name="settings_canvas_zoom_type_desc">Define which zoom controls are displayed on the map.</string>
+<string name="settings_canvas_category">Настройки на екрана</string>
+<string name="settings_canvas_text_size_title">Размер на информационните панели</string>
+<string name="settings_canvas_text_size_desc">Определете размера на текстовете в информационните панели върху картата.</string>
+<string name="settings_canvas_infobox_background_title">Цвят на информационните панели</string>
+<string name="settings_canvas_infobox_background_desc">Определете цвета на фона на информационните панели.</string>
+<string name="settings_canvas_zoom_type_title">Управление на мащаба</string>
+<string name="settings_canvas_zoom_type_desc">Определете кои контроли за мащабиране да се показват върху картата.</string>
 <string-array name="settings_canvas_zoom_type_entries">
-	<item>None</item>
-	<item>Buttons</item>
-	<item>Buttons and slider</item>
+	<item>Без</item>
+	<item>Бутони</item>
+	<item>Бутони и плъзгач</item>
 </string-array>
-<string name="settings_canvas_lock_zoom_title">Lock zoom on levels</string>
-<string name="settings_canvas_lock_zoom_desc">Automatically lock the zoom value on map levels.</string>
-<string name="settings_canvas_multitouch_zoom_title">Pinch to zoom</string>
-<string name="settings_canvas_multitouch_zoom_desc">Allow to control the map zoom with two fingers.</string>
-<string name="settings_canvas_multitouch_rotate_title">Manual map rotation</string>
-<string name="settings_canvas_multitouch_rotate_desc">Allow to control the map orientation with two fingers.</string>
-<string name="settings_canvas_hres_map_title">Map display resolution</string>
-<string name="settings_canvas_hres_map_desc">Display size of the map on the screen.</string>
+<string name="settings_canvas_lock_zoom_title">Фиксиране мащаба на картата</string>
+<string name="settings_canvas_lock_zoom_desc">Автоматично заключва стойността на картовия мащаб.</string>
+<string name="settings_canvas_multitouch_zoom_title">Мащабиране с пръсти</string>
+<string name="settings_canvas_multitouch_zoom_desc">Позволява да контролирате мащаба на картата с два пръста.</string>
+<string name="settings_canvas_multitouch_rotate_title">Ръчно завъртане на картата</string>
+<string name="settings_canvas_multitouch_rotate_desc">Позволява да контролирате ориентацията на картата с два пръста.</string>
+<string name="settings_canvas_hres_map_title">Разделителна способност на картата</string>
+<string name="settings_canvas_hres_map_desc">Показване на размера на картата върху екрана.</string>
 
-<string name="settings_landmarks_category">Landmarks</string>
-<string name="settings_landmarks_display_size_title">Display size</string>
-<string name="settings_landmarks_display_size_desc">Size of landmarks (paths, waypoints, icons) displayed on the map.</string>
-<string name="settings_landmarks_display_color_title">Default colour</string>
-<string name="settings_landmarks_display_color_desc">Default colour of landmarks displayed on the map.</string>
-<string name="settings_landmarks_display_target_color_title">Target colour</string>
-<string name="settings_landmarks_display_target_color_desc">Colour of targeted landmark displayed on the map.</string>
-<string name="settings_landmarks_display_borders_title">Display borders</string>
-<string name="settings_landmarks_display_borders_desc">Draw a border for landmarks displayed on the map.</string>
-<string name="settings_landmarks_display_shadow_title">Display shadow</string>
-<string name="settings_landmarks_display_shadow_desc">Draw a shadow for landmarks displayed on the map.</string>
-<string name="settings_landmarks_display_time_bounds_title">Display time bounds</string>
-<string name="settings_landmarks_display_time_bounds_desc">Display time bounds of tracks displayed on the map.</string>
-<string name="settings_landmarks_preprocess_title">Preprocess tracks</string>
-<string name="settings_landmarks_preprocess_desc">Improve accuracy of tracks by filtering and correcting points before display.</string>
+<string name="settings_landmarks_category">Маркери</string>
+<string name="settings_landmarks_display_size_title">Размер на маркера</string>
+<string name="settings_landmarks_display_size_desc">Размер на маркера (пътеки, ориентири, икони), показани върху картата.</string>
+<string name="settings_landmarks_display_color_title">Цвят по подразбиране</string>
+<string name="settings_landmarks_display_color_desc">Цветът на маркерите, които се показват върху картата.</string>
+<string name="settings_landmarks_display_target_color_title">Цвят на целите</string>
+<string name="settings_landmarks_display_target_color_desc">Цветът на целите, които се показват върху картата.</string>
+<string name="settings_landmarks_display_borders_title">Показване на границите</string>
+<string name="settings_landmarks_display_borders_desc">Изчертава граница за видимите маркери.</string>
+<string name="settings_landmarks_display_shadow_title">Показване на сянка</string>
+<string name="settings_landmarks_display_shadow_desc">Показва сянка върху видимите маркери.</string>
+<string name="settings_landmarks_display_time_bounds_title">Времетраене на записа</string>
+<string name="settings_landmarks_display_time_bounds_desc">Показване на времето за начало и край на записа.</string>
+<string name="settings_landmarks_preprocess_title">Преработване на записи</string>
+<string name="settings_landmarks_preprocess_desc">Подобрява точността на записите, като филтрира и коригира точките.</string>
 
-<string name="settings_geolocation_category">GPS localisation</string>
-<string name="settings_geolocation_disable_in_back_title">Disable in background</string>
-<string name="settings_geolocation_disable_in_back_desc">Disable localisation when the application runs in background to save battery.</string>
-<string name="settings_geolocation_relock_location_title">Automatic GPS relock</string>
-<string name="settings_geolocation_relock_location_desc">Automatically relock the screen centre on the current GPS location after 10s of inactivity.</string>
-<string name="settings_geolocation_current_heading_title">Display current heading</string>
-<string name="settings_geolocation_current_heading_desc">Display on the map the heading of the current GPS location.</string>
-<string name="settings_geolocation_previous_locations_title">Display previous locations</string>
-<string name="settings_geolocation_previous_locations_desc">Display the previous GPS locations on the map.</string>
-<string name="settings_geolocation_egm96_adjustment_title">EGM96 GPS adjustment</string>
-<string name="settings_geolocation_egm96_adjustment_desc">Compute more precise elevations using the EGM96 geoid model.</string>
+<string name="settings_geolocation_category">GPS локализация</string>
+<string name="settings_geolocation_disable_in_back_title">Деактивиране във фонов режим</string>
+<string name="settings_geolocation_disable_in_back_desc">Деактивира GPS локализацията, когато приложението работи във фонов режим за да пести батерия.</string>
+<string name="settings_geolocation_relock_location_title">Автоматично връщане в центъра на екрана</string>
+<string name="settings_geolocation_relock_location_desc">Автоматично връщане на текущата GPS позиция в центъра на екрана след 10 секунди на неактивност (след смяната на картата)</string>
+<string name="settings_geolocation_current_heading_title">Текуща позиция</string>
+<string name="settings_geolocation_current_heading_desc">Показва върху картата текущото GPS местоположение.</string>
+<string name="settings_geolocation_previous_locations_title">Предишни местоположения</string>
+<string name="settings_geolocation_previous_locations_desc">Показва върху картата предишни GPS местоположения.</string>
+<string name="settings_geolocation_egm96_adjustment_title">EGM96 GPS корекция</string>
+<string name="settings_geolocation_egm96_adjustment_desc">Изчислява по-точни надморски височини, използвайки геоидния модел EGM96.</string>
 
 <string-array name="settings_size_entries">
-	<item>Very small</item>
-	<item>Small</item>
-	<item>Medium</item>
-	<item>Big</item>
-	<item>Very big</item>
+	<item>Много малък</item>
+	<item>Малък</item>
+	<item>Среден</item>
+	<item>Голям</item>
+	<item>Много голям</item>
 </string-array>
 
 
@@ -736,218 +736,218 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <!-- Other common texts -->
 
-<string name="atk_metadata_address">Address</string>
-<string name="atk_metadata_author">Author</string>
-<string name="atk_metadata_charset">Charset</string>
-<string name="atk_metadata_color">Colour</string>
-<string name="atk_metadata_comment">Comment</string>
-<string name="atk_metadata_copyright">Copyright</string>
-<string name="atk_metadata_creator">Creator</string>
-<string name="atk_metadata_date">Date</string>
-<string name="atk_metadata_description">Description</string>
-<string name="atk_metadata_description_none">No description.</string>
-<string name="atk_metadata_dyncolor">Dynamic colour</string>
-<string name="atk_metadata_email">Email</string>
-<string name="atk_metadata_file_data">Data file</string>
-<string name="atk_metadata_file_path">Path</string>
-<string name="atk_metadata_group">Group</string>
-<string name="atk_metadata_icon">Icon</string>
+<string name="atk_metadata_address">Адрес</string>
+<string name="atk_metadata_author">Автор</string>
+<string name="atk_metadata_charset">Кодиране</string>
+<string name="atk_metadata_color">Цвят</string>
+<string name="atk_metadata_comment">Коментар</string>
+<string name="atk_metadata_copyright">Авторско право</string>
+<string name="atk_metadata_creator">Автор</string>
+<string name="atk_metadata_date">Дата</string>
+<string name="atk_metadata_description">Описание</string>
+<string name="atk_metadata_description_none">Няма описание.</string>
+<string name="atk_metadata_dyncolor">Динамични цветове</string>
+<string name="atk_metadata_email">Имейл </string>
+<string name="atk_metadata_file_data">Файл с данни</string>
+<string name="atk_metadata_file_path">Път</string>
+<string name="atk_metadata_group">Група</string>
+<string name="atk_metadata_icon">Икона</string>
 <string name="atk_metadata_id">Id</string>
-<string name="atk_metadata_keywords">Keywords</string>
-<string name="atk_metadata_location">Location</string>
-<string name="atk_metadata_location_accuracy">Accuracy</string>
-<string name="atk_metadata_location_barometric_elevation">Barometric elevation</string>
-<string name="atk_metadata_location_elevation">Elevation</string>
-<string name="atk_metadata_location_coordinates">Coordinates</string>
-<string name="atk_metadata_location_longitude">Longitude</string>
-<string name="atk_metadata_location_latitude">Latitude</string>
-<string name="atk_metadata_mapping_crs_geoid">Geoid</string>
-<string name="atk_metadata_mapping_crs_projection">Projection</string>
-<string name="atk_metadata_mapping_scale">Scale</string>
-<string name="atk_metadata_name">Name</string>
-<string name="atk_metadata_password">Password</string>
-<string name="atk_metadata_phonenumber">Phone</string>
-<string name="atk_metadata_picture">Picture</string>
-<string name="atk_metadata_pictures">Pictures</string>
-<string name="atk_metadata_place">Place</string>
-<string name="atk_metadata_pressure">Pressure</string>
-<string name="atk_metadata_pressure_sealevel">Sea-level pressure</string>
-<string name="atk_metadata_size">Size</string>
-<string name="atk_metadata_source">Source</string>
-<string name="atk_metadata_statistics_area">Area</string>
-<string name="atk_metadata_statistics_calories">Calories</string>
-<string name="atk_metadata_statistics_distance">Distance</string>
-<string name="atk_metadata_statistics_eta">ETA</string>
-<string name="atk_metadata_statistics_incline">Incline</string>
-<string name="atk_metadata_statistics_length">Length</string>
-<string name="atk_metadata_statistics_speed">Speed</string>
-<string name="atk_metadata_statistics_time">Time</string>
-<string name="atk_metadata_statistics_moving_time">Time in movement</string>
-<string name="atk_metadata_style">Style</string>
-<string name="atk_metadata_temperature">Temp.</string>
-<string name="atk_metadata_type">Type</string>
+<string name="atk_metadata_keywords">Ключови думи</string>
+<string name="atk_metadata_location">Местоположение</string>
+<string name="atk_metadata_location_accuracy">Точност</string>
+<string name="atk_metadata_location_barometric_elevation">Барометрична височина</string>
+<string name="atk_metadata_location_elevation">Височина</string>
+<string name="atk_metadata_location_coordinates">Координати</string>
+<string name="atk_metadata_location_longitude">Географска дължина</string>
+<string name="atk_metadata_location_latitude">Географска ширина</string>
+<string name="atk_metadata_mapping_crs_geoid">Геоид</string>
+<string name="atk_metadata_mapping_crs_projection">Проекция</string>
+<string name="atk_metadata_mapping_scale">Мащаб</string>
+<string name="atk_metadata_name">Име</string>
+<string name="atk_metadata_password">Парола</string>
+<string name="atk_metadata_phonenumber">Телефон</string>
+<string name="atk_metadata_picture">Снимка</string>
+<string name="atk_metadata_pictures">Снимки</string>
+<string name="atk_metadata_place">Място</string>
+<string name="atk_metadata_pressure">Налягане</string>
+<string name="atk_metadata_pressure_sealevel">Налягане на морското равнище</string>
+<string name="atk_metadata_size">Размер</string>
+<string name="atk_metadata_source">Източник</string>
+<string name="atk_metadata_statistics_area">Област</string>
+<string name="atk_metadata_statistics_calories">Калории</string>
+<string name="atk_metadata_statistics_distance">Разстояние</string>
+<string name="atk_metadata_statistics_eta">Пристигане</string>
+<string name="atk_metadata_statistics_incline">Наклон</string>
+<string name="atk_metadata_statistics_length">Дължина</string>
+<string name="atk_metadata_statistics_speed">Скорост</string>
+<string name="atk_metadata_statistics_time">Време</string>
+<string name="atk_metadata_statistics_moving_time">Време в движение</string>
+<string name="atk_metadata_style">Стил</string>
+<string name="atk_metadata_temperature">Температура</string>
+<string name="atk_metadata_type">Тип</string>
 <string name="atk_metadata_url">Url</string>
-<string name="atk_metadata_username">Username</string>
-<string name="atk_metadata_version">Version</string>
-<string name="atk_metadata_weight">User weight</string>
+<string name="atk_metadata_username">Потребителско име</string>
+<string name="atk_metadata_version">Версия</string>
+<string name="atk_metadata_weight">Моето тегло</string>
 
-<string name="core_toolkit_error_intent">Sorry, no suitable application is currently installed on your device to handle this action.</string>
-<string name="core_toolkit_error_intent_compat">Sorry, the external application used is not compatible with this application.</string>
+<string name="core_toolkit_error_intent">Няма приложение за обработка на това действие.</string>
+<string name="core_toolkit_error_intent_compat">Външното приложение не е съвместимо с това приложение.</string>
 
-<string name="core_canvas_online_tile_queuing">Queuing</string>
-<string name="core_canvas_online_tile_connecting">Connecting</string>
-<string name="core_canvas_online_tile_not_available">Not available</string>
-<string name="core_canvas_online_tile_local_storage_only">Area not stored</string>
+<string name="core_canvas_online_tile_queuing">В опашката</string>
+<string name="core_canvas_online_tile_connecting">Свързване</string>
+<string name="core_canvas_online_tile_not_available">Не се предлага</string>
+<string name="core_canvas_online_tile_local_storage_only">Офлайн режим</string>
 
-<string name="core_details_file_dont_exists">File does not exists.</string>
-<string name="core_details_no_information">No information.</string>
-<string name="core_details_category_metadata">Information</string>
+<string name="core_details_file_dont_exists">Файлът не съществува.</string>
+<string name="core_details_no_information">Няма информация.</string>
+<string name="core_details_category_metadata">Информация</string>
 
-<string name="core_button_open_with_external">Other application</string>
-<string name="core_button_open_with_direction">Map Directions</string>
-<string name="core_button_open_with_navigation">Navigation</string>
-<string name="core_button_open_with_street_view">Street View</string>
+<string name="core_button_open_with_external">Друго приложение</string>
+<string name="core_button_open_with_direction">Получаване на упътвания</string>
+<string name="core_button_open_with_navigation">Навигация</string>
+<string name="core_button_open_with_street_view">Google Street View</string>
 
-<string name="core_routing_method_driving">Driving</string>
-<string name="core_routing_method_walking">Walking</string>
-<string name="core_routing_method_cycling">Bicycling</string>
-<string name="core_routing_method_transit">Transit</string>
+<string name="core_routing_method_driving">Шофиране</string>
+<string name="core_routing_method_walking">Ходене</string>
+<string name="core_routing_method_cycling">Колоездене</string>
+<string name="core_routing_method_transit">Обществен транспорт</string>
 
-<string name="core_graphics_category_profile">Profile</string>
-<string name="core_graphics_category_events">Events</string>
-<string name="core_graphics_category_waypoints">Waypoints</string>
-<string name="core_graphics_not_enough_data">Not enough data</string>
-<string name="core_graphics_title_y">Set Y</string>
-<string name="core_graphics_title_x">Set X</string>
-<string name="core_graphics_axis_none_desc">Do not use this axis.</string>
-<string name="core_graphics_axis_altitude_geoid_desc">Real elevations, computed from the GPS altitudes and shape of the Earth.</string>
-<string name="core_graphics_axis_altitude_baro_desc">Real elevations, computed from the calibrated pressure data (known to be more precise than GPS altitudes) and shape of the Earth.</string>
-<string name="core_graphics_axis_altitude_diff_title">Elevation (diff.)</string>
-<string name="core_graphics_axis_altitude_diff_desc">Differences between barometric and geoid elevations.</string>
-<string name="core_graphics_axis_speed_desc">Instant speeds, computed from the GPS locations and times.</string>
-<string name="core_graphics_axis_incline_desc">Slope values between each locations, computed from the GPS altitudes.</string>
-<string name="core_graphics_axis_pressure_raw_desc">Uncalibrated pressures, as given by the barometer.</string>
-<string name="core_graphics_axis_pressure_sl_desc">Computed pressures at the sea level, computed from the GPS altitudes and pressure data.</string>
-<string name="core_graphics_axis_accuracy_desc">Accuracy of locations, with a 68&#37; confidence.</string>
+<string name="core_graphics_category_profile">Профил</string>
+<string name="core_graphics_category_events">Събития</string>
+<string name="core_graphics_category_waypoints">Оринтири</string>
+<string name="core_graphics_not_enough_data">Няма достатъчно данни</string>
+<string name="core_graphics_title_y">Задайте на ос Y</string>
+<string name="core_graphics_title_x">Задайте на ос X</string>
+<string name="core_graphics_axis_none_desc">Не използвай тази оси.</string>
+<string name="core_graphics_axis_altitude_geoid_desc">Реалните височини са изчислени от GPS надморска височина и форма на Земята.</string>
+<string name="core_graphics_axis_altitude_baro_desc">Реалните височини са изчислени от калибрираните данни за налягането (известни като по-прецизни от GPS надморска височина) и формата на Земята.</string>
+<string name="core_graphics_axis_altitude_diff_title">Височина (разл.)</string>
+<string name="core_graphics_axis_altitude_diff_desc">Разлики между барометричните и геоидните височини.</string>
+<string name="core_graphics_axis_speed_desc">Моментната скорост е изчислена от GPS позицията и времето.</string>
+<string name="core_graphics_axis_incline_desc">Наклонът между местоположенията е изчислен от GPS надморската височина.</string>
+<string name="core_graphics_axis_pressure_raw_desc">Некалибрирано налягане спрямо зададеното в барометъра.</string>
+<string name="core_graphics_axis_pressure_sl_desc">Изчислено налягане на морското равнище е определено от GPS надморската височина и барометъра.</string>
+<string name="core_graphics_axis_accuracy_desc">Точност на местоположението (равно на 68&#37; )</string>
 
 
 
 
 <!-- Maps feature other texts -->
 
-<string name="maps_default_name">Base map</string>
+<string name="maps_default_name">Базова карта</string>
 
-<string name="maps_utils_nb_map_1p">%s map</string>
-<string name="maps_utils_nb_maps_1p">%s maps</string>
-<string name="maps_utils_saturation_1p">Saturation: %s</string>
-<string name="maps_utils_contrast_1p">Contrast: %s</string>
+<string name="maps_utils_nb_map_1p">%s карта</string>
+<string name="maps_utils_nb_maps_1p">%s карти</string>
+<string name="maps_utils_saturation_1p">Наситеност: %s</string>
+<string name="maps_utils_contrast_1p">Контраст: %s</string>
 
-<string name="maps_offline_provider_address_aq">My onboard maps</string>
-<string name="maps_offline_provider_recursive">Recursive scan</string>
-<string name="maps_offline_confirm_oversized_title">Oversized map</string>
-<string name="maps_offline_confirm_oversized_desc">The map you\'ve selected is oversized for your Android version and some parts may fail to load.\n\nTry to split this map in different parts, smaller than 2GB.</string>
+<string name="maps_offline_provider_address_aq">Моите карти</string>
+<string name="maps_offline_provider_recursive">Рекурсивно сканиране</string>
+<string name="maps_offline_confirm_oversized_title">Карта с по-големи размери</string>
+<string name="maps_offline_confirm_oversized_desc">Картата, която сте избрали е прекалено голяма за вашата Android версия и някои части може да не се заредят.\n\nОпитайте се да разделите тази карта на по-малки части от 2GB.</string>
 
-<string name="maps_community_list_title">Community maps</string>
-<string name="maps_community_list_world_title">Worldwide maps</string>
-<string name="maps_community_list_local_title">Local maps</string>
-<string name="maps_community_list_featured_maps">Featured maps</string>
-<string name="maps_community_list_refreshed_1p">List updated: %s new map(s)</string>
+<string name="maps_community_list_title">Още карти</string>
+<string name="maps_community_list_world_title">Световни карти</string>
+<string name="maps_community_list_local_title">Регионални карти</string>
+<string name="maps_community_list_featured_maps">Избрани карти</string>
+<string name="maps_community_list_refreshed_1p">Списъкът е актуализиран: %s нови карти</string>
 
-<string name="maps_community_type_aeronautical">Aeronautical</string>
-<string name="maps_community_type_historical">Historical</string>
-<string name="maps_community_type_nautical">Nautical</string>
-<string name="maps_community_type_other">Other</string>
-<string name="maps_community_type_roads">Roads</string>
-<string name="maps_community_type_satellite">Satellite</string>
-<string name="maps_community_type_topo">Topo</string>
+<string name="maps_community_type_aeronautical">Авиационни</string>
+<string name="maps_community_type_historical">Исторически</string>
+<string name="maps_community_type_nautical">Морски</string>
+<string name="maps_community_type_other">Други</string>
+<string name="maps_community_type_roads">Пътни</string>
+<string name="maps_community_type_satellite">Сателитни</string>
+<string name="maps_community_type_topo">Топографски</string>
 
 
 
 
 <!-- Landmarks feature other texts -->
 
-<string name="landmarks_explorer_dialog_load_error_corrupt">The application couldn\'t load the entire file which looks like corrupted.</string>
-<string name="landmarks_explorer_dialog_load_error_memory">The application couldn\'t load the entire file due to insufficient memory.</string>
+<string name="landmarks_explorer_dialog_load_error_corrupt">Приложението не можа да зареди целия файл. Файлът може да е повреден.</string>
+<string name="landmarks_explorer_dialog_load_error_memory">Приложението не можа да зареди целия файл поради липса на памет.</string>
 
-<string name="landmarks_side_profile_touch">Touch the profile to control</string>
+<string name="landmarks_side_profile_touch">Докоснете профила за да го управлявате</string>
 
-<string name="landmarks_follow_path_option_reverse">Reverse order</string>
-<string name="landmarks_follow_path_option_loop">Loop</string>
-<string name="landmarks_follow_path_option_distance_1p">Set the target at least %s in advance</string>
-<string name="landmarks_follow_path_option_warn_me_1p">Warn me if I go more than %s away</string>
-<string name="landmarks_follow_path_option_dont_warn_me">Don\'t warn me if I go away</string>
+<string name="landmarks_follow_path_option_reverse">В обратната посока</string>
+<string name="landmarks_follow_path_option_loop">Контур</string>
+<string name="landmarks_follow_path_option_distance_1p">Минималното разстояние до най-близката целева точка %s </string>
+<string name="landmarks_follow_path_option_warn_me_1p">Предупреждение при отклонение от маршрута на повече от %s</string>
+<string name="landmarks_follow_path_option_dont_warn_me">Без предупреждение при отклонение</string>
 
-<string name="landmarks_details_category_list_done">Done so far</string>
-<string name="landmarks_details_category_list_remaining_on_path">Remaining on path</string>
-<string name="landmarks_details_category_list_remaining_to_1p">Remaining to \"%s\"</string>
-<string name="landmarks_details_statistics_category">Statistics</string>
-<string name="landmarks_details_statistics_line_total">Total</string>
-<string name="landmarks_details_statistics_line_stopped">Stopped</string>
-<string name="landmarks_details_statistics_category_elevations">Elevations</string>
-<string name="landmarks_details_statistics_elevation_line_min_max">Min/Max</string>
-<string name="landmarks_details_statistics_elevation_line_gain_loss">Gain/Loss</string>
-<string name="landmarks_details_statistics_elevation_line_inclines">Mean inclines</string>
-<string name="landmarks_details_statistics_category_moving_speeds">Moving speeds</string>
-<string name="landmarks_details_statistics_moving_line_flat">Flat</string>
-<string name="landmarks_details_statistics_moving_line_increase">Increase</string>
-<string name="landmarks_details_statistics_moving_line_decrease">Decrease</string>
-<string name="landmarks_details_statistics_moving_line_up">Up</string>
-<string name="landmarks_details_statistics_moving_line_down">Down</string>
-<string name="landmarks_details_statistics_category_events">Events</string>
-<string name="landmarks_details_statistics_events_line_break_1p">Break of %s.</string>
-<string name="landmarks_details_statistics_events_line_max_speed_1p">Maximum speed of %s.</string>
-<string name="landmarks_details_statistics_events_line_min_elevation_1p">Minimum elevation of %s.</string>
-<string name="landmarks_details_statistics_events_line_max_elevation_1p">Maximum elevation of %s.</string>
-<string name="landmarks_details_statistics_events_line_start_1p">Start at %s.</string>
-<string name="landmarks_details_statistics_events_line_end_1p">End at %s.</string>
-<string name="landmarks_details_statistics_category_about">Statistics settings</string>
-<string name="landmarks_details_statistics_about_line_noise_reduction">Noise reduction</string>
-<string name="landmarks_details_statistics_about_line_moving">Moving threshold</string>
-<string name="landmarks_details_statistics_about_line_breaks">Min. break time</string>
-<string name="landmarks_details_statistics_about_line_include_inter_segments">Include inter-segment gaps</string>
-<string name="landmarks_details_no_data_time">No time data</string>
-<string name="landmarks_details_no_data_elevation">No elevation data</string>
+<string name="landmarks_details_category_list_done">Изминато</string>
+<string name="landmarks_details_category_list_remaining_on_path">Остават</string>
+<string name="landmarks_details_category_list_remaining_to_1p">Остава до целта \"%s\"</string>
+<string name="landmarks_details_statistics_category">Статистика</string>
+<string name="landmarks_details_statistics_line_total">Общо</string>
+<string name="landmarks_details_statistics_line_stopped">Почивки</string>
+<string name="landmarks_details_statistics_category_elevations">Височини</string>
+<string name="landmarks_details_statistics_elevation_line_min_max">Мин./Макс.</string>
+<string name="landmarks_details_statistics_elevation_line_gain_loss">Изкачване/Слизане</string>
+<string name="landmarks_details_statistics_elevation_line_inclines">Средни наклони</string>
+<string name="landmarks_details_statistics_category_moving_speeds">Скораст на движение</string>
+<string name="landmarks_details_statistics_moving_line_flat">На равно</string>
+<string name="landmarks_details_statistics_moving_line_increase">Изкачване</string>
+<string name="landmarks_details_statistics_moving_line_decrease">Слизане</string>
+<string name="landmarks_details_statistics_moving_line_up">Нагоре</string>
+<string name="landmarks_details_statistics_moving_line_down">Надолу</string>
+<string name="landmarks_details_statistics_category_events">Събития</string>
+<string name="landmarks_details_statistics_events_line_break_1p">Почивка от %s.</string>
+<string name="landmarks_details_statistics_events_line_max_speed_1p">Максимална скорост от %s.</string>
+<string name="landmarks_details_statistics_events_line_min_elevation_1p">Минимална височина от %s.</string>
+<string name="landmarks_details_statistics_events_line_max_elevation_1p">Максимална височина от %s.</string>
+<string name="landmarks_details_statistics_events_line_start_1p">Начало в %s.</string>
+<string name="landmarks_details_statistics_events_line_end_1p">Край в %s.</string>
+<string name="landmarks_details_statistics_category_about">Статистически настройки</string>
+<string name="landmarks_details_statistics_about_line_noise_reduction">Филтриране на смущенията</string>
+<string name="landmarks_details_statistics_about_line_moving">Минимална скорост за отчитане на движение</string>
+<string name="landmarks_details_statistics_about_line_breaks">Минимално време за отчитане на почивка</string>
+<string name="landmarks_details_statistics_about_line_include_inter_segments">Включване на междусегментните пропуски</string>
+<string name="landmarks_details_no_data_time">Няма данни за времето</string>
+<string name="landmarks_details_no_data_elevation">Няма данни за височината</string>
 
-<string name="landmarks_sym_selected_1p">%s selected</string>
-<string name="landmarks_sym_group_custom">Custom</string>
-<string name="landmarks_sym_group_land">Landmark</string>
-<string name="landmarks_sym_group_acco">Accommodation</string>
-<string name="landmarks_sym_group_amen">Amenity</string>
-<string name="landmarks_sym_group_barr">Barrier</string>
-<string name="landmarks_sym_group_educ">Education</string>
-<string name="landmarks_sym_group_food">Food</string>
-<string name="landmarks_sym_group_health">Health</string>
-<string name="landmarks_sym_group_man">Man made</string>
-<string name="landmarks_sym_group_money">Money</string>
-<string name="landmarks_sym_group_nat">Natural</string>
-<string name="landmarks_sym_group_power">Power</string>
-<string name="landmarks_sym_group_shop">Shopping</string>
-<string name="landmarks_sym_group_sport">Sport</string>
-<string name="landmarks_sym_group_tour">Tourism</string>
-<string name="landmarks_sym_group_trans">Transport</string>
-<string name="landmarks_sym_group_water">Water</string>
-<string name="landmarks_sym_group_worship">Worship</string>
+<string name="landmarks_sym_selected_1p">%s избрани</string>
+<string name="landmarks_sym_group_custom">По избор</string>
+<string name="landmarks_sym_group_land">Забележителност</string>
+<string name="landmarks_sym_group_acco">Настаняване</string>
+<string name="landmarks_sym_group_amen">Бит</string>
+<string name="landmarks_sym_group_barr">Препятствие</string>
+<string name="landmarks_sym_group_educ">Образование</string>
+<string name="landmarks_sym_group_food">Храна</string>
+<string name="landmarks_sym_group_health">Здраве</string>
+<string name="landmarks_sym_group_man">Човек</string>
+<string name="landmarks_sym_group_money">Пари</string>
+<string name="landmarks_sym_group_nat">Природа</string>
+<string name="landmarks_sym_group_power">Енергия</string>
+<string name="landmarks_sym_group_shop">Пазаруване</string>
+<string name="landmarks_sym_group_sport">Спорт</string>
+<string name="landmarks_sym_group_tour">Туризъм</string>
+<string name="landmarks_sym_group_trans">Транспорт</string>
+<string name="landmarks_sym_group_water">Вода</string>
+<string name="landmarks_sym_group_worship">Преклонение</string>
 
-<string name="landmarks_import_options_download_external_content">Download external content</string>
+<string name="landmarks_import_options_download_external_content">Изтеглете външно съдържание</string>
 
-<string name="landmarks_import_xsv_separator">Separator</string>
-<string name="landmarks_import_xsv_assign">Assign to&#8230;</string>
-<string name="landmarks_import_xsv_first_row_headers">Headers in first row</string>
+<string name="landmarks_import_xsv_separator">Сепаратор</string>
+<string name="landmarks_import_xsv_assign">Задайте на&#8230;</string>
+<string name="landmarks_import_xsv_first_row_headers">Заглавия на първия ред</string>
 
-<string name="landmarks_ldks_provider_title">Online landmarks</string>
-<string name="landmarks_ldks_provider_unavailable">Sorry, right now Community Landmarks is only available in the full or activated versions.</string>
+<string name="landmarks_ldks_provider_title">Онлайн маркери</string>
+<string name="landmarks_ldks_provider_unavailable">Съжалявам, но към момента общностните маркири са достъпни само в пълната  версия на проложението.</string>
 
-<string name="landmarks_ldks_signin_desc">Save your landmarks online, share them with your friends.</string>
-<string name="landmarks_ldks_signin_button">Sign in</string>
-<string name="landmarks_ldks_signin_username_desc">3 to 10 characters, a-z;A-Z;0-9</string>
-<string name="landmarks_ldks_signin_password_desc">3 to 30 characters</string>
-<string name="landmarks_ldks_signin_failed">Wrong username/password provided, please try again.</string>
+<string name="landmarks_ldks_signin_desc">Запазете маркерите си онлайн и ги споделете с приятелите си.</string>
+<string name="landmarks_ldks_signin_button">Вписване</string>
+<string name="landmarks_ldks_signin_username_desc">3 до 10 символа, a-z;A-Z;0-9</string>
+<string name="landmarks_ldks_signin_password_desc">3 до 30 символа</string>
+<string name="landmarks_ldks_signin_failed">Неправилно потребителско име или парола, моля опитайте отново.</string>
 
-<string name="landmarks_ldks_signup_desc">Don\'t have an account yet? Create one right now for free!</string>
-<string name="landmarks_ldks_signup_button">Create account</string>
-<string name="landmarks_ldks_signup_username_invalid">Username already exists, please choose another one.</string>
-<string name="landmarks_ldks_signup_password_confirm">Confirm password</string>
-<string name="landmarks_ldks_signup_password_confirm_failed">Not matching</string>
+<string name="landmarks_ldks_signup_desc">Все още нямате профил? Създайте го сега безплатно!</string>
+<string name="landmarks_ldks_signup_button">Създаване на профил</string>
+<string name="landmarks_ldks_signup_username_invalid">Потребителското име вече съществува. Моля, изберете друго име.</string>
+<string name="landmarks_ldks_signup_password_confirm">Потвърдете паролата</string>
+<string name="landmarks_ldks_signup_password_confirm_failed">Не съвпада</string>
 
 <string name="landmarks_ldks_toast_connection_failed">Failed to connect to the server, working offline.</string>
 <string name="landmarks_ldks_toast_modify_success">Modifications successfully sent to the server.</string>
