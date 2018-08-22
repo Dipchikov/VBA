@@ -415,9 +415,9 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="landmarks_explorer_category_paths">Пътища</string>
 <string name="landmarks_explorer_category_routes">Маршрути</string>
 <string name="landmarks_explorer_category_segments">Записани сегменти</string>
-<string name="landmarks_explorer_category_sets">Набор от ориентири</string>
+<string name="landmarks_explorer_category_sets">Набор от точки</string>
 <string name="landmarks_explorer_category_tracks">Записи</string>
-<string name="landmarks_explorer_category_waypoints">Ориентири</string>
+<string name="landmarks_explorer_category_waypoints">Точки</string>
 <string name="landmarks_explorer_name_area">Област</string>
 <string name="landmarks_explorer_name_file">Файл с етикети</string>
 <string name="landmarks_explorer_name_landmark">Етикети</string>
@@ -427,17 +427,17 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="landmarks_explorer_name_route">Маршрут</string>
 <string name="landmarks_explorer_name_proximity">Известие при наближаване</string>
 <string name="landmarks_explorer_name_segment">Записан сегмент</string>
-<string name="landmarks_explorer_name_set">Набор от Ориентири</string>
+<string name="landmarks_explorer_name_set">Набор от точки</string>
 <string name="landmarks_explorer_name_slope">Наклон</string>
 <string name="landmarks_explorer_name_target">Цел</string>
 <string name="landmarks_explorer_name_track">Сегмент</string>
-<string name="landmarks_explorer_name_waypoint">Ориентир</string>
+<string name="landmarks_explorer_name_waypoint">Точка</string>
 <string name="landmarks_explorer_cell_location_1p">%s позиция</string>
 <string name="landmarks_explorer_cell_locations_1p">%s места</string>
 <string name="landmarks_explorer_cell_segment_1p">%s сегмент</string>
 <string name="landmarks_explorer_cell_segments_1p">%s сегменти</string>
-<string name="landmarks_explorer_cell_waypoint_1p">%s ориентир</string>
-<string name="landmarks_explorer_cell_waypoints_1p">%s ориентири</string>
+<string name="landmarks_explorer_cell_waypoint_1p">%s точка</string>
+<string name="landmarks_explorer_cell_waypoints_1p">%s точки</string>
 <string name="landmarks_explorer_sort_distance">Разстояние от центъра на екрана</string>
 
 <string name="landmarks_context_menu_auto_target">Автоматична цел най-близо до точката</string>
@@ -455,8 +455,8 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <string name="landmarks_create_waypoint_desc">Маркирайте местоположение на картата с известна информация.</string>
 <string name="landmarks_create_picture_desc">Маркирайте местоположение на картата със снимка и информация.</string>
-<string name="landmarks_create_set_desc">Маркирайте няколко ориентира на картата и ги управявайте заедно.</string>
-<string name="landmarks_create_route_desc">Маркирайте множество подредени ориентира на картата.</string>
+<string name="landmarks_create_set_desc">Маркирайте няколко точки на картата и ги управявайте заедно.</string>
+<string name="landmarks_create_route_desc">Маркирайте множество подредени точки на картата.</string>
 <string name="landmarks_create_area_desc">Ръчно изчертайте контура върху картата.</string>
 <string name="landmarks_create_path_desc">Ръчно изчертайте пътя върху картата.</string>
 <string name="landmarks_create_file_desc">Създайте празен файл за етикети.</string>
@@ -467,7 +467,7 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="landmarks_create_slope_desc">Изчислява наклона между две или повече точки въз основа на въведени от потребителя точки.</string>
 <string name="landmarks_create_autorouting_title">Авто-маршрут</string>
 <string name="landmarks_create_autorouting_desc">Автоматично изчертава маршрут следвайки пътищата на картата.</string>
-<string name="landmarks_create_quick_waypoint">Бърз ориентир</string>
+<string name="landmarks_create_quick_waypoint">Бърз точка</string>
 
 <string name="landmarks_create_dialog_category_tools">Инструменти</string>
 <string name="landmarks_create_proximity_repeat">Повтаряне на известието</string>
@@ -697,7 +697,7 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <string name="settings_landmarks_category">Маркери</string>
 <string name="settings_landmarks_display_size_title">Размер на маркера</string>
-<string name="settings_landmarks_display_size_desc">Размер на маркера (пътеки, ориентири, икони), показани върху картата.</string>
+<string name="settings_landmarks_display_size_desc">Размер на маркера (пътеки, точки, икони), показани върху картата.</string>
 <string name="settings_landmarks_display_color_title">Цвят по подразбиране</string>
 <string name="settings_landmarks_display_color_desc">Цветът на маркерите, които се показват върху картата.</string>
 <string name="settings_landmarks_display_target_color_title">Цвят на целите</string>
@@ -815,7 +815,7 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <string name="core_graphics_category_profile">Профил</string>
 <string name="core_graphics_category_events">Събития</string>
-<string name="core_graphics_category_waypoints">Оринтири</string>
+<string name="core_graphics_category_waypoints">Точки</string>
 <string name="core_graphics_not_enough_data">Няма достатъчно данни</string>
 <string name="core_graphics_title_y">Задайте на ос Y</string>
 <string name="core_graphics_title_x">Задайте на ос X</string>
@@ -949,39 +949,39 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 <string name="landmarks_ldks_signup_password_confirm">Потвърдете паролата</string>
 <string name="landmarks_ldks_signup_password_confirm_failed">Не съвпада</string>
 
-<string name="landmarks_ldks_toast_connection_failed">Failed to connect to the server, working offline.</string>
-<string name="landmarks_ldks_toast_modify_success">Modifications successfully sent to the server.</string>
-<string name="landmarks_ldks_toast_update_tiles_1p">Updating data from server (%s remaining)&#8230;</string>
-<string name="landmarks_ldks_toast_update_success_1p">%s new item(s).</string>
-<string name="landmarks_ldks_dialog_modify_failed">Failed to send modifications to the server. Please check your last modifications.</string>
-<string name="landmarks_ldks_dialog_wrong_version">Your version is no more supported, please update your client.</string>
-<string name="landmarks_ldks_explorer_header_title_offline">Working offline.</string>
-<string name="landmarks_ldks_explorer_header_up_to_date">Up to date.</string>
-<string name="landmarks_ldks_explorer_header_pendings_1p">%s pending action(s).</string>
+<string name="landmarks_ldks_toast_connection_failed">Неуспешно свързване със сървъра, работете офлайн.</string>
+<string name="landmarks_ldks_toast_modify_success">Модификациите бяха успешно записани на сървъра.</string>
+<string name="landmarks_ldks_toast_update_tiles_1p">Актуализиране на данните от сървъра (%s остават)&#8230;</string>
+<string name="landmarks_ldks_toast_update_success_1p">%s нови елемента.</string>
+<string name="landmarks_ldks_dialog_modify_failed">Промените не бяха записани на сървъра. Моля, проверете за последните промени.</string>
+<string name="landmarks_ldks_dialog_wrong_version">Вашата версия вече не се поддържа. Моля, актуализирайте я.</string>
+<string name="landmarks_ldks_explorer_header_title_offline">Офлайн режим.</string>
+<string name="landmarks_ldks_explorer_header_up_to_date">Актуално.</string>
+<string name="landmarks_ldks_explorer_header_pendings_1p">%s предстоящи задачи.</string>
 
-<string name="landmarks_ldks_context_menu_log_off">Sign off</string>
-<string name="landmarks_ldks_context_menu_account">My account</string>
-<string name="landmarks_ldks_context_menu_connect">Work online</string>
-<string name="landmarks_ldks_context_menu_disconnect">Work offline</string>
-<string name="landmarks_ldks_context_menu_refresh_folder">Refresh folder</string>
-<string name="landmarks_ldks_context_menu_refresh_area">Refresh area</string>
+<string name="landmarks_ldks_context_menu_log_off">Отписване</string>
+<string name="landmarks_ldks_context_menu_account">Моя профил</string>
+<string name="landmarks_ldks_context_menu_connect">Свързване</string>
+<string name="landmarks_ldks_context_menu_disconnect">Изклячване</string>
+<string name="landmarks_ldks_context_menu_refresh_folder">Опресняване на папката</string>
+<string name="landmarks_ldks_context_menu_refresh_area">Опресняване на района</string>
 
-<string name="landmarks_ldks_explorer_category_home">My account</string>
-<string name="landmarks_ldks_explorer_category_hidden_folders">Hidden folders</string>
-<string name="landmarks_ldks_explorer_category_users">Users</string>
-<string name="landmarks_ldks_explorer_category_friends">Friends</string>
-<string name="landmarks_ldks_explorer_category_public_waypoints">Public waypoints</string>
+<string name="landmarks_ldks_explorer_category_home">Моя профил</string>
+<string name="landmarks_ldks_explorer_category_hidden_folders">Скрити папки</string>
+<string name="landmarks_ldks_explorer_category_users">Потребители</string>
+<string name="landmarks_ldks_explorer_category_friends">Приятели</string>
+<string name="landmarks_ldks_explorer_category_public_waypoints">Публични маркери</string>
 
-<string name="landmarks_ldks_explorer_name_user">User</string>
-<string name="landmarks_ldks_explorer_name_my_landmarks_title">My waypoints</string>
-<string name="landmarks_ldks_explorer_name_my_landmarks_desc">Your online waypoints</string>
-<string name="landmarks_ldks_explorer_name_public_landmarks_title">My public waypoints</string>
-<string name="landmarks_ldks_explorer_name_public_landmarks_desc">Public waypoints you created or modified</string>
-<string name="landmarks_ldks_explorer_name_my_friends_title">My Friends</string>
-<string name="landmarks_ldks_explorer_name_my_friends_desc">Add users to access their waypoints</string>
+<string name="landmarks_ldks_explorer_name_user">Потребител</string>
+<string name="landmarks_ldks_explorer_name_my_landmarks_title">Моите точки</string>
+<string name="landmarks_ldks_explorer_name_my_landmarks_desc">Вашите онлайн точки</string>
+<string name="landmarks_ldks_explorer_name_public_landmarks_title">Моите публичини точки</string>
+<string name="landmarks_ldks_explorer_name_public_landmarks_desc">Публичини точки, които сте създали или променили.</string>
+<string name="landmarks_ldks_explorer_name_my_friends_title">Моите приятели</string>
+<string name="landmarks_ldks_explorer_name_my_friends_desc">Добавете потребители за да получите достъп до точките му.</string>
 
-<string name="landmarks_ldks_create_folder_hidden_title">Hidden folder</string>
-<string name="landmarks_ldks_create_folder_hidden_desc">Allows you to browse an hidden sub-folder</string>
+<string name="landmarks_ldks_create_folder_hidden_title">Скрита папка</string>
+<string name="landmarks_ldks_create_folder_hidden_desc">Преглеждайте скритите подпапки</string>
 <string name="landmarks_ldks_create_friend_title">Friend</string>
 <string name="landmarks_ldks_create_friend_desc">Define another user as a friend in order to browse its landmarks easier.</string>
 <string name="landmarks_ldks_create_public_waypoint_title">Public waypoint</string>
