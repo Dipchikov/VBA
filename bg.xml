@@ -23,34 +23,35 @@ PLEASE report suggestions and issues on our dedicated forum http://www.alpineque
 
 <u><b>Key features are:</b></u>
 
-★★ <b>Maps</b> ★★
-• Built-in <b>online maps</b> (with <b>automatic local storage</b>; road, topo and satellite maps included);
-• Built-in <b>online layers</b> (road names and hills shading);
-• Get more online maps and layers in one click from the included community map list (Nokia maps, Yahoo! Maps, local topo maps, ...);
-• Complete <b>area storage</b> of online maps for off-line use;
-• <b>On-board offline maps</b> support (visit our website to get the free map creator MOBAC);
-• <b>Memory-Map support</b> (QuickChart .QCT maps only, .QC3 maps not compatible, test your maps using the free Lite version first);
-• Multiple <b>maps in layers</b> display, with per-map opacity control;
+★★ <b>Карти</b> ★★
+• Вградени<b>онлайн карти</b> (с <b>автоматично запазване на устройството</b>; пътни, топографски и сателитни карти);
+• Вграден<b>онлайн слоеве</b> (име пътища, хълмове, контури на височини и т.н.);
+• Получете повече онлайн карти и слоеве с едно кликване на списъка с включени карти (карти на Nokia, Yahoo! Maps, локални топо карти, ...);
+• Изчисляване <b>място за съхранение</b>за онлайн карти и офлайн използване;
+• <b>Вградени офлайн карти</b> поддръжка (посетете нашия уебсайт и изтеглете безплатна програма за създаване на офлайн картите MOBAC);
+• <b>Карти <b>Карта памет</b> (само картите QuickChart .qct - .qc3 не се поддържат);
+• Многопластови<b> карти със слоевете </ b>, с контрол на прозрачността на карта;
 • Advanced SD memory card Map Explorer and Scanner.
 
-★★ <b>Landmarks</b> ★★
-• Create, display, save, restore unlimited number of waypoints, routes, areas and tracks;
-• Import/export <b>GPX</b> files, Google Earth <b>KML/KMZ</b> files and <b>CSV/TSV</b> files;
-• Support OziExplorer <b>WPT</b> and Geocaching <b>LOC</b> waypoints;
-• Save and share online locations with other users using Community Landmarks;
-• Details, advanced statistics and interactive graphics on various items;
-• Time Controller to replay time-tagged tracks;
-• Routes, tracks and areas creator;
-• Advanced SD memory card Landmarks Explorer.
+★★ <b>Етикети</b> ★★
+• Запазване, възстановяване, показване на неограничен брой точки и маршрути;
+• Експортиране / импортиране на файлове <b> GPX </b>, <b> файлове на Google Земя KML/KMZ</b>, <b>CSV / TSV</b>;
+• Поддръжка на точки от формат <b> OziExplorer WPT / PLT </b>, <b> Geocaching LOC </b> файлове;
+• Достъп до онлайн базата данни с потребителски точки от общността - запишете вашите точки, споделете ги и с други потребители;
+• Подробности, <b> Разширени статистически данни </b> и <b> Интерактивна графика </b>;
+• Контролер на времето;
+• Създаване на маршрути, точки и навигационни зони (възможност за ръчно създаване на нов маршрут / запис на картата);
+• Усъвършенствана за работа със знаци.
 
-★★ <b>GPS Position / Orientation</b> ★★
-• On-map geolocation using GPS or Network;
-• Map orientation, <b>compass</b> and target finder;
-• Built-in <b>GPS/Barometric track recorder</b> (long tracking capable, running in a separate and light process);
-• Proximity alerts and leave path alerts;
-• Barometer support (for compatible devices).
+★★ <b> GPS позициониране </ b> ★★
+• Геолокация на място с помощта на GPS или мрежа
+• Ориентация на картата, <b> компас </ b>, насочване;
+• Вграден <b> GPS / барометричено следене </ b> (записване и анализ на маршрута, възможност за записване, както приложението е изключено / минимизирано, енергоспестяващ режим);
+• Показване на разстоянието между точките на потребителя;
+• Уведомления и предупреждение за близост;
+• Барометър (за съвместими устройства).
 
-★★ <b>And more:</b> ★★
+★★ <b>Още:</b> ★★
 • Metric, imperial and hybrid distance units;
 • GPS Latitude/Longitude and grid coordinate formats (UTM, MGRS, USNG, OSGB, Irish Grid, Swiss Grid, Lambert Grids, DFCI Grid, QTH Maidenhead Locator System, ...);
 • Ability to import hundreds of coordinate formats from http://www.spatialreference.org;
@@ -120,21 +121,21 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <!-- About AQ -->
 
-<string name="aq_whatsnew_support_title">Thanks for using AlpineQuest!</string>
-<string name="aq_whatsnew_support_content">We need you! Support us by leaving a comment on the Google Play Store, it\'s free and only takes few seconds!</string>
-<string name="aq_whatsnew_facebook">Visit our facebook page:</string>
-<string name="aq_whatsnew_help_title">Where to find some help?</string>
-<string name="aq_whatsnew_help_content">To get help, ask any question, give suggestions, report bugs, don\'t hesitate:</string>
+<string name="aq_whatsnew_support_title">Благодарим Ви, че използвате AlpineQuest!</string>
+<string name="aq_whatsnew_support_content">Нуждаем се от вас! Подкрепете ни, като оставяте коментар в Google Play Магазин, той е безплатен и отнема само няколко секунди!</string>
+<string name="aq_whatsnew_facebook">Посетете нашата facebook страница:</string>
+<string name="aq_whatsnew_help_title">Къде да получите помощ?</string>
+<string name="aq_whatsnew_help_content">Не се колебайте да получите помощ, да задавате въпроси, предложения и да съобщавате за бъгове:</string>
 
 
 
 
 <!-- About OM -->
 
-<string name="om_whatsnew_howto_title">How does it work?</string>
-<string name="om_whatsnew_howto_content">Maps are retrieved from the internet. All displayed areas are stored locally to remain readily available even when offline.\nThere are plenty of available maps that can all be displayed in layers.</string>
-<string name="om_whatsnew_plus_title">Want to get rid of the ads?</string>
-<string name="om_whatsnew_plus_content">Support us and get the Plus version without ads:</string>
+<string name="om_whatsnew_howto_title">Как работи?</string>
+<string name="om_whatsnew_howto_content">Картите се извличат от интернет. Всички показани области се съхраняват на място, за да останат лесно достъпни дори когато са офлайн. \пИма много налични карти, които могат да се показват на слоеве.</string>
+<string name="om_whatsnew_plus_title">Искате ли да се отървете от рекламите?</string>
+<string name="om_whatsnew_plus_content">Подкрепете ни и получайте пълната версията без реклами:</string>
 
 
 
@@ -961,8 +962,8 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <string name="landmarks_ldks_context_menu_log_off">Отписване</string>
 <string name="landmarks_ldks_context_menu_account">Моя профил</string>
-<string name="landmarks_ldks_context_menu_connect">Свързване</string>
-<string name="landmarks_ldks_context_menu_disconnect">Изклячване</string>
+<string name="landmarks_ldks_context_menu_connect">Онлайн режим</string>
+<string name="landmarks_ldks_context_menu_disconnect">Офлайн режим</string>
 <string name="landmarks_ldks_context_menu_refresh_folder">Опресняване на папката</string>
 <string name="landmarks_ldks_context_menu_refresh_area">Опресняване на района</string>
 
@@ -982,35 +983,35 @@ If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete ou
 
 <string name="landmarks_ldks_create_folder_hidden_title">Скрита папка</string>
 <string name="landmarks_ldks_create_folder_hidden_desc">Преглеждайте скритите подпапки</string>
-<string name="landmarks_ldks_create_friend_title">Friend</string>
-<string name="landmarks_ldks_create_friend_desc">Define another user as a friend in order to browse its landmarks easier.</string>
-<string name="landmarks_ldks_create_public_waypoint_title">Public waypoint</string>
-<string name="landmarks_ldks_create_public_waypoint_desc">Share some information about this location. A new waypoint will be created on the map, visible to all users.</string>
-<string name="landmarks_ldks_create_public_waypoint_disclaimer_check">Before creating a new waypoint, please check that no other waypoint exists on the same place.</string>
-<string name="landmarks_ldks_create_public_waypoint_disclaimer_personal">Public waypoints are visible to all users. Do not enter any personal information.</string>
-<string name="landmarks_ldks_create_public_waypoint_disclaimer_correct">Please choose carefuly the waypoint icon: it will be displayed on the map for all users.</string>
+<string name="landmarks_ldks_create_friend_title">Приятел</string>
+<string name="landmarks_ldks_create_friend_desc">Изберете нов потребител като приятел, за да виждяте неговите точки.</string>
+<string name="landmarks_ldks_create_public_waypoint_title">Публичина точка</string>
+<string name="landmarks_ldks_create_public_waypoint_desc">Добавете информация за това местоположение. На картата ще се създаде нова точка, която ще се вижда от всички потребители.</string>
+<string name="landmarks_ldks_create_public_waypoint_disclaimer_check">Моля, преди да създадете нова точка проверете дали на това място няма друга точка.</string>
+<string name="landmarks_ldks_create_public_waypoint_disclaimer_personal">Публичините точки могат да се виждат от всички потребители. Моля, не въвеждайте никаква лична информация.</string>
+<string name="landmarks_ldks_create_public_waypoint_disclaimer_correct">Внимателно изберете иконата за точката - тя ще се вижда на картата от всички потребители.</string>
 
-<string name="landmarks_ldks_details_line_visibility">Visibility</string>
-<string name="landmarks_ldks_details_line_visibility_private">Private</string>
-<string name="landmarks_ldks_details_line_visibility_hidden">Hidden</string>
-<string name="landmarks_ldks_details_line_visibility_public">Public</string>
+<string name="landmarks_ldks_details_line_visibility">Видима</string>
+<string name="landmarks_ldks_details_line_visibility_private">Частна</string>
+<string name="landmarks_ldks_details_line_visibility_hidden">Скрита</string>
+<string name="landmarks_ldks_details_line_visibility_public">Публичина</string>
 
 
 
 
 <!-- Activation texts -->
 
-<string name="activation_context_menu_activation">Activation</string>
-<string name="activation_status_activated">Activated</string>
-<string name="activation_status_unactivated">Not activated</string>
-<string name="activation_status_locked">Locked by another device</string>
-<string name="activation_info_title">Current activation</string>
-<string name="activation_info_line_status">Status</string>
+<string name="activation_context_menu_activation">Активация</string>
+<string name="activation_status_activated">Активиран</string>
+<string name="activation_status_unactivated">Не е активиран</string>
+<string name="activation_status_locked">Блокирано от друго устройство</string>
+<string name="activation_info_title">Текуща активиция</string>
+<string name="activation_info_line_status">Статус</string>
 
-<string name="activation_dialog_limited_feature">This feature is not available in this free version.</string>
-<string name="activation_dialog_title_lite">Lite version</string>
-<string name="activation_dialog_desc_lite">Enjoy all features of AlpineQuest and support us by using the Full version (available on Google Play).</string>
-<string name="activation_dialog_url_lite">Click here to get more information on Google Play.</string>
-<string name="activation_dialog_title_online">Unactivated version</string>
-<string name="activation_dialog_desc_online">Enjoy all features of AlpineQuest and support us by activating your copy. Activation is fast and valid for all future versions.</string>
-<string name="activation_dialog_url_online">Click here to get more information on our website.</string>
+<string name="activation_dialog_limited_feature">Тази функция не е налична в безплатна версия.</string>
+<string name="activation_dialog_title_lite">Лека версия</string>
+<string name="activation_dialog_desc_lite">Насладете се на всички функции на AlpineQuest и поддръжка, като използвате пълната версия (налична в Google Play).</string>
+<string name="activation_dialog_url_lite">Кликнете тук, за да получите повече информация в Google Play.</string>
+<string name="activation_dialog_title_online">Неактивирана версия</string>
+<string name="activation_dialog_desc_online">Насладете се на всички функции на AlpineQuest и поддръжка, като активирате вашето копие. Активирането е бързо и е валидно за всички бъдещи версии.</string>
+<string name="activation_dialog_url_online">Кликнете тук, за да получите повече информация на нашия уебсайт.</string>
