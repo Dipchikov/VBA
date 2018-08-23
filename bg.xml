@@ -1,21 +1,21 @@
 <!-- AlpineQuest description -->
 
-Turn your Android device into a real off-road GPS using off-line topo maps!
+Вашето устройство с Android се превръща в навигационно устройство с офлайн карти!
 
 
-AlpineQuest is <b>the complete solution for all outdoor activities and sports</b>, including hiking, running, trailing, hunting, sailing, geocaching, off-road navigation and much more.
+AlpineQuest е мултифункционално решение за всички видове дейности на открито и спорт, включително туризъм, бягане, лов, off-road, корабоплаване и много други.
 
-You can access and store locally a large range of <b>on-line topographic maps, which will remain available</b> even while being out of cell coverage. AlpineQuest also supports <b>on-board file based maps</b>, like MemoryMap(c) maps.
+Можете да използвате и запазвате на устройството си голям брой <b> онлайн топографски карти, които ще са налични </b>, дори ако излезете от зоната на покритие на клетъчния си оператор. AlpineQuest също поддържа <b> различни картови формати </b>, например MemoryMap (c).
 
-By using the GPS and the magnetic sensor of your device (with compass display), getting lost is part of the past: <b>you are localized in real-time on the map</b>, which can also <b>be oriented</b> to match where you are looking at.
+Никога няма да излезете от пътя, ако използвате GPS приемника и магнитния сензор на вашето устройство (компас) - <b> Вашето местоположение ще се показва на картата в реално време </b>.
 
-Save and retrieve <b>landmarks</b>, share them with your friends. <b>Track</b> your path, get <b>advanced statistics</b> and <b>interactive graphics</b>. You won't have anymore questions about what you can accomplish.
+Запазете и качете <b> маркери (точки) </b>, споделете ги с приятелите си. <b> Запишете маршрути </b>, получавайте и <b> подробни статистически данни </b> и <b> интерактивни графики </ b> и ще имате пълна информация за това къде и как да маршрутизирате.
 
-By staying fully operational out of cell coverage (as often in mountain or abroad), AlpineQuest assists you in all your desires of deep wilderness exploring...
+Ще останете напълно функционални извън зоната на покритие на клетъчния оператор (например в планините, в гората, на открито), програмата AlpineQuest ще ви помогне да стигнете до най-отдалечените природни места ....
 
 
-<b><b>Don't hesitate, try the free Lite version right now!</b></b>
-<b><b>Don't hesitate, use it right now for free!</b></b>
+<b><b>Не се колебайте, опитайте безплатната версия!</b></b>
+<b><b>Не се колебайте, използвайте я сега безплатно!</b></b>
 
 
 PLEASE report suggestions and issues on our dedicated forum http://www.alpinequest.net/forum (no registration needed, all questions answered) and not in comments.
@@ -52,12 +52,12 @@ PLEASE report suggestions and issues on our dedicated forum http://www.alpineque
 • Барометър (за съвместими устройства).
 
 ★★ <b>Още:</b> ★★
-• Metric, imperial and hybrid distance units;
-• GPS Latitude/Longitude and grid coordinate formats (UTM, MGRS, USNG, OSGB, Irish Grid, Swiss Grid, Lambert Grids, DFCI Grid, QTH Maidenhead Locator System, ...);
-• Ability to import hundreds of coordinate formats from http://www.spatialreference.org;
-• On-map grids display;
-• Full screen map view;
-• Multi-touch zoom;
+• Различни мерни единици за измерване на разстояниятя;
+• Различни GPS формати за географска ширина/дължина и координатна мрежа (UTM, MGRS, USNG, OSGB, ирландска мрежа, швейцарска мрежа, Lambert Grids, DFCI Grid, QTH Maidenhead Locator System, ...);
+• Възможност за импортиране на стотици координатни формати от http://www.spatialreference.org;
+• Показване на координатната мрежа върху картата;
+• Изглед на цял екран;
+• Увеличение с няколко докосвания;
 • ...
 
 
@@ -68,17 +68,17 @@ About the "Phone state and identity" Android permission: due to the backward com
 
 <!-- OfflineMaps description -->
 
-<b>All-In-One OfflineMaps offers you to access a wide range of maps for free.</b>
-<b>All-In-One OfflineMaps+ offers you to access a wide range of maps.</b>
+<b>All-In-One OfflineMaps Ви предлага достъп до широка гама от карти безплатно.</b>
+<b>All-In-One OfflineMaps+ Ви предлага достъп до широка гама от карти.</b>
 
 --
 
-Bored to wait for maps to display? Use All-In-One OfflineMaps! <b>Once displayed, maps are stored and remain available, quickly, even with no network access</b>.
+Уморихте ли да чакате зареждането на онлайн картите? Използвайте All-In-One OfflineMaps! <b> След изтеглянето картите остават в програмата и винаги са достъпни дори и без връзка с интернет </ b>.
 
-• <b>Want more than just roads on your maps?</b> You will find what you need here;
-• <b>Used to go to places with poor network coverage?</b> Everything will stay available;
-• <b>Used to go abroad?</b> You won't be lost anymore;
-• <b>Have a data allowance limit?</b> It will reduce your usage.
+• <b> Имате ли нужда от повече от пътна картата? </b> Всичко, от което се нуждаете, може да намерите тук;
+• <b> Често пътувате ли там, където няма интернет или лошо качество на покритието на мрежата? </b> Всичко, от което се нуждаете за навигация, ще бъде достъпно за вас;
+• <b> Често ли ходите на непознати места? </b> Никога няма да се изгубите;
+• <b> Имате ли ограничения за трафика (качване)? </b> Програмата ще сведе до минимум това.
 
 --
 
@@ -86,35 +86,35 @@ Bored to wait for maps to display? Use All-In-One OfflineMaps! <b>Once displayed
 
 --
 
-★★ <b>Maps</b> ★★
-A lot of maps are available, including classical road maps, topographic maps, aerial (satellite) maps and various layers that can be added over any maps: OpenStreetMap (Roads, Topo), Google Maps, Bing Maps, USGS National Map (Hi-res topo, Aerial imagery), Worldwide Military Soviet topo maps, etc.
-• All maps can be stacked in layers, with precise opacity control;
-• Select and store large areas in few clicks;
-• Stored space is clear and can be easily deleted.
+★★ <b>Карти</b> ★★
+Предлага се голям брой карти, класически пътни карти, топографски карти, сателитни карти и различни слоеве, които могат да се добавят към всяка карта: OpenStreetMap (пътни, топографски), USGS национална карта (топография на карти с висока разделителна способност, сателитни карти), Google Maps, Bing, Yahoo, Yandex, различни регионални топографски карти, включително и в Европа, Великобритания, Испания, Италия и т.н.
+• Всички карти могат да се отварят (добавят) под формата на слоеве, възможно е да се регулира прозрачността, цвета и наситеността на всеки слой.
+• Избирате и съхранявате всички части на картата на устройството бързо и лесно.
+• Запазените раздели на картата винаги са достъпни офлайн и могат лесно да бъдат изтрити, ако е необходимо.
 
 
-★★ <b>Display, store and retrieve unlimited landmarks</b> ★★
-You can add various items on the map such as waypoints, icons, routes, areas and tracks.
-You can easily manage them using the powerful SD-Card Landmarks Explorer.
+★★ <b>Показване, запазване и качване на неограничен брой маркери</b> ★★
+Можете да добавите различен брой етикети, като точки, икони, маршрути, области на картата.
+Можете лесно да ги управлявате с врадения редактор.
 
 
-★★ <b>On-map GPS Location & Orientation</b> ★★
-Your real location and direction are clearly displayed on the map, which can be rotated to match your real orientation (depends on device capabilities).
-Easy turn on/off to save battery.
+★★ <b>GPS позициониране</b> ★★
+Текущото ви местоположение и посока се показва на картата, която може да се завърти чрез движение, за да се подобри ориентацията на терена (зависи от устройството).
+Бързо и лесно включване/изключване на GPS позициониране за икономична работа на устройството.
 
 
-And also:
-• Metric, imperial and hybrid distance units;
-• GPS Latitude/Longitude and grid coordinate formats (UTM, MGRS, USNG, OSGB Grid, Irish Grid, Swiss Grid, Lambert Grids, DFCI Grid, QTH Maidenhead Locator System, ...);
-• Ability to import hundreds of coordinate formats from http://www.spatialreference.org;
-• On-map grids display;
-• Full screen map view;
-• Multi-touch zoom;
+И още:
+• Метрични, имперски и хибридни измервателни единици;
+• Различни GPS формати за географска ширина/дължина и координатна мрежа (UTM, MGRS, USNG, OSGB, ирландска мрежа, швейцарска мрежа, Lambert Grids, DFCI Grid, QTH Maidenhead Locator System, ...);
+• Възможност за импортиране на стотици координатни формати от http://www.spatialreference.org;
+• Показване на координатната мрежа върху картата;
+• Изглед на цял екран;
+• Увеличение с няколко докосвания;
 • ...
 
 
-★★ <b>Need more?</b> ★★
-If you are a real adventurer, try <b>AlpineQuest GPS Hiking</b>, the complete outdoor solution based on All-In-One OfflineMaps, loaded with a powerful GPS Location Tracker and more: http://www.alpinequest.net/google-play
+★★ <b>Искате ли повече?</b> ★★
+Ако сте истински авантюрист, опитайте <b> AlpineQuest GPS Hiking </b>, цялостното решение за открито, базирано на All-In-One OfflineMaps, с добавен с мощен GPS Location Tracker и още: http://www.alpinequest.net/google-play
 
 
 
