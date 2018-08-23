@@ -155,12 +155,12 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="maps_submenu_title">Карти &amp; Слоеве</string>
 <string name="maps_submenu_available_maps">Налични карти</string>
 <string name="maps_submenu_displayed_maps">Активни карти</string>
-<string name="maps_submenu_area_downloader">Изберете и запазете област</string>
-<string name="maps_submenu_display_name">Име на карта</string>
-<string name="maps_submenu_display_scale_value">Мащаб на карта</string>
-<string name="maps_submenu_display_scale_bar">Мащабен бар на карта</string>
+<string name="maps_submenu_area_downloader">Селектиране и запазване област</string>
+<string name="maps_submenu_display_name">Име на картата</string>
+<string name="maps_submenu_display_scale_value">Мащаб на картата</string>
+<string name="maps_submenu_display_scale_bar">Мащабен бар на картата</string>
 <string name="maps_submenu_only_use_local_storage">Използвай само локалното хранилище</string>
-<string name="maps_submenu_show_storage_coverage">Покритие на локалното хранилищее</string>
+<string name="maps_submenu_show_storage_coverage">Покажи покритието на локалното хранилищее</string>
 <string name="maps_submenu_correct_china_shift">Правилни компенсации над Китай</string>
 <string name="maps_submenu_favorites_title">Предпочитани карти и комплексни карти</string>
 
@@ -179,7 +179,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="geolocation_submenu_barometer">Бароветър</string>
 <string name="geolocation_submenu_rotate">Завъртане на картата (с помощта на GPS)</string>
 <string name="geolocation_submenu_distance_line">Показване на разстоянието</string>
-<string name="geolocation_submenu_display_information">Positioning status</string>
+<string name="geolocation_submenu_display_information">Статус на позиционирането</string>
 <string name="geolocation_submenu_tracker_information">Статус на записвания маршрут</string>
 
 <string name="orientation_submenu_title">Ориентация</string>
@@ -239,8 +239,8 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_button_search">Търси</string>
 <string name="core_button_select">Избери</string>
 <string name="core_button_share">Сподели</string>
-<string name="core_button_undisplay">Премахване</string>
-<string name="core_button_undisplay_all_other">Премахване на останалите</string>
+<string name="core_button_undisplay">Премахни</string>
+<string name="core_button_undisplay_all_other">Премахвани на останалите</string>
 <string name="core_button_deselect">Размаркиране</string>
 <string name="core_button_update">Актуализация</string>
 <string name="core_button_whats_new">Какво е новото</string>
@@ -248,7 +248,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 
 <string name="core_button_leave_comment">Оставете коментар</string>
 <string name="core_button_support_forum">Форум за поддръжка</string>
-<string name="core_button_terms_of_use">Условия за ползване</string>
+<string name="core_button_terms_of_use">Условия за използване</string>
 
 
 
@@ -265,7 +265,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_utils_units_distance_meter">метри</string>
 <string name="core_utils_units_angle_degree">градуси</string>
 
-<string name="core_utils_units_time_hour_abbrev">ч</string>
+<string name="core_utils_units_time_hour_abbrev">ч.</string>
 <string name="core_utils_units_time_minute_abbrev">мин</string>
 <string name="core_utils_units_time_second_abbrev">сек</string>
 <string name="core_utils_units_distance_meter_abbrev">м</string>
@@ -275,6 +275,11 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_utils_units_area_are_abbrev">ар</string>
 <string name="core_utils_units_pressure_hpa_abbrev">hPa</string>
 <string name="core_utils_units_pressure_mmhg_abbrev">mmHg</string>
+<string name="core_utils_units_weigth_kg_abbrev">кг</string>
+<string name="core_utils_units_weigth_lbs_abbrev">lbs</string>
+<string name="core_utils_units_energy_kcal_abbrev">ccal</string>
+
+
 
 <string name="core_toolkit_share_location_1p">Местоположението е %s.</string>
 <string name="core_toolkit_share_location_named_2p" formatted="false">Местоположението на %s е %s.</string>
