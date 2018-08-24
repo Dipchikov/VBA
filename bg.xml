@@ -240,7 +240,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_button_select">Избери</string>
 <string name="core_button_share">Сподели</string>
 <string name="core_button_undisplay">Премахни</string>
-<string name="core_button_undisplay_all_other">Премахвани на останалите</string>
+<string name="core_button_undisplay_all_other">Премахни останалите</string>
 <string name="core_button_deselect">Размаркиране</string>
 <string name="core_button_update">Актуализация</string>
 <string name="core_button_whats_new">Какво е новото</string>
