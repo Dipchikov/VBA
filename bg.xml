@@ -178,7 +178,6 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="geolocation_submenu_tracker">Запис на маршрут</string>
 <string name="geolocation_submenu_barometer">Бароветър</string>
 <string name="geolocation_submenu_rotate">Завъртане на картата (с помощта на GPS)</string>
-<string name="geolocation_submenu_distance_line">Показване на разстоянието</string>
 <string name="geolocation_submenu_display_information">Статус на позиционирането</string>
 <string name="geolocation_submenu_tracker_information">Статус на записвания маршрут</string>
 
@@ -213,6 +212,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_button_filter">Филтър</string>
 <string name="core_button_fullscreen">Цял екран</string>
 <string name="core_button_gallery">Галерия</string>
+<string name="core_button_group">Групиране</string>
 <string name="core_button_hide">Скрий</string>
 <string name="core_button_import">Импортиране</string>
 <string name="core_button_insert_here">Вмъкни тук</string>
@@ -265,7 +265,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_utils_units_distance_meter">метри</string>
 <string name="core_utils_units_angle_degree">градуси</string>
 
-<string name="core_utils_units_time_hour_abbrev">ч.</string>
+<string name="core_utils_units_time_hour_abbrev">ч</string>
 <string name="core_utils_units_time_minute_abbrev">мин</string>
 <string name="core_utils_units_time_second_abbrev">сек</string>
 <string name="core_utils_units_distance_meter_abbrev">м</string>
@@ -273,11 +273,11 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_utils_units_speed_abbrev">км/ч</string>
 <string name="core_utils_units_area_hectare_abbrev">ха</string>
 <string name="core_utils_units_area_are_abbrev">ар</string>
-<string name="core_utils_units_pressure_hpa_abbrev">hPa</string>
-<string name="core_utils_units_pressure_mmhg_abbrev">mmHg</string>
+<string name="core_utils_units_pressure_hpa_abbrev">хПa</string>
+<string name="core_utils_units_pressure_mmhg_abbrev">мм ж. ст.,</string>
 <string name="core_utils_units_weigth_kg_abbrev">кг</string>
-<string name="core_utils_units_weigth_lbs_abbrev">lbs</string>
-<string name="core_utils_units_energy_kcal_abbrev">ccal</string>
+<string name="core_utils_units_weigth_lbs_abbrev">паунд</string>
+<string name="core_utils_units_energy_kcal_abbrev">ккал</string>
 
 
 
@@ -328,7 +328,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 
 <string name="core_explorer_item_delete_q">Елемента ще бъде изтрит?</string>
 <string name="core_explorer_item_delete_success_s">Eлемета е изтрит.</string>
-<string name="core_explorer_item_move_success_s">Eлемета е преместин.</string>
+<string name="core_explorer_item_move_success_s">Eлемета е преместeн.</string>
 <string name="core_explorer_item_rename_success_s">Eлемета е преименуван.</string>
 <string name="core_explorer_item_copy_success_s">Eлемета е копиран.</string>
 
@@ -336,7 +336,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_explorer_context_group_multiselect">Няколко селекции</string>
 
 <string name="core_explorer_category_files">Файлове</string>
-<string name="core_explorer_category_files_typed_1p">%s файлове</string>
+<string name="core_explorer_category_files_typed_1p">%s файла</string>
 <string name="core_explorer_category_folders">Папки</string>
 <string name="core_explorer_category_importables">файлове за импортирате</string>
 <string name="core_explorer_name_file">Файл</string>
@@ -345,7 +345,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="core_explorer_nb_folder_1p">%s папка</string>
 <string name="core_explorer_nb_folders_1p">%s папки</string>
 <string name="core_explorer_nb_file_1p">%s файл</string>
-<string name="core_explorer_nb_files_1p">%s файлове</string>
+<string name="core_explorer_nb_files_1p">%s файла</string>
 
 
 
@@ -395,8 +395,9 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="maps_elevation_title">Надморска височина</string>
 <string name="maps_elevation_dem">Цифров модел на релефа(DEM)</string>
 <string name="maps_elevation_dem_activate">Използвай данни за висичината</string>
+<string name="maps_elevation_dem_download">Автоматично изтегляне на височинни данни</string>
 <string name="maps_elevation_dem_map">Показване на зони със съхранени данни за релефа</string>
-<string name="maps_elevation_dem_source_1p">Индикативни данни от %s</string>
+<string name="maps_elevation_dem_source_1p">Индикативни данни: %s</string>
 
 <string name="maps_area_downloader_creator_zoom">Мащаб</string>
 <string name="maps_area_downloader_creator_cell_tile_1p">%s елемент</string>
@@ -441,7 +442,7 @@ About the "Phone state and identity" Android permission: due to the backward com
 <string name="landmarks_explorer_cell_location_1p">%s позиция</string>
 <string name="landmarks_explorer_cell_locations_1p">%s места</string>
 <string name="landmarks_explorer_cell_segment_1p">%s сегмент</string>
-<string name="landmarks_explorer_cell_segments_1p">%s сегменти</string>
+<string name="landmarks_explorer_cell_segments_1p">%s сегмента</string>
 <string name="landmarks_explorer_cell_waypoint_1p">%s точка</string>
 <string name="landmarks_explorer_cell_waypoints_1p">%s точки</string>
 <string name="landmarks_explorer_sort_distance">Разстояние от центъра на екрана</string>
