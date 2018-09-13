@@ -55,6 +55,23 @@ Set MyPlage = Range("I15:I" & lr)
         cell.Value = "Wire jumper"
         End If
 
+ '-----------FRENCH translation--------------
+        If cell.Value = "Conducteur / Fil" Then
+        cell.Value = "Conductor / wire"
+        End If
+        
+        If cell.Value = "Pontage par barrette" Then
+        cell.Value = "Saddle jumper"
+        End If
+        
+                If cell.Value = "Insertion de pont" Then
+        cell.Value = "Insertable jumper"
+        End If
+              If cell.Value = "Pontage par fil" Then
+        cell.Value = "Wire jumper"
+        End If
+
+
         Next
         
         '---------fix cable----------------
@@ -64,7 +81,25 @@ Set MyPlage = Range("I15:I" & lr)
   
         
     If (cell.Value = "black" Or cell.Value = "BLACK") Then
-        cell.Value = "bk"
+        cell.Value = "BK"
+        End If
+     '-----------FRENCH translation--------------
+          If (cell.Value = "Noir") Then
+        cell.Value = "BK"
+        End If
+         If (cell.Value = "Bleu") Then
+        cell.Value = "BU"
+        End If
+                 If (cell.Value = "Marron") Then
+        cell.Value = "BN"
+        End If
+        
+        If (cell.Value = "Rouge") Then
+        cell.Value = "RD"
+        End If
+        
+            If (cell.Value = "Vert / Jaune") Then
+        cell.Value = "GNYE"
         End If
         
     Next
