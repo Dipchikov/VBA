@@ -1,28 +1,22 @@
 Attribute VB_Name = "Jumpers"
 Sub Jumpers()
-
+Dim lr As Long
+Dim wire As Double
 Application.Calculation = xlCalculationManual
 Application.ScreenUpdating = False
 
- '------------------Jumpers Primery -------------------------
- 
-Set MyPlage = Range("G15:G1000")
 
-    For Each cell In MyPlage
-
-   If cell.Value = "Bridge" Then
-            cell(1, 3).Value = "Insertable jumper"
-            cell.Value = ""
-    End If
-    Next
+lr = Range("A" & Rows.Count).End(xlUp).Row
 
 '----------------- minimal wires crossection   --------------------
-Dim wire As String
 
-Set MyPlage = Range("G15:G1000")
+
+Set MyPlage = Range("G15:G" & lr)
 
 
 wire = InputBox("Please add minimal cross-section of conductors", "Read the General Arrangement Drawings!!!", 1)
+
+
 For Each cell In MyPlage
  If Not IsEmpty(cell.Value) And cell.Value < wire Then
  If Not (cell(1, 6).Value = "-" Or cell(1, 6).Value = "Shielded cable") Then
@@ -37,13 +31,38 @@ Next
 
 
 
-'---------------------------clear cells BAT-FCF -QAB -BGT -QCE -BCT- BCN- BAD- EB- EA- BGB-QBM2 - BPS--------------------------------
+ '------------------Jumpers Primery -------------------------
+ 
+Set MyPlage = Range("G15:G" & lr)
 
-Set MyPlage = Range("A15:A1000")
+    For Each cell In MyPlage
+
+   If cell.Value = "Bridge" Then
+            cell(1, 3).Value = "Insertable jumper"
+            cell.Value = ""
+    End If
+Next
+
+
+
+
+
+'---------------------------clear cells BAT-FCF -QAB -BGT -QCE -BCT- BCN- BAD- EB- EA- BGB-QBM2 - BPS- QBS-RLE------------------------------
+
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BAT" Then
+            cell(1, 9).Value = "Direct Connection"
+            cell(1, 7).ClearContents
+            cell(1, 8).ClearContents
+            cell(1, 9).Font.ColorIndex = 3
+            cell(1, 9).Font.Bold = True
+          End If
+          
+                  If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "QBS" And Left(cell(1, 4).Value, 3) = "XDC" Then
+           cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -51,6 +70,7 @@ Set MyPlage = Range("A15:A1000")
           End If
           
                   If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BGB" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -58,6 +78,7 @@ Set MyPlage = Range("A15:A1000")
           End If
 
                 If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "QCE" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -65,6 +86,7 @@ Set MyPlage = Range("A15:A1000")
           End If
           
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "FCF" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -73,6 +95,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "QAB" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -80,6 +103,7 @@ Set MyPlage = Range("A15:A1000")
         End If
     
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BGT" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -87,6 +111,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         
                 If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BGE" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -94,18 +119,21 @@ Set MyPlage = Range("A15:A1000")
         End If
         
                 If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BCT" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
         End If
                If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BCN" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
         End If
                  If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BAD" Then
+            cell(1, 9).Value = "Direct Connection"
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -113,6 +141,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         
          If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 2) = "EB" Then
+          
             cell(1, 7).ClearContents
             cell(1, 8).ClearContents
             cell(1, 9).Font.ColorIndex = 3
@@ -120,6 +149,7 @@ Set MyPlage = Range("A15:A1000")
         End If
         
          If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "EA2" Then
+        
          cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Font.ColorIndex = 3
@@ -127,6 +157,15 @@ Set MyPlage = Range("A15:A1000")
         End If
            
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "BPS" Then
+        cell(1, 9).Value = "Direct Connection"
+         cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+      
+         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "RLE" Then
+         cell(1, 9).Value = "Direct Connection"
          cell(1, 7).ClearContents
         cell(1, 8).ClearContents
         cell(1, 9).Font.ColorIndex = 3
@@ -134,14 +173,13 @@ Set MyPlage = Range("A15:A1000")
         End If
        Next
                  
-                 
  Set MyPlage = Range("D15:D1000")
 
     For Each cell In MyPlage
     
 
           If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "BAT" Then
-          
+          cell(1, 6).Value = "Direct Connection"
             cell(1, 4).ClearContents
             cell(1, 5).ClearContents
             cell(1, 6).Font.ColorIndex = 3
@@ -150,12 +188,14 @@ Set MyPlage = Range("A15:A1000")
         End If
         
         If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "FCF" Then
+        cell(1, 6).Value = "Direct Connection"
             cell(1, 4).ClearContents
             cell(1, 5).ClearContents
             cell(1, 6).Font.ColorIndex = 3
             cell(1, 6).Font.Bold = True
         End If
             If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "QAB" Then
+            cell(1, 6).Value = "Direct Connection"
             cell(1, 4).ClearContents
             cell(1, 5).ClearContents
             cell(1, 6).Font.ColorIndex = 3
@@ -163,18 +203,28 @@ Set MyPlage = Range("A15:A1000")
         End If
 
             If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "BGT" Then
+            cell(1, 6).Value = "Direct Connection"
             cell(1, 4).ClearContents
             cell(1, 5).ClearContents
             cell(1, 6).Font.ColorIndex = 3
             cell(1, 6).Font.Bold = True
         End If
             If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "BGE" Then
+            cell(1, 6).Value = "Direct Connection"
             cell(1, 4).ClearContents
             cell(1, 5).ClearContents
             cell(1, 6).Font.ColorIndex = 3
             cell(1, 6).Font.Bold = True
         End If
-                    If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "QCE" Then
+            If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "QCE" Then
+            cell(1, 6).Value = "Direct Connection"
+            cell(1, 4).ClearContents
+            cell(1, 5).ClearContents
+            cell(1, 6).Font.ColorIndex = 3
+            cell(1, 6).Font.Bold = True
+        End If
+                    If Not IsEmpty(cell(1, 4).Value) And Left(cell.Value, 3) = "RLE" Then
+            cell(1, 6).Value = "Direct Connection"
             cell(1, 4).ClearContents
             cell(1, 5).ClearContents
             cell(1, 6).Font.ColorIndex = 3
@@ -183,67 +233,18 @@ Set MyPlage = Range("A15:A1000")
         
         Next
  '------------------Jumpers between equipment -------------------------
- 
-Set MyPlage = Range("A15:A1000")
+Dim x As Double
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
-
-   If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
-    x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
-           cell(1, 9).Value = "Conduttore/filo"
-            cell(1, 9).Font.ColorIndex = 3
-            cell(1, 9).Font.Bold = True
-            If IsEmpty(cell(1, 7).Value) Then
-            cell(1, 7).Value = x
-            cell(1, 7).Font.ColorIndex = 3
-            cell(1, 7).Font.Bold = True
-    End If
-     If IsEmpty(cell(1, 8).Value) Then
-    cell(1, 8).Value = "bk"
-    cell(1, 8).Font.ColorIndex = 3
-    cell(1, 8).Font.Bold = True
-    End If
-    End If
-
-    
-       If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Ponticello inseribile" Then
-        x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
-            cell(1, 9).Value = "Conduttore/filo"
-            cell(1, 9).Font.ColorIndex = 3
-            cell(1, 9).Font.Bold = True
-            If IsEmpty(cell(1, 7).Value) Then
-            cell(1, 7).Value = x
-    End If
-        If IsEmpty(cell(1, 8).Value) Then
-    cell(1, 8).Value = "bk"
-    cell(1, 8).Font.ColorIndex = 3
-    cell(1, 8).Font.Bold = True
-    End If
-    End If
-    
-        If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Ponticello a filo" Then
-         x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
-            cell(1, 9).Value = "Conduttore/filo"
-            cell(1, 9).Font.ColorIndex = 3
-            cell(1, 9).Font.Bold = True
-            If IsEmpty(cell(1, 7).Value) Then
-            cell(1, 7).Value = x
-            cell(1, 7).Font.ColorIndex = 3
-            cell(1, 7).Font.Bold = True
-    End If
-        If IsEmpty(cell(1, 8).Value) Then
-    cell(1, 8).Value = "bk"
-    cell(1, 8).Font.ColorIndex = 3
-    cell(1, 8).Font.Bold = True
-    End If
-    End If
         
-            If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
-             x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
+         If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
+             
             cell(1, 9).Value = "Conductor / wire"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
              If IsEmpty(cell(1, 7).Value) Then
+             x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire, 1)
             cell(1, 7).Value = x
             cell(1, 7).Font.ColorIndex = 3
             cell(1, 7).Font.Bold = True
@@ -254,13 +255,13 @@ Set MyPlage = Range("A15:A1000")
     cell(1, 8).Font.Bold = True
     End If
     End If
-      
-                 If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Saddle jumper" Then
-            x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
+     
+           If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Saddle jumper" Then
             cell(1, 9).Value = "Conductor / wire"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
             If IsEmpty(cell(1, 7).Value) Then
+            x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
             cell(1, 7).Value = x
             cell(1, 7).Font.ColorIndex = 3
             cell(1, 7).Font.Bold = True
@@ -272,135 +273,98 @@ Set MyPlage = Range("A15:A1000")
     End If
     End If
          
-                If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Wire jumper" Then
-            x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
+         
+      If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Wire jumper" And IsEmpty(cell(1, 7).Value) Then
+            x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire, 1)
             cell(1, 9).Value = "Conductor / wire"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
-            If IsEmpty(cell(1, 7).Value) Then
             cell(1, 7).Value = x
             cell(1, 7).Font.ColorIndex = 3
             cell(1, 7).Font.Bold = True
-            End If
+            
     If IsEmpty(cell(1, 8).Value) Then
              cell(1, 8).Value = "bk"
              cell(1, 8).Font.ColorIndex = 3
              cell(1, 8).Font.Bold = True
     End If
     End If
-                If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Ponticello a filo" Then
+    
+    
+          If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Conductor / wire" And IsEmpty(cell(1, 7).Value) Then
             x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
-            cell(1, 9).Value = "Conduttore/filo"
+            cell(1, 7).Value = x
+            cell(1, 7).Font.ColorIndex = 3
+            cell(1, 7).Font.Bold = True
+            
+    If IsEmpty(cell(1, 8).Value) Then
+             cell(1, 8).Value = "bk"
+             cell(1, 8).Font.ColorIndex = 3
+             cell(1, 8).Font.Bold = True
+    End If
+    End If
+    
+    
+  If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Wire jumper" Then
+            cell(1, 9).Value = "Conductor / wire"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
-            If IsEmpty(cell(1, 7).Value) Then
-            cell(1, 7).Value = x
-            cell(1, 7).Font.ColorIndex = 3
-            cell(1, 7).Font.Bold = True
-            End If
-    If IsEmpty(cell(1, 8).Value) Then
-             cell(1, 8).Value = "bk"
-             cell(1, 8).Font.ColorIndex = 3
-             cell(1, 8).Font.Bold = True
-    End If
-    End If
+ End If
     
  Next
         
         
  '------------------XDA -------------------------
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
         
-           If Left(cell.Value, 3) = "XDA" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
-   If Left(cell.Value, 3) = "XDA" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-         cell(1, 7).ClearContents
-            cell(1, 8).ClearContents
-
-        End If
-        End If
-        
-           If Left(cell.Value, 3) = "XDA" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
-   If Left(cell.Value, 3) = "XDA" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
-        
- Next
-        
-'------------------XDV -------------------------
-
-Set MyPlage = Range("A15:A1000")
-
-    For Each cell In MyPlage
 
         
-           If Left(cell.Value, 3) = "XDV" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
+           If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
+         'If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
+        'End If
         End If
-        End If
-   If Left(cell.Value, 3) = "XDV" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-         cell(1, 7).ClearContents
+   If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Saddle jumper" Then
+         'If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 7).ClearContents
         cell(1, 8).ClearContents
-        End If
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 6
+        cell(1, 9).Font.Bold = True
+        'End If
         End If
         
-           If Left(cell.Value, 3) = "XDV" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
-   If Left(cell.Value, 3) = "XDV" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Saddle jumper" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
         
- Next
+
+
+        
+        
+'-------------Black jumpers----------------------------------
+        If cell.Value = "XDA" And cell.Value = cell(1, 4).Value And Not (cell(1, 9).Value = "Insertable jumper" Or cell(1, 9).Value = "Saddle jumper") Then
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        cell(1, 9).Value = "Insertable jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
+     
+    Next
+        
+
         
      '------------------XDC -------------------------
 
     
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
-        
-           If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
-   If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
+    
         
            If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Insertable jumper" Then
@@ -419,28 +383,38 @@ Set MyPlage = Range("A15:A1000")
         
 
         
-         If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDC" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+       If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDC" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Conductor / wire") Then
         XDC = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDC
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
+        If IsEmpty(cell(1, 8).Value) Then
         cell(1, 8).Value = "bk"
+        cell(1, 8).Font.ColorIndex = 3
+        cell(1, 8).Font.Bold = True
+        End If
         End If
         
-   If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And IsEmpty(cell(1, 7).Value) Then
-    answer = MsgBox("Is posible to have XDC matal jumper?" & vbNewLine & "If this is posible to have XDC matal jumper - Yes", vbYesNo + vbQuestion, "XDC matal jumper")
+    If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
+    If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And IsEmpty(cell(1, 7).Value) Then
+    answer = MsgBox("Is connection between " & cell(1, 3) & " and " & cell(1, 6) & " is " & cell(1, 9), vbYesNo + vbQuestion, "XDC matal jumper")
     If answer = vbNo Then
     XDC = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
         If XDC = vbOK Then
         cell(1, 7).Value = XDC
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
         cell(1, 8).Value = "bk"
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
+
         End If
         Else
         End If
         End If
         End If
+        
 
 
            If IsEmpty(cell(1, 8).Value) And Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
@@ -458,24 +432,11 @@ Set MyPlage = Range("A15:A1000")
  
      '------------------XDM -------------------------
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
         
-           If Left(cell.Value, 3) = "XDM" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        
-            
-           If Left(cell.Value, 3) = "XDM" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-            
 
         
            If Left(cell.Value, 3) = "XDM" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
@@ -493,24 +454,9 @@ Set MyPlage = Range("A15:A1000")
  
  '--------------------------------------PGA to PGW------------------------------
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
-
-        
-           If Left(cell.Value, 2) = "PG" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        
-            
-           If Left(cell.Value, 2) = "PG" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-            
 
         
            If Left(cell.Value, 2) = "PG" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
@@ -529,25 +475,11 @@ Set MyPlage = Range("A15:A1000")
  
  '--------------------------------------Selector Switch------------------------------
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
         
-           If Left(cell.Value, 2) = "SF" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        
-            
-           If Left(cell.Value, 2) = "SF" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-            
-
         
            If Left(cell.Value, 2) = "SF" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 9).Value = "Wire jumper"
@@ -564,25 +496,11 @@ Set MyPlage = Range("A15:A1000")
  
  '--------------------------------------BT- Thermostat------------------------------
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
         
-           If Left(cell.Value, 2) = "BT" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        
-            
-           If Left(cell.Value, 2) = "BT" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-            
-
         
            If Left(cell.Value, 2) = "BT" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 9).Value = "Wire jumper"
@@ -599,24 +517,11 @@ Set MyPlage = Range("A15:A1000")
  
  '--------------------------------------TB------------------------------
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
         
-           If Left(cell.Value, 2) = "TB" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        
-            
-           If Left(cell.Value, 2) = "TB" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-            
 
         
            If Left(cell.Value, 2) = "TB" And cell.Value = cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
@@ -634,14 +539,14 @@ Set MyPlage = Range("A15:A1000")
 
 '------------------XDI -------------------------
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
 
             If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Conductor / wire" Then
-           answer = MsgBox("Is it posible to have XDI wire jumper?" & vbNewLine & "If this is posible to have XDI Wire jumper - Yes", vbYesNo + vbQuestion, "XDI jumper")
+        answer = MsgBox("Is connection between" & cell(1, 3).Value & " And " & cell(1, 6).Value & " is " & cell(1, 9).Value, vbYesNo + vbQuestion, "XDI jumper")
         If answer = vbNo Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
@@ -654,7 +559,7 @@ Set MyPlage = Range("A15:A1000")
         End If
                   If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
                   If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Wire jumper" Then
-                  answer = MsgBox("Is it posible to have XDI wire jumper?" & vbNewLine & "If this is posible to have XDI Wire jumper - Yes", vbYesNo + vbQuestion, "XDI jumper")
+                  answer = MsgBox("Is connection between" & cell(1, 3).Value & " And " & cell(1, 6).Value & " is " & cell(1, 9).Value, vbYesNo + vbQuestion, "XDI jumper")
         If answer = vbNo Then
         cell(1, 7).ClearContents
         cell(1, 8).ClearContents
@@ -668,45 +573,6 @@ Set MyPlage = Range("A15:A1000")
         
         
         
-        
-        If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
-        If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Conduttore/filo" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        cell(1, 9).Value = "Ponticello a staffa"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-
-        End If
-        End If
-               
-               If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
-        If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Ponticello a filo" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        cell(1, 9).Value = "Ponticello a staffa"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        
-        End If
-        End If
-        
-           If Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
-        
-        If Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
-        
            If Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 9).Value = "Wire jumper"
@@ -714,6 +580,7 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Font.Bold = True
         End If
         End If
+        
          If Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Saddle jumper" Then
         cell(1, 9).Value = "Wire jumper"
@@ -726,19 +593,7 @@ Set MyPlage = Range("A15:A1000")
         
         '-------------------clear--------------------------------
         
-            If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
-                  If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
-                  If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
 
-        End If
-        End If
         
         
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
@@ -757,16 +612,28 @@ Set MyPlage = Range("A15:A1000")
         End If
         End If
         
-                         If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
-        XDI = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
+           If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDI" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
+        XDI = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDI
-        cell(1, 8).Value = "bk"
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
+        'cell(1, 8).Value = "bk"
         End If
+        
+        
+           If IsEmpty(cell(1, 8).Value) And Left(cell.Value, 3) = "XDI" And cell.Value = cell(1, 4).Value Then
+        If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 Then
+        cell(1, 8).Value = "bk"
+        cell(1, 8).Font.ColorIndex = 3
+        cell(1, 8).Font.Bold = True
+        End If
+        End If
+
         
         
         Next
     '--------------------------------------RAR------------------------------
-    Set MyPlage = Range("A15:A1000")
+    Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
@@ -796,7 +663,7 @@ Next
 
 '------------------XDX -------------------------
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
@@ -820,40 +687,8 @@ Set MyPlage = Range("A15:A1000")
         End If
         End If
         
-        If Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
-        If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Conduttore/filo" Then
-        cell(1, 9).Value = "Ponticello a staffa"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-         End If
+
                
-               If Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
-        If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Ponticello a filo" Then
-        cell(1, 9).Value = "Ponticello a staffa"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
-        
-           If Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
-   If Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
         
            If Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Insertable jumper" Then
@@ -870,18 +705,6 @@ Set MyPlage = Range("A15:A1000")
         End If
         End If
  
-             If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
-                  If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
-                  If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 7).ClearContents
-        cell(1, 8).ClearContents
-        End If
-        End If
 
         
         If Not IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
@@ -904,9 +727,19 @@ Set MyPlage = Range("A15:A1000")
                 If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDX" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
         XDX = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDX
-        cell(1, 8).Value = "bk"
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
+        'cell(1, 8).Value = "bk"
         End If
         
+
+           If IsEmpty(cell(1, 8).Value) And Left(cell.Value, 3) = "XDX" And cell.Value = cell(1, 4).Value Then
+        If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 Then
+        cell(1, 8).Value = "bk"
+        cell(1, 8).Font.ColorIndex = 3
+        cell(1, 8).Font.Bold = True
+        End If
+        End If
         
  
  
@@ -914,26 +747,18 @@ Set MyPlage = Range("A15:A1000")
   
   
 
-   If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
-   If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
+
         
            If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
+        If IsEmpty(cell(1, 8).Value) Then
+        cell(1, 8).Value = "bk"
+        cell(1, 8).Font.Bold = True
+        cell(1, 8).Font.ColorIndex = 3
+        End If
         End If
         End If
    If cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
@@ -941,32 +766,32 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
+        If IsEmpty(cell(1, 8).Value) Then
+        cell(1, 8).Value = "bk"
+        cell(1, 8).Font.ColorIndex = 3
+        cell(1, 8).Font.Bold = True
+        End If
         End If
         End If
         
           If IsEmpty(cell(1, 7).Value) And cell.Value = "XDB1" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
         XDB1 = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDB1
-        cell(1, 8).Value = "bk"
+        'cell(1, 8).Value = "bk"
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
         End If
         
+            If IsEmpty(cell(1, 8).Value) And cell.Value = "XDB1" And cell.Value = cell(1, 4).Value Then
+        If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 Then
+        cell(1, 8).Value = "bk"
+        cell(1, 8).Font.ColorIndex = 3
+        cell(1, 8).Font.Bold = True
+        End If
+        End If
         
-           If cell.Value = "XDE" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
-   If cell.Value = "XDE" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
+        
+
         
            If cell.Value = "XDE" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
@@ -987,25 +812,14 @@ Set MyPlage = Range("A15:A1000")
                     If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDE" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
         XDE = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDE
-        cell(1, 8).Value = "bk"
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
+        
+        'cell(1, 8).Value = "bk"
         End If
               
         
         
-           If cell.Value = "XDT" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello a staffa" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
-   If cell.Value = "XDT" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Ponticello inseribile" Then
-        cell(1, 9).Value = "Ponticello a filo"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
         
            If cell.Value = "XDT" And cell.Value = cell(1, 4).Value Then
          If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And cell(1, 9).Value = "Insertable jumper" Then
@@ -1024,8 +838,20 @@ Set MyPlage = Range("A15:A1000")
                   If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDT" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Ponticello a filo") Then
         XDT = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper between " & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDT
-        cell(1, 8).Value = "bk"
+        cell(1, 7).Font.ColorIndex = 3
+        cell(1, 7).Font.Bold = True
+        'cell(1, 8).Value = "bk"
         End If
+        
+                   If IsEmpty(cell(1, 8).Value) And (Left(cell.Value, 3) = "XDT" Or Left(cell.Value, 3) = "XDE") And cell.Value = cell(1, 4).Value Then
+        If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 Then
+        cell(1, 8).Value = "bk"
+        cell(1, 8).Font.ColorIndex = 3
+        cell(1, 8).Font.Bold = True
+        End If
+        End If
+        
+        
         
   Next
  

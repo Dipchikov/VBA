@@ -82,7 +82,7 @@ soft_by_colour.soft_by_colour
 End Sub
 
 Private Sub CommandButton19_Click()
-Comax_table.Comax_table
+Komax_table.Komax_table
 End Sub
 
 Private Sub CommandButton20_Click()
@@ -96,6 +96,7 @@ End Sub
 
 Private Sub CommandButton22_Click()
 Routing.Routing
+sernumerr.sernumerr
 End Sub
 
 Private Sub CommandButton23_Click()
@@ -135,6 +136,10 @@ Private Sub Frame1_Click()
 
 End Sub
 
+Private Sub Frame2_Click()
+
+End Sub
+
 Private Sub Frame6_Click()
 
 End Sub
@@ -151,7 +156,7 @@ End Sub
 
 Private Sub UserForm_Initialize()
 
-    Label8.Caption = "created by Hristo Dipchikov © vR1.8"
+    Label8.Caption = "Copyright Hristo Dipchikov© vR3.3"
     Me.StartUpPosition = 0
     Me.Top = 130
     Me.Left = Application.Left - 50 + Application.Width - Me.Width

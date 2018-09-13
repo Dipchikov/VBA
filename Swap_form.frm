@@ -22,7 +22,7 @@ End Sub
 Private Sub CommandButton1_Click()
     Dim FirstAddress As String
     Dim MyArr As Variant
-    Dim Rng As Range
+    Dim rng As Range
     Dim i As Long
     With Application
     'Dim s1 As String, s2 As String
@@ -50,19 +50,19 @@ Private Sub CommandButton1_Click()
             'if you use LookIn:=xlValues it will also work with a
             'formula cell that evaluates to "ron"
 
-            Set Rng = .Find(What:=MyArr(i), _
-                            After:=.Cells(.Cells.Count), _
+            Set rng = .Find(What:=MyArr(i), _
+                            after:=.Cells(.Cells.Count), _
                             LookIn:=xlFormulas, _
-                            LookAt:=xlWhole, _
+                            Lookat:=xlWhole, _
                             SearchOrder:=xlByRows, _
                             SearchDirection:=xlNext, _
                             MatchCase:=False)
-  If Not Rng Is Nothing Then
-                FirstAddress = Rng.Address
+  If Not rng Is Nothing Then
+                FirstAddress = rng.Address
                 Do
 
-                    Set r1 = Rng
-                    Set r2 = Rng
+                    Set r1 = rng
+                    Set r2 = rng
 
     temp1 = r1.Offset(, 0).Resize(, 3).Value
     temp2 = r2.Offset(, 3).Resize(, 3).Value
@@ -73,13 +73,13 @@ Private Sub CommandButton1_Click()
 
 
 
-                    Set Rng = .FindNext(Rng)
-                    If Rng Is Nothing Then
+                    Set rng = .FindNext(rng)
+                    If rng Is Nothing Then
                         Exit Do
                     End If
            
 
-                Loop While Rng.Address <> FirstAddress
+                Loop While rng.Address <> FirstAddress
                 
             End If
         Next i

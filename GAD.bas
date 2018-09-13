@@ -1,5 +1,5 @@
 Attribute VB_Name = "GAD"
-Sub GAD()
+Sub gad()
 
 '----------------- minimal wires crossection   --------------------
 

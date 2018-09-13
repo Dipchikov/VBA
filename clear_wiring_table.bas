@@ -4,24 +4,27 @@ Sub clear_wiring_table()
 
 If ActiveSheet.Name = "Wiring table" Then
 Application.ScreenUpdating = False
+Application.Calculation = xlCalculationManual
 Application.DisplayAlerts = False
  On Error Resume Next
 ActiveSheet.ShowAllData
 '
 ' delete Macro
 '
-answer = MsgBox("Are you sure you want to clear the table?" & vbNewLine & "Did you press the Routing botton?", vbYesNo + vbQuestion, "Clear the table")
+answer = MsgBox("Are you sure you want to clear the table?" & vbNewLine & "Did you press the Routing/Sn:Err botton?", vbYesNo + vbQuestion, "Clear the table")
 If answer = vbYes Then
 
 Range("A15:N1000").Interior.ColorIndex = 0
-
+Range("A15:L1000").ClearFormats
     Range("B1").Select
     Selection.ClearContents
     Range("O12").Select
     Selection.ClearContents
-    Range("A15:L951").Select
+    Range("A15:L960").Select
     Selection.ClearContents
-    Range("T15:T951").Select
+    Selection.Font.Size = 11
+    Selection.Font.Name = "Calibri"
+    Range("T15:T960").Select
     Selection.ClearContents
     Columns("C:C").Select
     Selection.NumberFormat = "General"
@@ -33,8 +36,8 @@ Range("A15:N1000").Interior.ColorIndex = 0
     Selection.NumberFormat = "@"
 
     
-   Range("A15:L951").Select
-    Range("L951").Activate
+   Range("A15:L960").Select
+    Range("L960").Activate
     With Selection.Font
         .ColorIndex = xlAutomatic
         .TintAndShade = 0
@@ -92,49 +95,28 @@ Range("A15:N1000").Interior.ColorIndex = 0
 
     '-------------Formulas---------------
     
-    Range("C15").Select
-    ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
-    Range("C15").Select
-    Selection.AutoFill Destination:=Range("C15:C951"), Type:=xlFillDefault
-    Range("C15:C951").Select
-    Range("F15").Select
-    ActiveCell.FormulaR1C1 = "=""-""&RC[-2]&"":""&RC[-1]"
-    Range("F15").Select
-    Selection.AutoFill Destination:=Range("F15:F951"), Type:=xlFillDefault
-    Range("F15:F951").Select
+    formula.formula
     
-        Columns("C:C").Select
-    Selection.NumberFormat = "@"
-    Columns("F:F").Select
-    Selection.NumberFormat = "@"
-    
-       '-------------Length formula---------------
-    Range("K15").Select
-    ActiveCell.FormulaR1C1 = _
-        "=IF(ISBLANK(RC[-4]),""-"",INDEX(INDIRECT(R12C15),MATCH(RC[-10],'Standard length'!R1C1:R800C1,0),MATCH(RC[-7],'Standard length'!R1C1:R1C800,0)))"
-    Range("K15").Select
-    Selection.AutoFill Destination:=Range("K15:K951")
-    Range("K15:K951").Select
+     '-------------Length formula---------------
+
+    Range("K15:K960").formula = "=IF(ISBLANK(RC[-4]),""-"",INDEX(INDIRECT(R12C15),MATCH(RC[-10],'Standard length'!R1C1:R800C1,0),MATCH(RC[-7],'Standard length'!R1C1:R1C800,0)))"
     
      '-------------Cable type formula---------------
      
-        Range("L15").Select
-    ActiveCell.FormulaR1C1 = _
-        "=IFNA(INDEX(INDIRECT(R12C13),MATCH(RC[-4],'Type of cables '!R2C1:R20C1,0),MATCH(RC[-5],'Type of cables '!R2C1:R2C20,0)),""-"")"
-    Range("L15").Select
-    Selection.AutoFill Destination:=Range("L15:L951")
-    Range("L15:L951").Select
+    Range("L15:L960").formula = "=IFNA(INDEX(INDIRECT(R12C13),MATCH(RC[-4],'Type of cables '!R2C1:R20C1,0),MATCH(RC[-5],'Type of cables '!R2C1:R2C20,0)),""-"")"
     
    '-------------Possible_errors---------------
     Possible_errors.Possible_errors
 
-Application.ScreenUpdating = True
-Application.DisplayAlerts = True
-Range("A15").Select
 
+Application.Calculation = xlCalculationAutomatic
+Application.DisplayAlerts = True
+Application.ScreenUpdating = True
+Range("A15").Select
     Else
     'do nothing
     End If
  End If
 
 End Sub
+

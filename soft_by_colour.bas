@@ -1,7 +1,6 @@
 Attribute VB_Name = "soft_by_colour"
 Sub soft_by_colour()
 Attribute soft_by_colour.VB_ProcData.VB_Invoke_Func = " \n14"
-
 Application.ScreenUpdating = False
 ' soft_by_colour Macro
 '----------------start Legend_of_colours-----------------
@@ -44,8 +43,7 @@ Application.ScreenUpdating = False
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add(Range( _
         "K15:K" & lr), xlSortOnCellColor, xlAscending, , xlSortNormal).SortOnValue.Color _
         = RGB(255, 255, 0)
-               
-               
+                   
         '--------------------XDB-----------------------------------------------------
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add(Range( _
         "K15:K" & lr), xlSortOnCellColor, xlAscending, , xlSortNormal).SortOnValue.Color _

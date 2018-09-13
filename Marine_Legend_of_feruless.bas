@@ -1,5 +1,9 @@
 Attribute VB_Name = "Marine_Legend_of_feruless"
 Sub Marine_Legend_of_feruless()
+
+Dim lr As Long
+lr = Range("A" & Rows.Count).End(xlUp).Row
+
 Application.ScreenUpdating = False
 Range("T14:T951").Select
 Selection.ClearContents
@@ -10,7 +14,7 @@ On Error Resume Next
 '------------------Inside Wiring -------------------------
 
 
-Set MyPlage = Range("A14:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
     
@@ -141,10 +145,7 @@ Set MyPlage = Range("A14:A1000")
         End If
         
         If Left(cell.Value, 3) = "XDX" Then
-        cell(1, 20).Value = 10
-        End If
-        If Left(cell.Value, 3) = "XDX" And cell(1, 7).Value = "1" Then
-        cell(1, 20).Value = 11
+        cell(1, 20).Value = ""
         End If
         
         If cell.Value = "XDA" Then
@@ -265,6 +266,14 @@ Set MyPlage = Range("A14:A1000")
         If Left(cell.Value, 3) = "TFM" And cell(1, 7).Value = "1" Then
         cell(1, 20).Value = 11
         End If
+        
+        If Left(cell.Value, 3) = "PFF" Then
+        cell(1, 20).Value = 10
+        End If
+        If Left(cell.Value, 3) = "PFF" And cell(1, 7).Value = "1" Then
+        cell(1, 20).Value = 11
+        End If
+        
         If Left(cell.Value, 3) = "RAR" Then
         cell(1, 20).Value = 10
         End If
@@ -289,7 +298,7 @@ Set MyPlage = Range("A14:A1000")
     '----------------------------Door Wireing ----------------------------
     
     
-    Set MyPlage = Range("A14:A1000")
+    Set MyPlage = Range("A15:A" & lr)
         For Each cell In MyPlage
         
             If Left(cell.Value, 3) = "SPM" Then
@@ -507,23 +516,24 @@ Set MyPlage = Range("A14:A1000")
 
  '---------------------Wireing - 'Ref protection-----------------
  
-    Set MyPlage = Range("A14:A1000")
+    Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
-        If Left(cell.Value, 2) = "AA" And (Left(cell(1, 2).Value, 5) = "-X130" Or Left(cell(1, 2).Value, 5) = "-X327" Or Left(cell(1, 2).Value, 5) = "-X329" Or Left(cell(1, 2).Value, 5) = "-X321" Or Left(cell(1, 2).Value, 5) = "-X324" Or Left(cell(1, 2).Value, 5) = "-X316" Or Left(cell(1, 2).Value, 5) = "-X319" Or Left(cell(1, 2).Value, 5) = "-X101" Or Left(cell(1, 2).Value, 5) = "-X102" Or Left(cell(1, 2).Value, 5) = "-X304") Then
+        If Left(cell.Value, 2) = "AA" And (Left(cell(1, 2).Value, 5) = "-X130" Or Left(cell(1, 2).Value, 5) = "-X327" Or Left(cell(1, 2).Value, 5) = "-X329" Or Left(cell(1, 2).Value, 5) = "-X321" Or Left(cell(1, 2).Value, 5) = "-X324" Or Left(cell(1, 2).Value, 5) = "-X316" Or Left(cell(1, 2).Value, 5) = "-X319" Or Left(cell(1, 2).Value, 5) = "-X101" Or Left(cell(1, 2).Value, 5) = "-X102" Or Left(cell(1, 2).Value, 5) = "-X304" Or Left(cell(1, 2).Value, 5) = "-X307" Or Left(cell(1, 2).Value, 5) = "-X309" Or Left(cell(1, 2).Value, 5) = "-X410" Or Left(cell(1, 2).Value, 5) = "-X304" Or Left(cell(1, 2).Value, 5) = "-X326" Or Left(cell(1, 2).Value, 5) = "-X331" Or Left(cell(1, 2).Value, 5) = "-X336" Or Left(cell(1, 2).Value, 5) = "-X334" Or Left(cell(1, 2).Value, 5) = "-X339") Then
             cell(1, 20).Value = 14
         End If
         
-        If Left(cell.Value, 2) = "AA" And Not (Left(cell(1, 2).Value, 5) = "-X130" Or Left(cell(1, 2).Value, 5) = "-X327" Or Left(cell(1, 2).Value, 5) = "-X329" Or Left(cell(1, 2).Value, 5) = "-X321" Or Left(cell(1, 2).Value, 5) = "-X324" Or Left(cell(1, 2).Value, 5) = "-X316" Or Left(cell(1, 2).Value, 5) = "-X319" Or Left(cell(1, 2).Value, 5) = "-X101" Or Left(cell(1, 2).Value, 5) = "-X102" Or Left(cell(1, 2).Value, 5) = "-X304") And Not cell(1, 7).Value = 4 Then
+        If Left(cell.Value, 2) = "AA" And Not (Left(cell(1, 2).Value, 5) = "-X130" Or Left(cell(1, 2).Value, 5) = "-X327" Or Left(cell(1, 2).Value, 5) = "-X329" Or Left(cell(1, 2).Value, 5) = "-X321" Or Left(cell(1, 2).Value, 5) = "-X324" Or Left(cell(1, 2).Value, 5) = "-X316" Or Left(cell(1, 2).Value, 5) = "-X319" Or Left(cell(1, 2).Value, 5) = "-X101" Or Left(cell(1, 2).Value, 5) = "-X102" Or Left(cell(1, 2).Value, 5) = "-X304" Or Left(cell(1, 2).Value, 5) = "-X307" Or Left(cell(1, 2).Value, 5) = "-X309" Or Left(cell(1, 2).Value, 5) = "-X410" Or Left(cell(1, 2).Value, 5) = "-X304" Or Left(cell(1, 2).Value, 5) = "-X326" Or Left(cell(1, 2).Value, 5) = "-X331" Or Left(cell(1, 2).Value, 5) = "-X336" Or Left(cell(1, 2).Value, 5) = "-X334" Or Left(cell(1, 2).Value, 5) = "-X339") And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10
         End If
-            If Left(cell.Value, 2) = "AA" And Not (Left(cell(1, 2).Value, 5) = "-X130" Or Left(cell(1, 2).Value, 5) = "-X327" Or Left(cell(1, 2).Value, 5) = "-X329" Or Left(cell(1, 2).Value, 5) = "-X321" Or Left(cell(1, 2).Value, 5) = "-X324" Or Left(cell(1, 2).Value, 5) = "-X316" Or Left(cell(1, 2).Value, 5) = "-X319" Or Left(cell(1, 2).Value, 5) = "-X101" Or Left(cell(1, 2).Value, 5) = "-X102" Or Left(cell(1, 2).Value, 5) = "-X304") And cell(1, 7).Value = 4 Then
+            If Left(cell.Value, 2) = "AA" And Not (Left(cell(1, 2).Value, 5) = "-X130" Or Left(cell(1, 2).Value, 5) = "-X327" Or Left(cell(1, 2).Value, 5) = "-X329" Or Left(cell(1, 2).Value, 5) = "-X321" Or Left(cell(1, 2).Value, 5) = "-X324" Or Left(cell(1, 2).Value, 5) = "-X316" Or Left(cell(1, 2).Value, 5) = "-X319" Or Left(cell(1, 2).Value, 5) = "-X101" Or Left(cell(1, 2).Value, 5) = "-X102" Or Left(cell(1, 2).Value, 5) = "-X304" Or Left(cell(1, 2).Value, 5) = "-X307" Or Left(cell(1, 2).Value, 5) = "-X309" Or Left(cell(1, 2).Value, 5) = "-X410" Or Left(cell(1, 2).Value, 5) = "-X304" Or Left(cell(1, 2).Value, 5) = "-X326" Or Left(cell(1, 2).Value, 5) = "-X331" Or Left(cell(1, 2).Value, 5) = "-X336" Or Left(cell(1, 2).Value, 5) = "-X334" Or Left(cell(1, 2).Value, 5) = "-X339") And cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 12
         End If
-                    If Left(cell.Value, 2) = "AA" And Not (Left(cell(1, 2).Value, 5) = "-X130" Or Left(cell(1, 2).Value, 5) = "-X327" Or Left(cell(1, 2).Value, 5) = "-X329" Or Left(cell(1, 2).Value, 5) = "-X321" Or Left(cell(1, 2).Value, 5) = "-X324" Or Left(cell(1, 2).Value, 5) = "-X316" Or Left(cell(1, 2).Value, 5) = "-X319" Or Left(cell(1, 2).Value, 5) = "-X101" Or Left(cell(1, 2).Value, 5) = "-X102" Or Left(cell(1, 2).Value, 5) = "-X304") And cell(1, 7).Value = 1 Then
+            If Left(cell.Value, 2) = "AA" And Not (Left(cell(1, 2).Value, 5) = "-X130" Or Left(cell(1, 2).Value, 5) = "-X327" Or Left(cell(1, 2).Value, 5) = "-X329" Or Left(cell(1, 2).Value, 5) = "-X321" Or Left(cell(1, 2).Value, 5) = "-X324" Or Left(cell(1, 2).Value, 5) = "-X316" Or Left(cell(1, 2).Value, 5) = "-X319" Or Left(cell(1, 2).Value, 5) = "-X101" Or Left(cell(1, 2).Value, 5) = "-X102" Or Left(cell(1, 2).Value, 5) = "-X304" Or Left(cell(1, 2).Value, 5) = "-X307" Or Left(cell(1, 2).Value, 5) = "-X309" Or Left(cell(1, 2).Value, 5) = "-X410" Or Left(cell(1, 2).Value, 5) = "-X304" Or Left(cell(1, 2).Value, 5) = "-X326" Or Left(cell(1, 2).Value, 5) = "-X331" Or Left(cell(1, 2).Value, 5) = "-X336" Or Left(cell(1, 2).Value, 5) = "-X334" Or Left(cell(1, 2).Value, 5) = "-X339") And cell(1, 7).Value = 1 Then
             cell(1, 20).Value = 11
         End If
+        
         
         If Left(cell.Value, 3) = "BCR" And Not cell(1, 7).Value = 4 Then
             cell(1, 20).Value = 10

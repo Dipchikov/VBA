@@ -10,26 +10,37 @@ If ActiveSheet.Name = "Routing" Then
     'Workbooks("CALCULATION OF CABLE LENGHTS_TEMPLATE - Italy Secondary.xlsm").Activate
     ActiveWorkbook.ActiveSheet.Select
     lr = Range("A" & Rows.Count).End(xlUp).Row
-
-    Range("A2:K" & lr).Copy
-    Workbooks.Open Filename:="C:\UniSec\Routing_form.xlsx", ReadOnly:=True
-    Workbooks("Routing_form.xlsx").Activate
-    Sheets("UNISEC").Select
-        Range("A2").Select
-    ActiveSheet.Paste
-    Range("A2").PasteSpecial Paste:=xlPasteFormats
-
-         
-  
+    
+    
+    Dim wb As Workbook
+    Set wb = Workbooks.Add
+    Application.CopyObjectsWithCells = False
+    ThisWorkbook.Sheets("Routing").Copy Before:=wb.Sheets(1)
+    Application.CopyObjectsWithCells = True
+    
+        '---------Изтриване на Sheet1------------------
+    Application.DisplayAlerts = False
+    Sheets("Sheet1").Delete
+    Application.DisplayAlerts = True
+    
+    
+    '-------------add user in Footer ---------------
+    With ActiveSheet.PageSetup
+    .LeftFooter = "&D" & Chr(13) & "&9" & Application.UserName
+    .RightFooter = "Page " & "&P" & Chr(13) & "&9" & Tools.Label8.Caption
+    End With
+    
     Application.CutCopyMode = False 'esp
 
 Dim sFileSaveName As Variant
 Dim sPath As String
-sPath = "Routing_" & Right(ActiveSheet.Range("A4").Value, 4) & "_" & Left(ActiveSheet.Range("B4").Value, 2) & "k"
+sPath = "Routing_" & Right(ActiveSheet.Range("A4").Value, 4) & "_" & ActiveSheet.Range("B4").Value
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, fileFilter:="Excel Files (*.xls), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=sPath, FileFilter:="Excel Files (*.xlsx), *.xlsm")
 If sFileSaveName <> False Then
+Application.DisplayAlerts = False
 ActiveWorkbook.SaveAs sFileSaveName
+Application.DisplayAlerts = True
 End If
 End If
 End Sub

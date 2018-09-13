@@ -1,11 +1,16 @@
 Attribute VB_Name = "Legend_of_colours"
 Sub Legend_of_colours()
 
+Dim lr As Long
+lr = Range("A" & Rows.Count).End(xlUp).Row
+Application.Calculation = xlCalculationManual
+Application.ScreenUpdating = False
+
 On Error Resume Next
 
 '------------------------------------auto filter--------------------------------------
     ActiveSheet.ShowAllData
-        lr = Range("A" & Rows.Count).End(xlUp).Row
+        
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Clear
     ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add Key _
         :=Range("A14:A" & lr), SortOn:=xlSortOnValues, order:=xlAscending, _
@@ -24,7 +29,7 @@ On Error Resume Next
 '------------------Inside Wiring -------------------------
 
 
-Set MyPlage = Range("A15:A1000")
+Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
     
@@ -32,6 +37,11 @@ Set MyPlage = Range("A15:A1000")
           If Left(cell.Value, 2) = "BT" Then
         cell(1, 11).Interior.ColorIndex = 40
         End If
+        
+                  If Left(cell.Value, 2) = "KM" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
         
          If Left(cell.Value, 2) = "PJ" Then
         cell(1, 11).Interior.ColorIndex = 40
@@ -183,6 +193,21 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 40
         End If
         
+                 If Left(cell.Value, 3) = "TFC" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
+        
+                        If Left(cell.Value, 3) = "KLA" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
+                         If Left(cell.Value, 3) = "KLT" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
+        
+        
+        
         '------------When we have AA1 to  AA19--------------------
         
                   If Left(cell.Value, 2) = "AA" Then
@@ -191,46 +216,8 @@ Set MyPlage = Range("A15:A1000")
         
         
     Next
-    
-      '-----------------Shielded cable--------------------------------
-    
-    Set MyPlage = Range("L15:L1000")
+   
 
-    For Each cell In MyPlage
-    
-        If cell.Value = "Shielded cable" Then
-            cell.Interior.ColorIndex = 6
-            cell(1, -1).Interior.ColorIndex = 6
-            cell(1, -2).Interior.ColorIndex = 6
-            cell(1, -3).Interior.ColorIndex = 6
-            cell(1, -4).Interior.ColorIndex = 6
-        End If
-
-    Next
-    
-    '-----------------Lolours of cable--------------------------------
-        Set MyPlage = Range("H15:H1000")
-
-    For Each cell In MyPlage
-    
-        If cell.Value = "bn" Or cell.Value = "BN" Then
-            cell(1, 5).Interior.ColorIndex = 46
-        End If
-        
-           If cell.Value = "bu" Or cell.Value = "BU" Then
-            cell(1, 5).Interior.ColorIndex = 33
-        End If
-        
-        If cell.Value = "gr" Or cell.Value = "GR" Then
-            cell(1, 5).Interior.ColorIndex = 15
-        End If
-
-
-    Next
-    
-    
-    
-    
      '---------------------Wireing - XDB----------------------------
     
     Set MyPlage = Range("D15:D1000")
@@ -279,7 +266,7 @@ Set MyPlage = Range("A15:A1000")
     '----------------------------Door Wireing ----------------------------
     
     
-    Set MyPlage = Range("A15:A1000")
+    Set MyPlage = Range("A15:A" & lr)
         For Each cell In MyPlage
         
             If Left(cell.Value, 3) = "SPM" Then
@@ -346,6 +333,10 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 43
         End If
         
+                   If Left(cell.Value, 3) = "PFF" Then
+        cell(1, 11).Interior.ColorIndex = 43
+        End If
+        
             If Left(cell.Value, 3) = "PFR" Then
             cell(1, 11).Interior.ColorIndex = 43
         End If
@@ -403,6 +394,8 @@ Set MyPlage = Range("A15:A1000")
         cell(1, 11).Interior.ColorIndex = 43
         End If
         
+
+        
             If Left(cell.Value, 2) = "SF" Then
         cell(1, 11).Interior.ColorIndex = 43
         End If
@@ -423,7 +416,7 @@ Set MyPlage = Range("A15:A1000")
  
  '---------------------Wireing - 'Ref protection-----------------
  
-    Set MyPlage = Range("A15:A1000")
+    Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
@@ -547,17 +540,28 @@ Set MyPlage = Range("I15:I1000")
             
         
             
-              '-------------------------Slap"----------------------------------
+              '-------------------------Swap"----------------------------------
              On Error Resume Next
              Set MyPlage = Range("K15:K1000")
 
             For Each cell In MyPlage
             If cell.Value = "Swap" Then
             cell(1, 1).Interior.ColorIndex = 0
-         End If
+            End If
+            Next
+              '-------------------------Empty"----------------------------------
+             On Error Resume Next
+             Set MyPlage = Range("I15:I1000")
 
+            For Each cell In MyPlage
+            If (cell.Value = "Conductor / wire" Or cell.Value = "Wire jumper") And cell(1, 3).Value = "-" Then
+            cell(1, 3).Interior.ColorIndex = 0
+            End If
+            Next
             
- Next
-
+                   
+            
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
 
 End Sub

@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} edit_table 
    Caption         =   "Edit table"
-   ClientHeight    =   4596
+   ClientHeight    =   5508
    ClientLeft      =   36
    ClientTop       =   360
    ClientWidth     =   2628
@@ -30,24 +30,12 @@ formula.formula
 End Sub
 
 Private Sub CommandButton19_Click()
-  ActiveSheet.ShowAllData
-  ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Clear
-    ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort.SortFields.Add Key _
-        :=Range("A14:A550"), SortOn:=xlSortOnValues, Order:=xlAscending, _
-        DataOption:=xlSortNormal
-    With ActiveWorkbook.Worksheets("Wiring table").AutoFilter.Sort
-        .Header = xlYes
-        .MatchCase = False
-        .Orientation = xlTopToBottom
-        .SortMethod = xlPinYin
-        .Apply
-    End With
+ translate.translate
   
 End Sub
 
 Private Sub CommandButton3_Click()
-Unload Me
-Tools.Show vbModaless
+renumber.renumber
 End Sub
 
 Private Sub Label8_Click()

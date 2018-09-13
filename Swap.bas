@@ -1,21 +1,20 @@
 Attribute VB_Name = "Swap"
 Sub Swap()
-Dim FirstAddress As String
+  Dim FirstAddress As String
     Dim MyArr As Variant
-    Dim Rng As Range
+    Dim rng As Range
     Dim i As Long
-    With Application
     'Dim s1 As String, s2 As String
     Dim r1 As Range, r2 As Range
     Dim temp1, temp2
     
-    
-    On Error Resume Next
-        ActiveSheet.ShowAllData
-        
+    With Application
         .ScreenUpdating = False
         .EnableEvents = False
     End With
+    
+        On Error Resume Next
+        ActiveSheet.ShowAllData
 
     'Search for a Value Or Values in a range
     'You can also use more values like this Array("ron", "dave")
@@ -33,19 +32,19 @@ Dim FirstAddress As String
             'if you use LookIn:=xlValues it will also work with a
             'formula cell that evaluates to "ron"
 
-            Set Rng = .Find(What:=MyArr(i), _
-                            After:=.Cells(.Cells.Count), _
+            Set rng = .Find(What:=MyArr(i), _
+                            after:=.Cells(.Cells.Count), _
                             LookIn:=xlValues, _
-                            LookAt:=xlWhole, _
+                            Lookat:=xlWhole, _
                             SearchOrder:=xlByRows, _
                             SearchDirection:=xlNext, _
                             MatchCase:=False)
-  If Not Rng Is Nothing Then
-                FirstAddress = Rng.Address
+  If Not rng Is Nothing Then
+                FirstAddress = rng.Address
                 Do
 
-                    Set r1 = Rng
-                    Set r2 = Rng
+                    Set r1 = rng
+                    Set r2 = rng
 
     temp1 = r1.Offset(, -10).Resize(, 3).Value
     temp2 = r2.Offset(, -7).Resize(, 3).Value
@@ -56,19 +55,24 @@ Dim FirstAddress As String
 
 
 
-                    Set Rng = .FindNext(Rng)
-                    If Rng Is Nothing Then
+                    Set rng = .FindNext(rng)
+                    If rng Is Nothing Then
                         Exit Do
                     End If
            
 
-                Loop While Rng.Address <> FirstAddress
+                Loop While rng.Address <> FirstAddress
                 
             End If
         Next i
+
     End With
+    
     With Application
         .ScreenUpdating = True
         .EnableEvents = True
+         
     End With
 End Sub
+
+

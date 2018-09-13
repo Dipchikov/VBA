@@ -10,7 +10,7 @@ Sub FilterCriteria()
     i = 0
     For Each cl In Selection
     
-        filterValues(i) = cl.Text
+        filterValues(i) = cl.text
         i = i + 1
     Next cl
     Range(ActiveCell.CurrentRegion.Address).AutoFilter Field:=ActiveCell.Column, Criteria1:=filterValues, Operator:=xlFilterValues
