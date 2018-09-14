@@ -87,10 +87,11 @@ answer = MsgBox("This schematic already exist!!!" & vbNewLine & "If you want to 
     Range("C" & cell.Row).Value = Data.Range("B1").Value
     Range("D" & cell.Row).Value = Designation2 + designation
     Range("E" & cell.Row).Value = Crosssection
-    Range("F" & cell.Row).Value = connection
+    Range("F" & cell.Row).Value = Colour
+    Range("G" & cell.Row).Value = connection
     Range("H" & cell.Row).Value = Designation2 + designation + Crosssection + Colour + connection
     Range("I" & cell.Row).Value = Data.Range("F10").Value
-    Range("G" & cell.Row).Value = MonthName(Month(Date))
+    Range("J" & cell.Row).Value = MonthName(Month(Date))
     Exit Sub
 Else
 Exit Sub
