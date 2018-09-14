@@ -238,79 +238,24 @@ Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
         
-         If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Insertable jumper" Then
-             
+        If cell.Value <> cell(1, 4).Value Then
+         If cell(1, 9).Value <> "Conductor / wire" Then
             cell(1, 9).Value = "Conductor / wire"
             cell(1, 9).Font.ColorIndex = 3
             cell(1, 9).Font.Bold = True
-             If IsEmpty(cell(1, 7).Value) Then
+        End If
+            If IsEmpty(cell(1, 7).Value) Then
              x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire, 1)
             cell(1, 7).Value = x
             cell(1, 7).Font.ColorIndex = 3
             cell(1, 7).Font.Bold = True
-    End If
+        End If
         If IsEmpty(cell(1, 8).Value) Then
-    cell(1, 8).Value = "bk"
-    cell(1, 8).Font.ColorIndex = 3
-    cell(1, 8).Font.Bold = True
-    End If
-    End If
-     
-           If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Saddle jumper" Then
-            cell(1, 9).Value = "Conductor / wire"
-            cell(1, 9).Font.ColorIndex = 3
-            cell(1, 9).Font.Bold = True
-            If IsEmpty(cell(1, 7).Value) Then
-            x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
-            cell(1, 7).Value = x
-            cell(1, 7).Font.ColorIndex = 3
-            cell(1, 7).Font.Bold = True
-    End If
-    If IsEmpty(cell(1, 8).Value) Then
-    cell(1, 8).Value = "bk"
-    cell(1, 8).Font.ColorIndex = 3
-    cell(1, 8).Font.Bold = True
-    End If
-    End If
-         
-         
-      If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Wire jumper" And IsEmpty(cell(1, 7).Value) Then
-            x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire, 1)
-            cell(1, 9).Value = "Conductor / wire"
-            cell(1, 9).Font.ColorIndex = 3
-            cell(1, 9).Font.Bold = True
-            cell(1, 7).Value = x
-            cell(1, 7).Font.ColorIndex = 3
-            cell(1, 7).Font.Bold = True
-            
-    If IsEmpty(cell(1, 8).Value) Then
-             cell(1, 8).Value = "bk"
-             cell(1, 8).Font.ColorIndex = 3
-             cell(1, 8).Font.Bold = True
-    End If
-    End If
-    
-    
-          If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Conductor / wire" And IsEmpty(cell(1, 7).Value) Then
-            x = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
-            cell(1, 7).Value = x
-            cell(1, 7).Font.ColorIndex = 3
-            cell(1, 7).Font.Bold = True
-            
-    If IsEmpty(cell(1, 8).Value) Then
-             cell(1, 8).Value = "bk"
-             cell(1, 8).Font.ColorIndex = 3
-             cell(1, 8).Font.Bold = True
-    End If
-    End If
-    
-    
-  If cell.Value <> cell(1, 4).Value And cell(1, 9).Value = "Wire jumper" Then
-            cell(1, 9).Value = "Conductor / wire"
-            cell(1, 9).Font.ColorIndex = 3
-            cell(1, 9).Font.Bold = True
- End If
-    
+        cell(1, 8).Value = "bk"
+        cell(1, 8).Font.ColorIndex = 3
+        cell(1, 8).Font.Bold = True
+        End If
+        End If
  Next
         
         
@@ -364,30 +309,17 @@ Set MyPlage = Range("A15:A" & lr)
 
     For Each cell In MyPlage
 
-    
-        
-           If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Insertable jumper" Then
-        cell(1, 9).Value = "Wire jumper"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
-        If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-        If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 And cell(1, 9).Value = "Saddle jumper" Then
-        cell(1, 9).Value = "Wire jumper"
-        cell(1, 9).Font.ColorIndex = 3
-        cell(1, 9).Font.Bold = True
-        End If
-        End If
+
         
 
         
-       If IsEmpty(cell(1, 7).Value) And Left(cell.Value, 3) = "XDC" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Conductor / wire") Then
-        XDC = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
+       If Left(cell.Value, 3) = "XDC" And (cell(1, 9).Value = "Wire jumper" Or cell(1, 9).Value = "Conductor / wire") Then
+       If IsEmpty(cell(1, 7).Value) Then
+        XDC = InputBox("Please add cross-section of conductors between" & vbNewLine & cell(1, 3) & " and " & cell(1, 6), "Wire connection" & cell(1, 3) & " and " & cell(1, 6), wire)
         cell(1, 7).Value = XDC
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
+        End If
         If IsEmpty(cell(1, 8).Value) Then
         cell(1, 8).Value = "bk"
         cell(1, 8).Font.ColorIndex = 3
@@ -396,28 +328,42 @@ Set MyPlage = Range("A15:A" & lr)
         End If
         
     If Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
-    If Abs(cell(1, 2).Value - cell(1, 5).Value) = 1 And IsEmpty(cell(1, 7).Value) Then
-    answer = MsgBox("Is connection between " & cell(1, 3) & " and " & cell(1, 6) & " is " & cell(1, 9), vbYesNo + vbQuestion, "XDC matal jumper")
+    If Abs(cell(1, 2).Value - cell(1, 5).Value) >= 1 And (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
+    answer = MsgBox("Is connection between " & cell(1, 3) & " and " & cell(1, 6) & " is with -" & cell(1, 9), vbYesNo + vbQuestion + vbDefaultButton2, "XDC matal jumper")
     If answer = vbNo Then
     XDC = InputBox("Please add cross-section of conductors between" & cell(1, 3) & " and " & cell(1, 6), "Wire jumper  between " & cell(1, 3) & " and " & cell(1, 6), wire)
         If XDC = vbOK Then
+        If IsEmpty(cell(1, 7).Value) Then
         cell(1, 7).Value = XDC
         cell(1, 7).Font.ColorIndex = 3
         cell(1, 7).Font.Bold = True
+        End If
+        If IsEmpty(cell(1, 8).Value) Then
         cell(1, 8).Value = "bk"
+        cell(1, 8).Font.ColorIndex = 3
+        cell(1, 8).Font.Bold = True
+        End If
+        If Not cell(1, 9).Value = "Wire jumper" Then
         cell(1, 9).Value = "Wire jumper"
         cell(1, 9).Font.ColorIndex = 3
         cell(1, 9).Font.Bold = True
-
+        End If
         End If
         Else
+        cell(1, 7).ClearContents
+        cell(1, 8).ClearContents
+        If Not cell(1, 9).Value = "Saddle jumper" Then
+        cell(1, 9).Value = "Saddle jumper"
+        cell(1, 9).Font.ColorIndex = 3
+        cell(1, 9).Font.Bold = True
+        End If
         End If
         End If
         End If
         
 
 
-           If IsEmpty(cell(1, 8).Value) And Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value Then
+        If IsEmpty(cell(1, 8).Value) And Left(cell.Value, 3) = "XDC" And cell.Value = cell(1, 4).Value And Not (cell(1, 9).Value = "Saddle jumper" Or cell(1, 9).Value = "Insertable jumper") Then
         If Abs(cell(1, 2).Value - cell(1, 5).Value) > 1 Then
         cell(1, 8).Value = "bk"
         cell(1, 8).Font.ColorIndex = 3
@@ -426,9 +372,7 @@ Set MyPlage = Range("A15:A" & lr)
         End If
 
     Next
- 
 
- 
  
      '------------------XDM -------------------------
 

@@ -206,7 +206,9 @@ Set MyPlage = Range("A15:A" & lr)
         cell(1, 11).Interior.ColorIndex = 40
         End If
         
-        
+        If Left(cell.Value, 3) = "QBM" Then
+        cell(1, 11).Interior.ColorIndex = 40
+        End If
         
         '------------When we have AA1 to  AA19--------------------
         
