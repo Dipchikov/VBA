@@ -1,8 +1,9 @@
 Attribute VB_Name = "Komax_table"
 Sub Komax_table()
-
- On Error Resume Next
-If ActiveSheet.Name = "Wiring table" Then
+Application.Calculation = xlCalculationManual
+Application.ScreenUpdating = False
+On Error Resume Next
+If ActiveSheet.name = "Wiring table" Then
 
        If IsEmpty(Worksheets("Wiring table").Range("B1")) Then
         OutPut = MsgBox("Please add scheme number in cell B1!!!", vbOKOnly + vbExclamation)
@@ -14,15 +15,20 @@ If ActiveSheet.Name = "Wiring table" Then
         End If
 
 
-formula.formula
 
-Application.Calculation = xlCalculationManual
-Application.ScreenUpdating = False
+
+'------Formula-----------------
+formula.formula
+Swap.Swap
+
+
+
+'----------------------------
 Set Data = Sheets("Wiring table")
 Set Final = Sheets("Komax")
 Data.Active
 Data.ShowAllData
-Swap.Swap
+
 
 'Legend_of_colours.Legend_of_colours
 'soft_by_colour.soft_by_colour
@@ -44,16 +50,17 @@ Swap.Swap
     Final.Range("A2").Select
     Final.Range("A2:CO1048576").EntireRow.Delete
         '----------Prigram number------------------
+
     Number_pr_comax.Number
     
     Final.Range("A2").Select
-    Set Rng = Data.Range("L15:L1048576")
-    For i = Rng.Cells(1, 1).Row To Rng.Cells(1, 1).End(xlDown).Row
+    Set rng = Data.Range("L15:L1048576")
+    For i = rng.Cells(1, 1).Row To rng.Cells(1, 1).End(xlDown).Row
 
         '----------Condition If cell is empty------------------
         
         If Not (Data.Range("L" & i).Value = "-" Or Data.Range("L" & i).Value = "Shielded cable") Then
-        '-----------------------Дефиниране на праграма под 99 реда-----------------
+        '-----------------------Дефиниране на програма под 99 реда-----------------
             If lRow <= 113 Then
             Final.Range("A" & i - 13).Value = Left(Data.Range("B1").Value, 10) & "W" & Right(Data.Range("B1").Value, 4)
             Else
@@ -90,23 +97,24 @@ Swap.Swap
          Final.Range("A:A").SpecialCells(xlCellTypeBlanks).EntireRow.Delete
          
 
-    
-    Application.Calculation = xlCalculationAutomatic
-    Application.ScreenUpdating = True
 
     Sheets("Wiring table").Select
     Range("A15").Select
 
 
-   lr = Final.Range("A" & Rows.Count).End(xlUp).Row
+   'lr = Final.Range("A" & Rows.Count).End(xlUp).Row
     
-  '---------Изтриване на Sheet1------------------
+  '---------Изтриване------------------
     Final.Columns("CO").EntireColumn.Delete
+    
+    
 
     
     Dim wb As Workbook
     Set wb = Workbooks.Add
     ThisWorkbook.Sheets("Komax").Copy Before:=wb.Sheets(1)
+    
+    
     
         '-------------add user in Footer ---------------
     With ActiveSheet.PageSetup
@@ -123,16 +131,25 @@ Swap.Swap
     
 Application.CutCopyMode = False 'esp
 
+   Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
+
+
 Dim sFileSaveName As Variant
 Dim sPath As String
 sPath = ActiveSheet.Range("A2").Value
 InitialFoldr$ = "\\10.28.38.5\ppmv\Productions\Italian\LVC\UniSec\!!!__Orders\!_____Ongoing Orders"
-sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=Left(sPath, 15), fileFilter:="Excel Files (*.csv), *.xlsm")
+sFileSaveName = Application.GetSaveAsFilename(InitialFileName:=Left(sPath, 15), FileFilter:="Excel Files (*.csv), *.xlsm")
 If sFileSaveName <> False Then
 ActiveWorkbook.SaveAs sFileSaveName, FileFormat:=xlCSV, Local:=True
+Application.DisplayAlerts = False
+ActiveWorkbook.Close
+Application.DisplayAlerts = True
 End If
+
 Else
- answer = MsgBox("To generate Comax table please make worksheet Wiring table active !!!", vbYes + vbQuestion, "")
+ answer = MsgBox("To generate Komax table please make worksheet Wiring table active !!!", vbYes + vbQuestion, "")
 End If
+
 End Sub
 
