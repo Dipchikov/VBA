@@ -4,7 +4,7 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} Number_of_connections
    ClientHeight    =   1440
    ClientLeft      =   36
    ClientTop       =   360
-   ClientWidth     =   5868
+   ClientWidth     =   6744
    OleObjectBlob   =   "Number_of_connections.frx":0000
    StartUpPosition =   1  'CenterOwner
 End
@@ -16,8 +16,9 @@ Attribute VB_Exposed = False
 Private Sub CommandButton2_Click()
 Application.ScreenUpdating = False
 If CheckBox3.Value = True Then
-Range("A15:F1000").Interior.ColorIndex = 0
+'Range("A15:F1000").Interior.ColorIndex = 0
 Error_number_of_conections.Error_number_of_conections
+'XDA_XDV.XDA_XDV_connections
 '------------------------- Jumpers clear cells"----------------------------------
 End If
  
@@ -36,14 +37,15 @@ If CheckBox1.Value = True And CheckBox2.Value = False Then
     
   End If
   
-       If CheckBox4.Value = True Then
-       ErrorsREf542.ErrorsREf542
+       'If CheckBox4.Value = True Then
+      ' ErrorsREf542.ErrorsREf542
     
-  End If
-         If CheckBox4.Value = False Then
+ ' End If
+       If CheckBox4.Value = False Then
        ErrorsRefs.ErrorsRefs
        
   End If
+  
 Application.ScreenUpdating = True
 Unload Me
 End Sub
