@@ -661,6 +661,113 @@ Set MyPlage = Range("A15:A" & lr)
         
     Next
     
+    '------------------Ferrules -------------------------
+
+
+Set MyPlage = Range("A15:A" & lr)
+
+For Each cell In MyPlage
+
+If Komax.ferulles_Yes.Value = True Then
+
+    
+If Komax.XDC.Value = True Then
+ 
+        If Left(cell.Value, 3) = "XDC" And cell(1, 7).Value = "1" Then
+        cell(1, 21).Value = ferulle_10
+        End If
+        If Left(cell.Value, 3) = "XDC" And cell(1, 7).Value = "1,5" Then
+        cell(1, 21).Value = ferulle_15
+        End If
+        If Left(cell.Value, 3) = "XDC" And cell(1, 7).Value = "2,5" Then
+        cell(1, 21).Value = ferulle_25
+        End If
+        If Left(cell.Value, 3) = "XDC" And cell(1, 7).Value = "4" Then
+        cell(1, 21).Value = ferulle_40
+        End If
+
+Else
+        If Left(cell.Value, 3) = "XDC" Then
+        cell(1, 21).Value = ""
+        End If
+End If
+
+
+If Komax.XDX.Value = True Then
+
+        If Left(cell.Value, 3) = "XDX" And cell(1, 7).Value = "1" Then
+        cell(1, 21).Value = ferulle_10
+        End If
+        If Left(cell.Value, 3) = "XDX" And cell(1, 7).Value = "1,5" Then
+        cell(1, 21).Value = ferulle_15
+        End If
+        If Left(cell.Value, 3) = "XDX" And cell(1, 7).Value = "2,5" Then
+        cell(1, 21).Value = ferulle_25
+        End If
+        If Left(cell.Value, 3) = "XDX" And cell(1, 7).Value = "4" Then
+        cell(1, 21).Value = ferulle_40
+        End If
+
+Else
+        If Left(cell.Value, 3) = "XDX" Then
+        cell(1, 21).Value = ""
+        End If
+End If
+
+If Komax.XDI.Value = True Then
+
+        If Left(cell.Value, 3) = "XDI" And cell(1, 7).Value = "1" Then
+        cell(1, 21).Value = ferulle_10
+        End If
+        If Left(cell.Value, 3) = "XDI" And cell(1, 7).Value = "1,5" Then
+        cell(1, 21).Value = ferulle_15
+        End If
+        If Left(cell.Value, 3) = "XDI" And cell(1, 7).Value = "2,5" Then
+        cell(1, 21).Value = ferulle_25
+        End If
+        If Left(cell.Value, 3) = "XDI" And cell(1, 7).Value = "4" Then
+        cell(1, 21).Value = ferulle_40
+        End If
+
+Else
+        If Left(cell.Value, 3) = "XDI" Then
+        cell(1, 21).Value = ""
+        End If
+End If
+
+
+          If cell.Value = "XDB1" Then
+        cell(1, 21).Value = ""
+        End If
+                If Left(cell.Value, 3) = "XDE" Then
+        cell(1, 21).Value = ""
+        End If
+        
+                If Left(cell.Value, 3) = "XDT" Then
+        cell(1, 21).Value = ""
+        End If
+
+        
+        If Not (Left(cell.Value, 3) = "XDI" Or Left(cell.Value, 3) = "XDX" Or Left(cell.Value, 3) = "XDC" Or cell.Value = "XDB1" Or cell.Value = "XDE" Or cell.Value = "XDT") And cell(1, 7).Value = "1" And cell(1, 13).Value = 1 Then
+        cell(1, 21).Value = ferulle_10
+        End If
+        
+        If Not (Left(cell.Value, 3) = "XDI" Or Left(cell.Value, 3) = "XDX" Or Left(cell.Value, 3) = "XDC" Or cell.Value = "XDB1" Or cell.Value = "XDE" Or cell.Value = "XDT") And cell(1, 7).Value = "1,5" And cell(1, 13).Value = 1 Then
+        cell(1, 21).Value = ferulle_15
+        End If
+        
+        If Not (Left(cell.Value, 3) = "XDI" Or Left(cell.Value, 3) = "XDX" Or Left(cell.Value, 3) = "XDC" Or cell.Value = "XDB1" Or cell.Value = "XDE" Or cell.Value = "XDT") And cell(1, 7).Value = "2,5" And cell(1, 13).Value = 1 Then
+        cell(1, 21).Value = ferulle_25
+        End If
+        
+        If Not (Left(cell.Value, 3) = "XDI" Or Left(cell.Value, 3) = "XDX" Or Left(cell.Value, 3) = "XDC" Or cell.Value = "XDB1" Or cell.Value = "XDE" Or cell.Value = "XDT") And cell(1, 7).Value = "4" And cell(1, 13).Value = 1 Then
+        cell(1, 21).Value = ferulle_40
+        End If
+        
+        
+ End If
+    
+    
 Application.ScreenUpdating = True
 
 End Sub
